@@ -4,9 +4,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<title>Results</title>
 </head>
 <body>
-
+<div class="menu">
+		<div class="margins">
+			<ul>
+				<li><a href="../">Home</a></li>
+				<li><a href="#">Datasets</a></li>
+				<li><a href="#">Algoritmos</a></li>
+				<li><a href="#">Resultados</a></li>
+				<li><a href="#">Código</a></li>
+				<li><a href="Bibliography.jsp">Bibliografía</a></li>
+				<li><a href="#">Foro</a></li>
+				<li><a href="#">Sobre nosotros</a></li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>

@@ -21,9 +21,9 @@
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Datasets</a></li>
 				<li><a href="#">Algoritmos</a></li>
-				<li><a href="#">Resultados</a></li>
+				<li><a href="Views/Results.jsp">Resultados</a></li>
 				<li><a href="#">Código</a></li>
-				<li><a href="#">Bibliografía</a></li>
+				<li><a href="Views/Bibliography.jsp">Bibliografía</a></li>
 				<li><a href="#">Foro</a></li>
 				<li><a href="#">Sobre nosotros</a></li>
 			</ul>
@@ -141,7 +141,7 @@
 					  opciones si se prioriza el coste computacional. En la Figura 2.1 se muestra
 					  una taxonomía de las principales técnicas de clasificación ordinal, extraída del artículo Ordinal Regression Methods: Survey and Experimental Study [3].</p>
 					  
-					  <img src="Views/Images/taxonomy.JPG"
+					  <img src="Views/Images/taxonomy.png"
 					  title="Taxonomía de los métodos de Clasificación Ordinal">
 					  
 					  <p>Este tipo de problema es cada vez más frecuente, además de que dicho campo ha evolucionado mucho en 
@@ -209,10 +209,6 @@
 		
 		
 	</div>
-
-	
-	
-	
 
 
 </body>
