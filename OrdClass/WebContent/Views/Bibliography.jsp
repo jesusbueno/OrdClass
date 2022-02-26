@@ -21,7 +21,7 @@
 			<ul>
 				<li><a href="../">Home</a></li>
 				<li><a href="#">Datasets</a></li>
-				<li><a href="#">Algoritmos</a></li>
+				<li><a href="Algorithms.jsp">Algoritmos</a></li>
 				<li><a href="#">Resultados</a></li>
 				<li><a href="#">Código</a></li>
 				<li><a href="#" style="color: #219ebc">Bibliografía</a></li>
@@ -267,8 +267,6 @@
 							</tr>
 						</tbody>
 					</table>
-
-
 				</div>
 			</div>
 

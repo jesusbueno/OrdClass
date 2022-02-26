@@ -20,7 +20,7 @@
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Datasets</a></li>
-				<li><a href="#">Algoritmos</a></li>
+				<li><a href="Views/Algorithms.jsp">Algoritmos</a></li>
 				<li><a href="Views/Results.jsp">Resultados</a></li>
 				<li><a href="#">Código</a></li>
 				<li><a href="Views/Bibliography.jsp">Bibliografía</a></li>
@@ -107,18 +107,29 @@
 
 				<div class="novedades">
 					<h3>Novedades</h3>
-					<table class="news">
-
+					<div class="news">
+						<table>
+						<tbody>
 						<tr>
+							<td>26/02</td>
 							<td>Nuevos datasets agregados.</td>
+							<td><span>new</span></td>
 						</tr>
 						<tr>
+							<td>24/02</td>
 							<td>Corregidos errores sobre algoritmos.</td>
+							<td><span>new</span></td>
 						</tr>
 						<tr>
+							<td>21/02</td>
 							<td>Ahora las vistas son más profesionales!</td>
+							<td><span>new</span></td>
 						</tr>
+						
+						</tbody>
 					</table>
+					</div>
+					
 				</div>
 				
 				</div>
