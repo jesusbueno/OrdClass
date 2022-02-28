@@ -32,7 +32,36 @@
 			<h3>Nombre algoritmo</h3>
 			
 			<div class="nal-content">
+				<div class="code-types">
+					<div class="buttons">
+						<ul>
+							<li>
+								<div class="card">
+									<div class="box">
+										<p>MatLab</p>
+										<i class="fa-solid fa-code"></i>
+									</div>
+								</div>
+							</li>
+							
+							<li>
+								<div class="card">
+									<div class="box">
+										<p>Python</p>
+										<i class="fa-brands fa-python""></i>
+									</div>
+								</div>
+							</li>
+						</ul>
+					
+					</div>
+					
+					<div class="code">
+						<script src="https://gist.github.com/jesusbueno/2ee9b88e4df66fc673e6a753e3ef4914.js"></script>
+					</div>
 				
+				
+				</div>
 			
 			</div>
 		

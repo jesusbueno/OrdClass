@@ -86,7 +86,7 @@
 								</tr>
 								
 
-								<tr>
+								<tr onclick="window.location='AlgorithmDescription.jsp';">
 									<td>TSF</td>
 									<td>Time Series Forest</td>
 									<td>Intervals</td>
