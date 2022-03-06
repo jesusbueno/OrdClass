@@ -594,11 +594,91 @@ a{
 	width: 100%;
 }
 
+.home .margins .nal-content .info{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 2fr 8fr;
+	gap: 40px;
+	margin-bottom: 50px;
+}
+
+.home .margins .nal-content .info .table-1{
+	background-color: white;
+	padding: 30px 40px 30px 40px;
+	border-radius: 20px;
+	font-family: Open Sans;
+	font-size: 17px;
+	box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+	height: 250px;
+}
+
+.home .margins .nal-content .info .table-1 table{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.home .margins .nal-content .info .table-1 table th{
+	text-align: left;
+}
+
+.home .margins .nal-content .info .table-1 table tr{
+	border-bottom: 1px solid var(--third-color);
+}
+
+.home .margins .nal-content .info .table-1 table tr:last-child{
+	border-bottom: none;
+}
+
+.home .margins .nal-content .info .table-1 table tr td{
+	padding: 10px 20px 10px 20px;
+}
+
+
+.home .margins .nal-content .info .table-2{
+	height: auto;
+	background-color: white;
+	padding: 30px 40px 30px 40px;
+	border-radius: 20px;
+	font-family: Open Sans;
+	font-size: 17px;
+	box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+
+.home .margins .nal-content .info .table-2 table{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.home .margins .nal-content .info .table-2 table th{
+	text-align: left;
+	vertical-align: top;
+	width: 15%;
+	padding: 10px 20px 10px 20px;
+}
+
+.home .margins .nal-content .info .table-2 table tr{
+	border-bottom: 1px solid var(--third-color);
+	
+}
+
+.home .margins .nal-content .info .table-2 table tr:last-child{
+	border-bottom: none;
+}
+
+.home .margins .nal-content .info .table-2 table tr td{
+	padding: 10px 20px 10px 20px;
+	vertical-align: top;
+	text-align: justify;
+}
+
+
+
+
 .home .margins .nal-content .code-types{
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 9fr;
-	gap: 40px;
+	gap: 60px;
 }
 
 .home .margins .nal-content .code-types .buttons{
@@ -611,7 +691,7 @@ a{
 
 .home .margins .nal-content .code-types .buttons li{
 	list-style: none;
-	margin: 20px 0px 20px 0px;
+	margin: 2px 0px 30px 0px;
 }
 
 .home .margins .nal-content .code-types .buttons .card{
@@ -640,9 +720,16 @@ a{
 	background-color: var(--secondary-color);
 }
 
-.home .margins .nal-content .code-types .code script{
+.home .margins .nal-content .code-types .code{
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.home .margins .nal-content .code-types .code .gist-file{
 	width: 100%;
-	max-height: 300px;
+	max-height: 600px;
+	overflow-y: scroll;
+	border-radius: 20px;
 }
 
 
