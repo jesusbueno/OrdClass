@@ -420,7 +420,7 @@ a{
 .home .searchs .input-field{
 	width: 230px;
 	height: 30px;
-	background-color: #white;
+	background-color: white;
 	border: solid 1px var(--third-color);
 	border-radius: 55px;
 	padding: 0 20px 0 20px;
@@ -732,6 +732,75 @@ a{
 	border-radius: 20px;
 }
 
+/*-------------------Researches-----------------------*/
+
+.home .margins .r-content p{
+	font-family: 'Roboto';
+	text-align: justify;
+	line-height : 30px;
+	color: var(--font-color);
+	font-size: 17px;
+}
+
+.home .r-content .r-container{
+	margin-top: 30px;
+	height: auto;
+	background-color: white;
+	padding: 30px 50px 30px 50px;
+	border-radius: 20px;
+	font-family: Open Sans;
+	font-size: 17px;
+	box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+	display: grid;
+	grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+	justify-items: center;
+}
+
+.home .r-content .r-container .r-card{
+	width: 250px;
+	height: 300px;
+	margin-top: 30px;
+	background-color: white;
+	padding: 30px 30px 30px 30px;
+	border-radius: 20px;
+	box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+	text-align: center;
+	vertical-align: center;
+	cursor: pointer;
+}
+
+.home .r-content .r-container .r-card .profile img{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.home .r-content .r-container .r-card .profile .name p{
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.home .r-content .r-container .r-card .profile .institution p{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.home .r-content .r-container .r-card .profile .country p{
+	text-align: center;
+	font-size: 15px;
+}
+
+.home .r-content .r-container .r-card .profile:hover {
+	transform: scale(1.08);
+}
+
+.home .r-content .r-container .r-card .profile{
+	transition: all 0.3s ease;
+}
 
 
 

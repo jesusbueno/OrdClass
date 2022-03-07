@@ -22,7 +22,7 @@
 				<li><a href="#">Datasets</a></li>
 				<li><a href="Views/Algorithms.jsp">Algoritmos</a></li>
 				<li><a href="Views/Results.jsp">Resultados</a></li>
-				<li><a href="#">Código</a></li>
+				<li><a href="Views/Researches.jsp">Investigadores</a></li>
 				<li><a href="Views/Bibliography.jsp">Bibliografía</a></li>
 				<li><a href="#">Foro</a></li>
 				<li><a href="#">Sobre nosotros</a></li>
