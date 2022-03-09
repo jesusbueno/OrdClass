@@ -44,12 +44,14 @@
 					</div>
 					
 					<div class="r-card">
+						<a href="ResearcherProfile.jsp">
 						<div class="profile">
-							<img src="Images/profile.jpg">
+							<img src="Images/profile2.jpg">
 							<div class="name"><p>Bueno Ruiz, Jesús</p></div>
 							<div class="institution"><p>Universidad de Córdoba</p></div>
 							<div class="country"><p>Spain</p></div>
 						</div>
+						</a>
 					</div>
 					
 					<div class="r-card">
