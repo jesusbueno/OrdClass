@@ -1110,6 +1110,89 @@ a{
 }
 
 
+/*---------------------ABOUT US---------------------------------- */
+
+.home .margins .au-content{
+	width: 100%;
+	font-family: Open Sans;
+	font-size: 17px;
+}
+
+.home .margins .au-content h2{
+	padding: 0px 0px 10px 0px;
+	margin: 20px 80px 40px 80px;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: solid 2px var(--third-color); 
+}
+
+.home .margins .au-content p{
+	font-size: 17px;
+	text-align: justify;
+	line-height : 30px;
+	margin-bottom: 30px;
+}
+
+.home .margins .au-content .sections{
+	background-color: white;
+	padding: 30px 80px 30px 80px;
+	border-radius: 20px;
+	box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+	height: auto;
+
+}
+
+.home .margins .au-content .sections .section-1 .content{
+	display: grid;
+	grid-template-columns: 7fr 3fr;
+	gap: 80px;
+}
+.home .margins .au-content .sections .section-1 .content .right img{
+	width: 100%;
+}
+
+.home .margins .au-content .sections .section-2{
+	margin-top: 100px;
+}
+
+.home .margins .au-content .sections .section-2 .contents{
+	display: grid;
+	grid-template-columns: 3.3fr 3.3fr 3.3fr;
+	justify-items: center;
+}
+
+.home .margins .au-content .sections .section-2 .contents .profile{
+	margin-top: 30px;
+}
+
+.home .margins .au-content .sections .section-2 .contents .profile img{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	object-fit: fit;
+	text-align: center;
+}
+
+
+.home .margins .au-content .sections .section-2 .contents .profile .name p{
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.home .margins .au-content .sections .section-2 .contents .profile .institution p{
+	text-align: center;
+	margin-bottom: 7px;
+}
+
+.home .margins .au-content .sections .section-2 .contents .profile .web{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
 
 
 

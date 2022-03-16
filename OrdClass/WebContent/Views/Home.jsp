@@ -18,14 +18,14 @@
 	<div class="menu">
 		<div class="margins">
 			<ul>
-				<li><a href="#">Home</a></li>
+				<li><a href="#" style="color: #219ebc">Home</a></li>
 				<li><a href="Views/Datasets.jsp">Datasets</a></li>
 				<li><a href="Views/Algorithms.jsp">Algoritmos</a></li>
 				<li><a href="Views/Results.jsp">Resultados</a></li>
 				<li><a href="Views/Researches.jsp">Investigadores</a></li>
 				<li><a href="Views/Bibliography.jsp">Bibliografía</a></li>
 				<li><a href="#">Foro</a></li>
-				<li><a href="#">Sobre nosotros</a></li>
+				<li><a href="Views/AboutUs.jsp">Sobre nosotros</a></li>
 			</ul>
 		</div>
 	</div>

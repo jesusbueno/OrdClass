@@ -26,7 +26,7 @@
 				<li><a href="Researches.jsp">Investigadores</a></li>
 				<li><a href="#" style="color: #219ebc">Bibliografía</a></li>
 				<li><a href="#">Foro</a></li>
-				<li><a href="#">Sobre nosotros</a></li>
+				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
 			</ul>
 		</div>
 	</div>

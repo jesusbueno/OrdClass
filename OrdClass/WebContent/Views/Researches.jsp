@@ -22,7 +22,7 @@
 				<li><a href="Researches.jsp" style="color: #219ebc">Investigadores</a></li>
 				<li><a href="Bibliography.jsp">Bibliografía</a></li>
 				<li><a href="#">Foro</a></li>
-				<li><a href="#">Sobre nosotros</a></li>
+				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
 			</ul>
 		</div>
 	</div>
