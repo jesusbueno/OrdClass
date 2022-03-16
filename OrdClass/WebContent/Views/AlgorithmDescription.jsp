@@ -16,7 +16,7 @@
 		<div class="margins">
 			<ul>
 				<li><a href="../">Home</a></li>
-				<li><a href="#">Datasets</a></li>
+				<li><a href="Datasets.jsp">Datasets</a></li>
 				<li><a href="Algorithms.jsp" style="color: #219ebc">Algoritmos</a></li>
 				<li><a href="Results.jsp">Resultados</a></li>
 				<li><a href="Researches.jsp">Investigadores</a></li>
@@ -78,11 +78,9 @@
 							<td>hola</td>
 						</tr>
 					</table>
-					</div>
-					
-				
-				
+					</div>	
 				</div>
+				
 				<div class="code-types">
 					<div class="buttons">
 						<ul>
