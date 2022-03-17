@@ -1194,14 +1194,168 @@ a{
 }
 
 
+/*-----------------RESULTS------------------------------*/
+
+.home .margins .result-content{
+	width: 100%;
+	font-family: Open Sans;
+	font-size: 17px;
+}
+
+.home .margins .result-content .options{
+	width: 100%;
+	color: white;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
+}
 
 
+.home .margins .result-content .options .card{
+	background-color: var(--principal-color);
+	padding: 15px 20px 15px 20px;
+	border-radius: 20px;
+	text-align: center;
+	cursor: pointer;
+	width: 200px;
+	margin: 0px 20px 0px 20px;
+}
+
+.home .margins .result-content .options .card:hover .box{
+	transform: scale(1.08);
+}
+
+.home .margins .result-content .options .card .box{
+	transition: all 0.3s ease;
+}
+
+.home .margins .result-content .options .card .box i{
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.home .margins .result-content .options .card:hover{
+	background-color: var(--secondary-color);
+}
 
 
+.home .margins .result-content .tables{
+	background-color: white;
+	padding: 30px 40px 30px 40px;
+	border-radius: 20px;
+	font-family: Roboto;
+	font-size: 13px;
+	box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+
+.home .margins .result-content .tables .desc{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.home .margins .result-content .tables p{
+	display: flex;
+	font-size: 30px;
+	font-family: Open Sans;
+	font-weight: bold;
+	text-align: center;
+	padding-right: 10px;
+	
+}
+
+.home .margins .result-content .tables .button{
+	display: flex;
+	justify-content: center;
+	padding-left: 10px;
+}
+
+.home .margins .result-content .tables .button a{
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: 15px;
+	color: white;
+	padding: 6px 35px 6px 35px;
+	background-color: var(--principal-color);
+	border-radius: 25px;
+
+	
+}
+
+.home .margins .result-content .tables .button a:hover{
+	background-color: var(--secondary-color);
+	transition: all .2s;
+}
 
 
+.home .margins .result-content .tables table{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.home .margins .result-content .tables table thead{
+	font-weight: bold;
+	text-align: center;
+}
 
 
+.home .margins .result-content .tables table tr{
+	border-bottom: 1px solid var(--third-color);
+}
+
+.home .margins .result-content .tables table tr:last-child{
+	border-bottom: none;
+}
+
+.home .margins .result-content .tables tbody tr:hover{
+	background-color: var(--principal-color);
+	color: white;
+	cursor: pointer;
+}
+
+
+.home .margins .result-content .tables table tr td{
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+}
+
+
+.home .margins .result-content .tables table tr td:nth-child(1){
+	font-weight: bold;
+}
+
+/*
+.home .ds-content .ds-table table tr td:nth-child(2){
+	width: 16%;
+	text-align: center;
+}
+
+.home .ds-content .ds-table table tr td:nth-child(3){
+	width: 16%;
+	text-align: center;
+}
+
+.home .ds-content .ds-table table tr td:nth-child(4){
+	width: 16%;
+	text-align: center;
+}
+
+.home .ds-content .ds-table table tr td:nth-child(5){
+	width: 16%;
+	text-align: center;
+}
+
+.home .ds-content .ds-table table tr td:nth-child(6){
+	width: auto;
+	text-align: right;
+}
+
+*/
 
 
 
