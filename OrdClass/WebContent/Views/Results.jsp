@@ -8,54 +8,11 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="https://kit.fontawesome.com/e289be1c63.js"
 	crossorigin="anonymous"></script>
-<script src="jquery-3.6.0.min.js" type="text/javascript"></script>   
+<script src="jquery-3.6.0.min.js" type="text/javascript"></script> 
+<script src="js/LoadCSV.js" type="text/javascript"></script> 
 
 <title>Results</title>
 
-<script>
-	
-	$.ajax({
-		url : "mze.csv",
-		dataType : 'text',
-	}).done(successFunction);
-	
-
-	function successFunction(data) {
-		console.log("Hola Mundo");
-		var allRows = data.split(/\r?\n|\r/);
-		var table = '<table>';
-		for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
-			if (singleRow === 0) {
-				table += '<thead>';
-				table += '<tr>';
-			} else {
-				table += '<tr>';
-			}
-			var rowCells = allRows[singleRow].split(';');
-			for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
-				if (singleRow === 0) {
-					table += '<th>';
-					table += rowCells[rowCell];
-					table += '</th>';
-				} else {
-					table += '<td>';
-					table += rowCells[rowCell];
-					table += '</td>';
-				}
-			}
-			if (singleRow === 0) {
-				table += '</tr>';
-				table += '</thead>';
-				table += '<tbody>';
-			} else {
-				table += '</tr>';
-			}
-		}
-		table += '</tbody>';
-		table += '</table>';
-		$(".table-1").append(table);
-	}
-</script>
 
 
 </head>
@@ -104,7 +61,7 @@
 						<p>Métrica MZE</p>
 					
 						<div class="button">
-							<a href="mze.csv" download="mze.csv">Descargar (.csv)</a>
+							<a href="sources/mze.csv" download="mze.csv">Descargar (.csv)</a>
 						</div>
 					</div>
 					
