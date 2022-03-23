@@ -1,12 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.Date"%>
+<%@ page import="es.uco.ordclass.business.Log"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="Views/css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -15,17 +19,27 @@
 </head>
 <body>
 
+<%
+	ArrayList<Log> logs = (ArrayList<Log>) session.getAttribute("logs");
+
+	Date today = new Date(System.currentTimeMillis());
+	int milisecondsByDay = 86400000;
+	int days = 0;
+	
+
+%>
+
 	<div class="menu">
 		<div class="margins">
 			<ul>
 				<li><a href="#" style="color: #219ebc">Home</a></li>
-				<li><a href="Views/Datasets.jsp">Datasets</a></li>
-				<li><a href="Views/Algorithms.jsp">Algoritmos</a></li>
-				<li><a href="Views/Results.jsp">Resultados</a></li>
-				<li><a href="Views/Researches.jsp">Investigadores</a></li>
-				<li><a href="Views/Bibliography.jsp">Bibliografía</a></li>
+				<li><a href="Datasets.jsp">Datasets</a></li>
+				<li><a href="Algorithms.jsp">Algoritmos</a></li>
+				<li><a href="Results.jsp">Resultados</a></li>
+				<li><a href="Researches.jsp">Investigadores</a></li>
+				<li><a href="Bibliography.jsp">Bibliografía</a></li>
 				<li><a href="#">Foro</a></li>
-				<li><a href="Views/AboutUs.jsp">Sobre nosotros</a></li>
+				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
 			</ul>
 		</div>
 	</div>
@@ -35,7 +49,7 @@
 		<div class="margins">
 			<div class="header">
 
-				<img src="Views/Images/logo.png">
+				<img src="Images/logo.png">
 
 				<div class="title">
 					<h1>OrdClass</h1>
@@ -69,21 +83,21 @@
 						</div>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<a href="https://es.wikipedia.org/wiki/Inteligencia_artificial"><img src="Views/Images/news/new1.jpg" class="d-block w-100" alt="..."></a>
+								<a href="https://es.wikipedia.org/wiki/Inteligencia_artificial"><img src="Images/news/new1.jpg" class="d-block w-100" alt="..."></a>
 								<div class="carousel-caption d-none d-md-block">
 									<h5>Qué es la Inteligencia Artificial</h5>
 									<p>Aprende conceptos básicos sobre Inteligencia Artificial</p>
 								</div>
 							</div>
 							<div class="carousel-item">
-								<a href="https://www.xataka.com/aplicaciones/google-quiere-llevar-su-autocorrector-a-otro-nivel-asi-su-tecnologia-para-corregir-nuestra-gramatica"><img src="Views/Images/news/new2.jpeg" class="d-block w-100" alt="..."></a>
+								<a href="https://www.xataka.com/aplicaciones/google-quiere-llevar-su-autocorrector-a-otro-nivel-asi-su-tecnologia-para-corregir-nuestra-gramatica"><img src="Images/news/new2.jpeg" class="d-block w-100" alt="..."></a>
 								<div class="carousel-caption d-none d-md-block">
 									<h5>Google quiere llevar su autocorrector a otro nivel</h5>
 									<p>El autocorrector lleva con nosotros desde hace años, mostrando sugerencias o sustituyendo aquellas palabras que hemos escrito mal. Con la llegada de los Google Pixel 6 y el nuevo motor neuronal de su chip tensor, Google quiere llevar esta autocorrección aún más allá, analizando la propia gramática de las frases que escribimos.</p>
 								</div>
 							</div>
 							<div class="carousel-item">
-								<a href="https://www.questionpro.com/blog/es/escala-ordinal/"><img src="Views/Images/news/new3.jpg" class="d-block w-100" alt="..."></a>
+								<a href="https://www.questionpro.com/blog/es/escala-ordinal/"><img src="Images/news/new3.jpg" class="d-block w-100" alt="..."></a>
 								<div class="carousel-caption d-none d-md-block">
 									<h5>Escala ordinal: Ejemplos y ventajas de su uso</h5>
 									<p>La escala ordinal es uno de los niveles de medición que nos otorga la clasificación y el orden de los datos sin que realmente se establezca el grado de variación entre ellos.</p>
@@ -110,21 +124,27 @@
 					<div class="news">
 						<table>
 						<tbody>
-						<tr>
-							<td>26/02</td>
-							<td>Nuevos datasets agregados.</td>
-							<td><span>new</span></td>
-						</tr>
-						<tr>
-							<td>24/02</td>
-							<td>Corregidos errores sobre algoritmos.</td>
-							<td><span>new</span></td>
-						</tr>
-						<tr>
-							<td>21/02</td>
-							<td>Ahora las vistas son más profesionales!</td>
-							<td><span>new</span></td>
-						</tr>
+						
+							<%
+								for(int i=0; i<logs.size(); i++){
+									%>
+									<tr>
+										<td><%=logs.get(i).getDate()%></td>
+										<td><%=logs.get(i).getInfo() %></td>
+										<%
+											days =(int) (today.getTime() - logs.get(i).getDate().getTime()) / milisecondsByDay;
+											if(days < 7){
+												%>
+												<td><span>new</span></td>
+											<%
+											}
+										%>
+										
+									</tr>
+									<%
+								}
+							%>
+						
 						
 						</tbody>
 					</table>
@@ -152,7 +172,7 @@
 					  opciones si se prioriza el coste computacional. En la Figura 2.1 se muestra
 					  una taxonomía de las principales técnicas de clasificación ordinal, extraída del artículo Ordinal Regression Methods: Survey and Experimental Study [3].</p>
 					  
-					  <img src="Views/Images/taxonomy.png"
+					  <img src="Images/taxonomy.png"
 					  title="Taxonomía de los métodos de Clasificación Ordinal">
 					  
 					  <p>Este tipo de problema es cada vez más frecuente, además de que dicho campo ha evolucionado mucho en 
@@ -167,7 +187,7 @@
 				<div class="section-3">
 					<h3>Qué es OrdClass</h3>
 					
-					<img src="Views/Images/logo.png"
+					<img src="Images/logo.png"
 					title="Logotipo de OrdClass">
 					<p>Los problemas de clasificación ordinal comentados anterioremente son cada vez más frecuentes, además de que dicho campo ha evolucionado mucho en la última década. 
 					Actualmente, no hay ninguna aplicación web que ayude a analizar los conjuntos de datos disponibles para este tipo de 

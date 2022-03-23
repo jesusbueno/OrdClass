@@ -12,10 +12,11 @@ public class Dataset {
 	private int best_accuracy;
 	private String images;
 	private String download;
+	private String description;
 	
 	public Dataset() {}
 
-	public Dataset(int id, String name, int train_size, int test_size, int length, int classes, String type, String best_algorithm, int best_accuracy, String images, String download) {
+	public Dataset(int id, String name, int train_size, int test_size, int length, int classes, String type, String best_algorithm, int best_accuracy, String images, String download, String description) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -28,6 +29,7 @@ public class Dataset {
 		this.best_accuracy = best_accuracy;
 		this.images = images;
 		this.download = download;
+		this.description = description;
 	}
 
 	//Getters and setters
@@ -118,6 +120,14 @@ public class Dataset {
 
 	public void setDownload(String download) {
 		this.download = download;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 
