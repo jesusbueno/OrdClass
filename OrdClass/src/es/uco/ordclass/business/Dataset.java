@@ -13,10 +13,16 @@ public class Dataset {
 	private String images;
 	private String download;
 	private String description;
+	private String donor;
+	private String data_source;
 	
 	public Dataset() {}
 
-	public Dataset(int id, String name, int train_size, int test_size, int length, int classes, String type, String best_algorithm, int best_accuracy, String images, String download, String description) {
+	
+
+	public Dataset(int id, String name, int train_size, int test_size, int length, int classes, String type,
+			String best_algorithm, int best_accuracy, String images, String download, String description, String donor,
+			String data_source) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -30,7 +36,11 @@ public class Dataset {
 		this.images = images;
 		this.download = download;
 		this.description = description;
+		this.donor = donor;
+		this.data_source = data_source;
 	}
+
+
 
 	//Getters and setters
 	
@@ -128,6 +138,30 @@ public class Dataset {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+
+
+	public String getDonor() {
+		return donor;
+	}
+
+
+
+	public void setDonor(String donor) {
+		this.donor = donor;
+	}
+
+
+
+	public String getData_source() {
+		return data_source;
+	}
+
+
+
+	public void setData_source(String data_source) {
+		this.data_source = data_source;
 	}
 	
 

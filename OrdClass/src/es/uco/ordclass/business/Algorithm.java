@@ -2,6 +2,7 @@ package es.uco.ordclass.business;
 
 public class Algorithm {
 
+	private int id;
 	private String acronym;
 	private String name;
 	private String type;
@@ -15,8 +16,9 @@ public class Algorithm {
 	
 	public Algorithm() {}
 
-	public Algorithm(String acronym, String name, String type, int year, String publication, String description, String source_code, String link, String ml_code, String py_code) {
+	public Algorithm(int id, String acronym, String name, String type, int year, String publication, String description, String source_code, String link, String ml_code, String py_code) {
 		super();
+		this.id = id;
 		this.acronym = acronym;
 		this.name = name;
 		this.type = type;
@@ -109,6 +111,14 @@ public class Algorithm {
 
 	public void setPy_code(String py_code) {
 		this.py_code = py_code;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	

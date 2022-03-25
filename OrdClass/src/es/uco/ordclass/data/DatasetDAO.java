@@ -15,34 +15,40 @@ public class DatasetDAO extends DAO{
 		super(url, user, password, sqlProperties);
 	}
 	
-	public ArrayList<Dataset> getDatasets() throws SQLException{
+	public ArrayList<Dataset> getDatasets(){
 		
 		ArrayList<Dataset> datasets = new ArrayList<Dataset>();
 		
-		String sql = "SELECT * FROM datasets";
+		String sql = "SELECT * FROM datasets ORDER BY Name";
 		
-		Connection con = getConnection();
-		PreparedStatement ps = con.prepareStatement(sql);
-		ResultSet rs = ps.executeQuery();
+		try {
+			Connection con = getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				Dataset dataset = new Dataset();
+				
+				dataset.setId(rs.getInt("ID"));
+				dataset.setBest_accuracy(rs.getInt("Best_Accuracy"));
+				dataset.setBest_algorithm(rs.getString("Best_Algorithm"));
+				dataset.setClasses(rs.getInt("Classes"));
+				dataset.setDownload(rs.getString("Download"));
+				dataset.setImages(rs.getString("Images"));
+				dataset.setLength(rs.getInt("Length"));
+				dataset.setName(rs.getString("Name"));
+				dataset.setTest_size(rs.getInt("Test_Size"));
+				dataset.setTrain_size(rs.getInt("Train_Size"));
+				dataset.setType(rs.getString("Type"));
+				dataset.setDescription(rs.getString("Description"));
+				dataset.setDonor(rs.getString("Donor"));
+				dataset.setData_source(rs.getString("Data_Source"));
+				
+				datasets.add(dataset);
+			}
+			
+		}catch (SQLException e) {System.out.println(e);}
 		
-		while(rs.next()) {
-			Dataset dataset = new Dataset();
-			
-			dataset.setId(rs.getInt("ID"));
-			dataset.setBest_accuracy(rs.getInt("Best_Accuracy"));
-			dataset.setBest_algorithm(rs.getString("Best_Algorithm"));
-			dataset.setClasses(rs.getInt("Classes"));
-			dataset.setDownload(rs.getString("Download"));
-			dataset.setImages(rs.getString("Images"));
-			dataset.setLength(rs.getInt("Length"));
-			dataset.setName(rs.getString("Name"));
-			dataset.setTest_size(rs.getInt("Test_Size"));
-			dataset.setTrain_size(rs.getInt("Train_Size"));
-			dataset.setType(rs.getString("Type"));
-			dataset.setDescription(rs.getString("Description"));
-			
-			datasets.add(dataset);
-		}
 		
 		return datasets;
 	}

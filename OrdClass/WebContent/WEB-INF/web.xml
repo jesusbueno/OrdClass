@@ -23,4 +23,31 @@
         <servlet-name>loadData</servlet-name>
         <url-pattern>/loadData</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SearchDatasetInfo</servlet-name>
+        <servlet-class>es.uco.ordclass.servlet.SearchDatasetInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchDatasetInfo</servlet-name>
+        <url-pattern>/SearchDatasetInfo</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SearchAlgorithmInfo</servlet-name>
+        <servlet-class>es.uco.ordclass.servlet.SearchAlgorithmInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchAlgorithmInfo</servlet-name>
+        <url-pattern>/SearchAlgorithmInfo</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>SearchResearcherInfo</servlet-name>
+        <servlet-class>es.uco.ordclass.servlet.SearchResearcherInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchResearcherInfo</servlet-name>
+        <url-pattern>/SearchResearcherInfo</url-pattern>
+    </servlet-mapping>
 </web-app>

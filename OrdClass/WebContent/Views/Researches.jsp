@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="es.uco.ordclass.business.Researcher"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,6 +15,9 @@
 </head>
 <body>
 
+<%
+ArrayList<Researcher> researches = (ArrayList<Researcher>) session.getAttribute("researches");
+%>
 	<div class="menu">
 		<div class="margins">
 			<ul>
@@ -34,61 +40,23 @@
 				<p>Investigadores implicados en la información que se muestra en OrdClass.</p>
 				
 				<div class="r-container">
-					<div class="r-card">
-						<div class="profile">
-							<img src="Images/profile.jpg">
-							<div class="name"><p>Bueno Ruiz, Jesús</p></div>
-							<div class="institution"><p>Universidad de Córdoba</p></div>
-							<div class="country"><p>Spain</p></div>
-						</div>
-					</div>
 					
-					<div class="r-card">
-						<a href="ResearcherProfile.jsp">
+					<%for(int i=0; i<researches.size(); i++){
+					%>
+						<div class="r-card">
+						<a href="../SearchResearcherInfo?id=<%=researches.get(i).getId() %>">
 						<div class="profile">
 							<img src="Images/profile2.jpg">
-							<div class="name"><p>Bueno Ruiz, Jesús</p></div>
-							<div class="institution"><p>Universidad de Córdoba</p></div>
-							<div class="country"><p>Spain</p></div>
+							<div class="name"><p><%=researches.get(i).getSurname()%>, <%=researches.get(i).getName()%></p></div>
+							<div class="institution"><p><%=researches.get(i).getInstitution() %></p></div>
+							<div class="country"><p><%=researches.get(i).getCountry() %></p></div>
 						</div>
 						</a>
 					</div>
-					
-					<div class="r-card">
-						<div class="profile">
-							<img src="Images/profile.jpg">
-							<div class="name"><p>Bueno Ruiz, Jesús</p></div>
-							<div class="institution"><p>Universidad de Córdoba</p></div>
-							<div class="country"><p>Spain</p></div>
-						</div>
-					</div>
-					
-					<div class="r-card">
-						<div class="profile">
-							<img src="Images/profile.jpg">
-							<div class="name"><p>Bueno Ruiz, Jesús</p></div>
-							<div class="institution"><p>Universidad de Córdoba</p></div>
-							<div class="country"><p>Spain</p></div>
-						</div>
-					</div>
-					
-					<div class="r-card">
-						<div class="profile">
-							<img src="Images/profile.jpg">
-							<div class="name"><p>Bueno Ruiz, Jesús</p></div>
-							<div class="institution"><p>Universidad de Córdoba</p></div>
-							<div class="country"><p>Spain</p></div>
-						</div>
-					</div>
-					
-					<div class="r-card">
-						<div class="profile">
-							<img src="Images/profile.jpg">
-							<div class="name"><p>Bueno Ruiz, Jesús</p></div>
-							<div class="institution"><p>Universidad de Córdoba</p></div>
-							<div class="country"><p>Spain</p></div>
-						</div>
-					</div>
+						
+					<%
+					}
+						%>
 					
 				</div>
 			</div>

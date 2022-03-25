@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="es.uco.ordclass.business.Algorithm"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -14,6 +17,10 @@
 <title>Algoritmos</title>
 </head>
 <body>
+
+<%
+	ArrayList<Algorithm> algorithms = (ArrayList<Algorithm>) session.getAttribute("algorithms");
+%>
 	<div class="menu">
 		<div class="margins">
 			<ul>
@@ -74,94 +81,19 @@
 							</thead>
 							<tbody>
 
-
 								
-								<tr>
-									
-										<td><a href="AlgorithmDescription.jsp">BOSS</a></td>
-										<td>Bag of SFA Symbols</td>
-										<td>Dictionary</td>
-										<td>2015</td>
-									
-								</tr>
-								
+								<%for(int i=0; i<algorithms.size(); i++){
+									%>
+										<tr onclick="window.location='../SearchAlgorithmInfo?id=<%=algorithms.get(i).getId() %>'">
+											<td><%=algorithms.get(i).getAcronym()%></td>
+											<td><%=algorithms.get(i).getName()%></td>
+											<td><%=algorithms.get(i).getType()%></td>
+											<td><%=algorithms.get(i).getYear()%></td>		
+										</tr>
+									<%
+								}
+								%>
 
-								<tr onclick="window.location='AlgorithmDescription.jsp';">
-									<td>TSF</td>
-									<td>Time Series Forest</td>
-									<td>Intervals</td>
-									<td>2013</td>
-								</tr>
-
-								<tr>
-									<td></td>
-									<td>Inception Time</td>
-									<td>Deep learning</td>
-									<td>2019</td>
-								</tr>
-
-								<tr>
-									<td>BOSS</td>
-									<td>Bag of SFA Symbols</td>
-									<td>Dictionary</td>
-									<td>2015</td>
-								</tr>
-
-								<tr>
-									<td>TSF</td>
-									<td>Time Series Forest</td>
-									<td>Intervals</td>
-									<td>2013</td>
-								</tr>
-
-								<tr>
-									<td></td>
-									<td>Inception Time</td>
-									<td>Deep learning</td>
-									<td>2019</td>
-								</tr>
-								
-								<tr>
-									<td>BOSS</td>
-									<td>Bag of SFA Symbols</td>
-									<td>Dictionary</td>
-									<td>2015</td>
-								</tr>
-
-								<tr>
-									<td>TSF</td>
-									<td>Time Series Forest</td>
-									<td>Intervals</td>
-									<td>2013</td>
-								</tr>
-
-								<tr>
-									<td></td>
-									<td>Inception Time</td>
-									<td>Deep learning</td>
-									<td>2019</td>
-								</tr>
-
-								<tr>
-									<td>BOSS</td>
-									<td>Bag of SFA Symbols</td>
-									<td>Dictionary</td>
-									<td>2015</td>
-								</tr>
-
-								<tr>
-									<td>TSF</td>
-									<td>Time Series Forest</td>
-									<td>Intervals</td>
-									<td>2013</td>
-								</tr>
-
-								<tr>
-									<td></td>
-									<td>Inception Time</td>
-									<td>Deep learning</td>
-									<td>2019</td>
-								</tr>
 							</tbody>
 						</table>
 					</div>

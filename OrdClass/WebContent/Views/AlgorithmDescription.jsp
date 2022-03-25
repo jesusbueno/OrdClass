@@ -1,17 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="es.uco.ordclass.business.Algorithm"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="https://kit.fontawesome.com/e289be1c63.js"
-	crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 
 <title>Algoritmos</title>
 
 
 </head>
 <body>
+<%
+	Algorithm algorithm = (Algorithm) session.getAttribute("algorithm");
+%>
+
 	<div class="menu">
 		<div class="margins">
 			<ul>
@@ -29,7 +35,7 @@
 	
 	<div class="home">
 		<div class="margins">
-			<h3>Nombre algoritmo</h3>
+			<h3><%=algorithm.getName() %></h3>
 			
 			<div class="nal-content">
 				
@@ -38,7 +44,7 @@
 						<table>
 						<tr>
 							<th>Acronym</th>
-							<td>TSF</td>
+							<td><%=algorithm.getAcronym() %></td>
 							
 							
 							
@@ -46,15 +52,15 @@
 						
 						<tr>
 							<th>Type</th>
-							<td>Intervals</td>
+							<td><%=algorithm.getType() %></td>
 						</tr>
 						<tr>
 							<th>Year</th>
-							<td>2013</td>
+							<td><%=algorithm.getYear() %></td>
 						</tr>
 						<tr>
 							<th>Publication</th>
-							<td>InfoScience</td>
+							<td><%=algorithm.getPublication() %></td>
 						</tr>
 					</table>
 					</div>
@@ -63,19 +69,18 @@
 						<table>
 						<tr>
 							<th>Description</th>
-							<td>Deng  overcome the problem of the huge interval feature space by employing a random forest approach, using summary statistics of each interval as features. Training a single tree involves selecting m--v random intervals, generating the mean, standard deviation and slope of the random intervals for every series then creating and training a tree on the resulting 3m--v features. Classification is by a majority vote of all the trees in the ensemble. The classification tree has two bespoke characteristics. Firstly, rather than evaluate all possible split points to find the best information gain, a fixed number of evaluation points is pre-defined. We assume this is an expedient to make the classifier faster, as it removes the need to sort the cases by each attribute value. Secondly, a refined splitting criteria to choose between features with equal information gain is introduced. This is defined as the distance between the splitting margin and the closest case. The intuition behind the idea is that if two splits have equal entropy gain, then the split that is furthest from the nearest case should be preferred. This measure would have no value if all possible intervals were evaluated because by definition the split points are taken as equi-distant between cases. We experimented with including these two features, but found the effect on accuracy was, if anything, negative. We found the computational overhead of evaluating all split points acceptable, hence we had no need to include the margin based tie breaker. We used the built in Weka RandomTree classifier (which is the basis for the Weka RandomForest classifier) with default parameters. This means there is no limit to the depth of the tree nor a minimum number of cases per leaf node. A more formal description is given in Algorithm 6.</td>
-							
+							<td><%=algorithm.getDescription() %></td>
 							
 						</tr>
 						
 						<tr>
 							<th>Source Code</th>
-							<td>Time Series Forest Code</td>
+							<td><%=algorithm.getSource_code() %></td>
 						</tr>
 						
 						<tr>
 							<th>Link</th>
-							<td>hola</td>
+							<td><%=algorithm.getLink() %></td>
 						</tr>
 					</table>
 					</div>	
@@ -106,8 +111,10 @@
 					</div>
 					
 					<div class="code">
-						<script src="https://gist.github.com/jesusbueno/2ee9b88e4df66fc673e6a753e3ef4914.js"></script>
+						<script src="<%=algorithm.getMl_code() %>"></script>
+						<script src="<%=algorithm.getPy_code() %>"></script>
 					</div>
+
 				
 				
 				</div>

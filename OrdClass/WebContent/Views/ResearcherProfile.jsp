@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="es.uco.ordclass.business.Researcher"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,6 +13,10 @@
 <title>Perfil</title>
 </head>
 <body>
+
+<%
+	Researcher researcher = (Researcher) session.getAttribute("researcher");
+%>
 
 	<div class="menu">
 		<div class="margins">
@@ -31,32 +37,28 @@
 		<div class="margins">
 
 			<div class="p-content">
-				<h3>Jesús Bueno Ruiz</h3>
+				<h3><%=researcher.getName()%> <%=researcher.getSurname()%></h3>
 				
 				<div class="container">
 					<img src="Images/profile2.jpg">
 					
 					<div class="datos">
 						<div class="left">
-							<div class="title">Profesión </div><p>Estudiante</p>
-							<div class="title">Institución </div><p>Universidad de Córdoba, Spain</p>
+							<div class="title">Profesión </div><p><%=researcher.getProfession() %></p>
+							<div class="title">Institución </div><p><%=researcher.getInstitution()%>, <%=researcher.getCountry() %></p>
 							<div class="title">Phone</div>
-							<p>671616985</p>
+							<p><%=researcher.getPhone() %></p>
 							<div class="title">External Link</div>
-							<p><a href="https://www.uco.es">https://www.uco.es</a></p>
+							<p><a href="<%=researcher.getLink() %>"><%=researcher.getLink() %></a></p>
 						
 							<div class="title">Email</div>
-							<p><a href="mailto:jesusbuenoruiz1999@gmail.com">jesusbuenoruiz1999@gmail.com</a></p>
+							<p><a href="mailto:<%=researcher.getEmail() %>"><%=researcher.getEmail() %></a></p>
 						</div>
 						
 						
 						<div class="right">
 							<div class="title">Description</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque laoreet, mi vitae pretium laoreet, libero libero congue elit, at lobortis ligula ipsum sed tortor. Suspendisse nisl augue, 
-							eleifend id venenatis ac, dapibus suscipit mauris. Cras eu risus vel metus pretium suscipit. Ut venenatis aliquam dolor ut scelerisque. Nullam consectetur diam lacus, et posuere velit placerat vitae. 
-							Morbi convallis nulla id nisl imperdiet pellentesque. Pellentesque pharetra semper ultrices. Donec finibus et orci at malesuada. Vestibulum magna diam, rhoncus bibendum congue pretium, rhoncus non risus.
-						 	Nulla consectetur metus in orci euismod porta. Suspendisse leo velit, suscipit placerat risus a,
-						 	tincidunt pellentesque justo. Sed egestas fermentum consequat. Duis eu nisi sit amet odio accumsan lobortis ac iaculis arcu. In fringilla eu odio nec congue.</p>
+							<p><%=researcher.getDescription() %></p>
 						</div>
 						
 					</div>

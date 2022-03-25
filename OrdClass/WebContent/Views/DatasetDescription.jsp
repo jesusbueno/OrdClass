@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="es.uco.ordclass.business.Dataset"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,6 +11,10 @@
 <title>Datasets</title>
 </head>
 <body>
+
+<%
+	Dataset dataset = (Dataset) session.getAttribute("dataset");
+%>
 	<div class="menu">
 		<div class="margins">
 			<ul>
@@ -28,44 +33,44 @@
 	<div class="home">
 		<div class="margins">
 		
-			<h3>Nombre Dataset</h3>
+			<h3><%=dataset.getName() %></h3>
 			<div class="dsd-content">
 				<div class="info">
 					<div class="table-1">
 						<table>
 						<tr>
 							<th>Train Size</th>
-							<td>390</td>			
+							<td><%=dataset.getTrain_size() %></td>			
 						</tr>
 						
 						<tr>
 							<th>Test Size</th>
-							<td>391</td>
+							<td><%=dataset.getTest_size() %></td>
 						</tr>
 						
 						<tr>
 							<th>Length</th>
-							<td>176</td>
+							<td><%=dataset.getLength() %></td>
 						</tr>
 						
 						<tr>
 							<th>Classes</th>
-							<td>37</td>
+							<td><%=dataset.getClasses() %></td>
 						</tr>
 						
 						<tr>
 							<th>Type</th>
-							<td>Image</td>
+							<td><%=dataset.getType() %></td>
 						</tr>
 						
 						<tr>
 							<th>Best Algorithm</th>
-							<td>COTE</td>
+							<td><%=dataset.getBest_algorithm() %></td>
 						</tr>
 						
 						<tr>
 							<th>Best Accuaricy</th>
-							<td>80.98%</td>
+							<td><%=dataset.getBest_accuracy()%>%</td>
 						</tr>
 					</table>
 					
@@ -76,23 +81,22 @@
 						<table>
 						<tr>
 							<th>Description</th>
-							<td>The dataset is compiled from ACS-F1, the first version of the database of appliance consumption signatures. The dataset contains the power consumption of typical appliances. The recordings are characterized by long idle periods and some high bursts of enery consumption when the appliance is active. The classes correspond to 10 categories of home appliances: mobile phones (via chargers), coffee machines, computer stations (including monitor), fridges and freezers, Hi-Fi systems (CD players), lamp (CFL), laptops (via chargers), microwave ovens, printers, and televisions (LCD or LED). There is nothing to infer from the order of examples in the train and test set. Data created by Gisler, Christophe, et al. (see [1). Data edited by Patrick Schafer and Ulf Leser (see [2]). [1] Gisler, Christophe, et al. "Appliance consumption signature database and recognition test protocols." Systems, Signal Processing and their Applications (WoSSPA), 2013 8th International Workshop on. IEEE, 2013. [2] Schafer, Patrick, and Ulf Leser. "Fast and accurate time series classification with weasel." Proceedings of the 2017 ACM on Conference on Information and Knowledge Management. ACM, 2017.</td>
-							
+							<td><%=dataset.getDescription() %></td>							
 						</tr>
 						
 						<tr>
 							<th>Data Source</th>
-							<td><a href="https://www.google.es">Link</a></td>
+							<td><a href="<%=dataset.getData_source() %>"><%=dataset.getData_source() %></a></td>
 						</tr>
 						
 						<tr>
 							<th>Donated by</th>
-							<td>A. Jalba</td>
+							<td><%=dataset.getDonor()%></td>
 						</tr>
 					</table>
 					
 					<div class="button">
-						<a href="#">Descargar</a>
+						<a href="<%=dataset.getDownload()%>">Descargar</a>
 					</div>
 					</div>
 				
