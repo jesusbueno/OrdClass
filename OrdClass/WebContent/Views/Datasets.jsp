@@ -113,15 +113,6 @@
 								</tr>
 							</thead>
 
-							<tr onclick="window.location='DatasetDescription.jsp';">
-								<td>Adiac</td>
-								<td>390</td>
-								<td>391</td>
-								<td>176</td>
-								<td>37</td>
-								<td>Image</td>
-							</tr>
-
 							<%
 								for (int i = 0; i < datasets.size(); i++) {
 							%>
