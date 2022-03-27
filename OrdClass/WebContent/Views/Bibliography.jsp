@@ -9,6 +9,8 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
+<script src="js/NavbarScroll.js" type="text/javascript"></script>
+<script src="js/SearchOnTables.js" type="text/javascript"></script>
 
 
 
@@ -16,7 +18,7 @@
 </head>
 
 <body>
-	<div class="menu">
+	<div class="menu" id="navbar">
 		<div class="margins">
 			<ul>
 				<li><a href="../">Home</a></li>
@@ -42,7 +44,7 @@
 
 				<div class="searchs">
 					<div class="input-field">
-						<input type="text" placeholder="Palabra relacionada" name="word">
+						<input id="searchTerm" type="text" placeholder="Palabra relacionada" name="word" onkeyup="doSearch()">
 					</div>
 					
 					<div class="button">
@@ -52,7 +54,7 @@
 				
 				
 				<div class="b-table">
-					<table>
+					<table id="sortable">
 						<thead>
 							<tr>
 								<td>Author</td>
@@ -66,8 +68,6 @@
 							</tr>
 						</thead>
 						<tbody>
-
-
 							<tr>
 								<td>Bagnall, A. & Janacek, G.</td>
 								<td>A run length transformation for discriminating between

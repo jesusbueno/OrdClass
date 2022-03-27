@@ -12,7 +12,9 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="https://kit.fontawesome.com/e289be1c63.js"
 	crossorigin="anonymous"></script>
-
+<script src="js/NavbarScroll.js" type="text/javascript"></script>
+<script src="js/SortTables.js" type="text/javascript"></script>
+<script src="js/SearchOnTables.js" type="text/javascript"></script>
 
 <title>Algoritmos</title>
 </head>
@@ -21,7 +23,7 @@
 <%
 	ArrayList<Algorithm> algorithms = (ArrayList<Algorithm>) session.getAttribute("algorithms");
 %>
-	<div class="menu">
+	<div class="menu" id="navbar">
 		<div class="margins">
 			<ul>
 				<li><a href="../">Home</a></li>
@@ -47,7 +49,7 @@
 
 				<div class="searchs">
 					<div class="input-field">
-						<input type="text" placeholder="Buscar Algoritmo" name="word">
+						<input id="searchTerm" type="text" placeholder="Buscar Algoritmo" name="word" onkeyup="doSearch()">
 					</div>
 
 					<div class="button">
@@ -69,15 +71,13 @@
 					</div>
 
 					<div class="al-table">
-						<table>
+						<table id="sortable">
 							<thead>
-								<tr>
-									<td>Acronym</td>
-									<td>Algoritmo</td>
-									<td>Tipo</td>
-									<td>Año</td>
+								<th>Acronym <i class="fa-solid fa-sort"></i></th>
+								<th>Algoritmo <i class="fa-solid fa-sort"></i></th>
+								<th>Tipo <i class="fa-solid fa-sort"></i></th>
+								<th>Año <i class="fa-solid fa-sort"></i></th>
 
-								</tr>
 							</thead>
 							<tbody>
 
@@ -128,14 +128,6 @@
 			</footer>
 
 		</div>
-
-
-
-
-
-
-
-
 	</div>
 	</div>
 </body>

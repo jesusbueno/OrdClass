@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
+<script src="js/NavbarScroll.js" type="text/javascript"></script>
 
 <title>Datasets</title>
 </head>
@@ -15,7 +16,7 @@
 <%
 	Dataset dataset = (Dataset) session.getAttribute("dataset");
 %>
-	<div class="menu">
+	<div class="menu" id="navbar">
 		<div class="margins">
 			<ul>
 				<li><a href="../">Home</a></li>

@@ -9,6 +9,9 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="https://kit.fontawesome.com/e289be1c63.js"
 	crossorigin="anonymous"></script>
+<script src="js/NavbarScroll.js" type="text/javascript"></script>
+<script src="js/SortTables.js" type="text/javascript"></script>
+<script src="js/SearchOnTables.js" type="text/javascript"></script>
 
 <title>Datasets</title>
 
@@ -19,7 +22,7 @@
 		ArrayList<Dataset> datasets = (ArrayList<Dataset>) session.getAttribute("datasets");
 	%>
 
-	<div class="menu">
+	<div class="menu" id="navbar">
 		<div class="margins">
 			<ul>
 				<li><a href="../">Home</a></li>
@@ -44,7 +47,7 @@
 
 				<div class="searchs">
 					<div class="input-field">
-						<input type="text" placeholder="Buscar Dataset" name="word">
+						<input id="searchTerm" type="text" placeholder="Buscar Dataset" name="word" onkeyup="doSearch()">
 					</div>
 
 					<div class="button">
@@ -101,19 +104,17 @@
 					</div>
 
 					<div class="ds-table">
-						<table>
+						<table id="sortable">
 							<thead>
-								<tr>
-									<td>Dataset</td>
-									<td>Train Size</td>
-									<td>Test Size</td>
-									<td>Length</td>
-									<td>Classes</td>
-									<td>Type</td>
-								</tr>
+								<th>Dataset <i class="fa-solid fa-sort"></i></th>
+								<th>Train Size <i class="fa-solid fa-sort"></i></th>
+								<th>Test Size <i class="fa-solid fa-sort"></i></th>
+								<th>Length <i class="fa-solid fa-sort"></i></th>
+								<th>Classes <i class="fa-solid fa-sort"></i></th>
+								<th>Type <i class="fa-solid fa-sort"></i></th>
 							</thead>
-
-							<%
+							<tbody>
+								<%
 								for (int i = 0; i < datasets.size(); i++) {
 							%>
 							
@@ -129,6 +130,9 @@
 							</tr>
 							
 							<% } %>
+							</tbody>
+
+							
 
 						</table>
 					</div>

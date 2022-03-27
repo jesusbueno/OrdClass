@@ -10,6 +10,7 @@
 	crossorigin="anonymous"></script>
 <script src="jquery-3.6.0.min.js" type="text/javascript"></script> 
 <script src="js/LoadCSV.js" type="text/javascript"></script> 
+<script src="js/NavbarScroll.js" type="text/javascript"></script>
 
 <title>Results</title>
 
@@ -17,7 +18,7 @@
 
 </head>
 <body>
-	<div class="menu">
+	<div class="menu" id="navbar">
 		<div class="margins">
 			<ul>
 				<li><a href="../">Home</a></li>
