@@ -11,6 +11,7 @@
 <script src="jquery-3.6.0.min.js" type="text/javascript"></script> 
 <script src="js/LoadCSV.js" type="text/javascript"></script> 
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
+<script src="js/showElements.js" type="text/javascript"></script>
 
 <title>Results</title>
 
@@ -42,14 +43,14 @@
 					métricas distintas.</p>
 
 				<div class="options">
-					<div class="card">
+					<div class="card" onclick="showMAE()">
 						<div class="box">
 							<p>MAE</p>
 							<i class="fa-solid fa-code-branch"></i>
 						</div>
 					</div>
 
-					<div class="card">
+					<div class="card" onclick="showMZE()">
 						<div class="box">
 							<p>MZE</p>
 							<i class="fa-solid fa-code-branch"></i>
@@ -57,9 +58,23 @@
 					</div>
 				</div>
 
-				<div class="tables">
+				<div class="tables" id="mze" style="display:none">
 					<div class="desc">
 						<p>Métrica MZE</p>
+					
+						<div class="button">
+							<a href="sources/mze.csv" download="mze.csv">Descargar (.csv)</a>
+						</div>
+					</div>
+					
+					
+					<div class="table-1"></div>
+
+				</div>
+				
+				<div class="tables" id="mae">
+					<div class="desc">
+						<p>Métrica MAE</p>
 					
 						<div class="button">
 							<a href="sources/mze.csv" download="mze.csv">Descargar (.csv)</a>

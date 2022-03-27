@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
+<script src="js/showElements.js" type="text/javascript"></script>
 
 <title>Algoritmos</title>
 
@@ -91,7 +92,7 @@
 					<div class="buttons">
 						<ul>
 							<li>
-								<div class="card">
+								<div class="card" onclick="showMLCode()">
 									<div class="box">
 										<p>MatLab</p>
 										<i class="fa-solid fa-code"></i>
@@ -100,7 +101,7 @@
 							</li>
 							
 							<li>
-								<div class="card">
+								<div class="card" onclick="showPyCode()">
 									<div class="box">
 										<p>Python</p>
 										<i class="fa-brands fa-python""></i>
@@ -112,8 +113,15 @@
 					</div>
 					
 					<div class="code">
-						<script src="<%=algorithm.getMl_code() %>"></script>
-						<script src="<%=algorithm.getPy_code() %>"></script>
+						<div id="matlab">
+							<script src="<%=algorithm.getMl_code() %>"></script>
+						</div>
+						
+						<div id="python" style="display: none">
+							<script src="<%=algorithm.getPy_code() %>"></script>
+						</div>
+						
+						
 					</div>
 
 				
