@@ -15,6 +15,7 @@
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 <script src="js/SortTables.js" type="text/javascript"></script>
 <script src="js/SearchOnTables.js" type="text/javascript"></script>
+<script src="js/Filters.js" type="text/javascript"></script>
 
 <title>Algoritmos</title>
 </head>
@@ -53,20 +54,20 @@
 					</div>
 
 					<div class="button">
-						<a href="#">Buscar</a>
+						<a onclick="showAllAlgorithms()">Reset</a>
 					</div>
 				</div>
 
 				<div class="section-1">
 					<div class="filters">
 						<h5>Tipo</h5>
-						<label class="container"><input type="checkbox" id="cbox1" value="first_checkbox">Dictionary</label><br>
-						<label class="container"><input type="checkbox" id="cbox2" value="first_checkbox">Intervals</label><br>
-						<label class="container"><input type="checkbox" id="cbox3" value="first_checkbox">Distance based</label><br>
+						<label class="container"><input type="radio" name="type" value="Dictionary" onclick="filterAlgorithm(this)">Dictionary</label><br>
+						<label class="container"><input type="radio" name="type" value="Intervals" onclick="filterAlgorithm(this)">Intervals</label><br>
+						<label class="container"><input type="radio" name="type" value="Distance based" onclick="filterAlgorithm(this)">Distance based</label><br>
 						<h5>Año</h5>
-						<label class="container"><input type="checkbox" id="cbox1" value="first_checkbox">2020</label><br>
-						<label class="container"><input type="checkbox" id="cbox2" value="first_checkbox">2017</label><br>
-						<label class="container"><input type="checkbox" id="cbox3" value="first_checkbox">2015</label>
+						<label class="container"><input type="radio" name="year" value="2020" onclick="filterAlgorithm(this)">2020</label><br>
+						<label class="container"><input type="radio" name="year" value="2017" onclick="filterAlgorithm(this)">2017</label><br>
+						<label class="container"><input type="radio" name="year" value="2015" onclick="filterAlgorithm(this)">2015</label>
 					
 					</div>
 

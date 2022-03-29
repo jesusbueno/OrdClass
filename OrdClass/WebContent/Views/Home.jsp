@@ -21,6 +21,10 @@
 <body>
 
 <%
+	if(session == null){
+		response.sendRedirect("../loadData");
+	}
+
 	ArrayList<Log> logs = (ArrayList<Log>) session.getAttribute("logs");
 
 	Date today = new Date(System.currentTimeMillis());

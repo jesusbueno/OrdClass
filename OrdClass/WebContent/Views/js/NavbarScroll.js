@@ -5,7 +5,6 @@
 let ubicacionPrincipal = window.pageYOffset;
 
 window.onscroll = function(){
-	console.log("Holasdfs");
 	let Desplazamiento_Actual = window.pageYOffset;
 	
 	if(ubicacionPrincipal >= Desplazamiento_Actual){

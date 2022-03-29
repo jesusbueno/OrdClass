@@ -451,6 +451,7 @@ a{
 .home .searchs .button{
 	margin-left: 30px;
 	margin-top: 5px;
+	cursor: pointer;
 }
 
 .home .searchs .button a{
@@ -760,12 +761,14 @@ a{
 .home .r-content .r-container{
 	margin-top: 30px;
 	height: auto;
-	background-color: white;
+	
 	padding: 30px 50px 30px 50px;
 	border-radius: 20px;
 	font-family: Open Sans;
 	font-size: 17px;
-	box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+	/*
+	background-color: white;
+	box-shadow: 0 7px 25px rgba(0,0,0,0.08);*/
 	display: grid;
 	grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
 	justify-items: center;
@@ -773,7 +776,7 @@ a{
 
 .home .r-content .r-container .r-card{
 	width: 250px;
-	height: 300px;
+	height: 320px;
 	margin-top: 30px;
 	background-color: white;
 	padding: 30px 30px 30px 30px;

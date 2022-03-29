@@ -1,9 +1,4 @@
-/**
- * Modified and more readable version of the answer by Paul S. to sort a table with ASC and DESC order
- * with the <thead> and <tbody> structure easily.
- * 
- * https://stackoverflow.com/a/14268260/4241030
- */
+
  window.onload = function(){
     TableSorter.makeSortable(document.getElementById("sortable"));
 };

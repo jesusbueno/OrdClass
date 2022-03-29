@@ -12,6 +12,7 @@
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 <script src="js/SortTables.js" type="text/javascript"></script>
 <script src="js/SearchOnTables.js" type="text/javascript"></script>
+<script src="js/Filters.js" type="text/javascript"></script>
 
 <title>Datasets</title>
 
@@ -20,6 +21,8 @@
 
 	<%
 		ArrayList<Dataset> datasets = (ArrayList<Dataset>) session.getAttribute("datasets");
+		
+
 	%>
 
 	<div class="menu" id="navbar">
@@ -51,56 +54,42 @@
 					</div>
 
 					<div class="button">
-						<a href="#">Buscar</a>
+						<a onclick="showAllDatasets()">Reset</a>
 					</div>
 				</div>
 
 				<div class="section-1">
 					<div class="filters">
 						<h5>Train Size</h5>
-						<label class="container"><input type="checkbox" id="cbox1"
-							value="first_checkbox">Less than 100</label> <label
-							class="container"><input type="checkbox" id="cbox2"
-							value="first_checkbox">100 to 500</label> <label
-							class="container"><input type="checkbox" id="cbox3"
-							value="first_checkbox">Greather than 500</label>
+						<label class="container"><input type="radio" name="train" value="minus" onclick="filterByRanges(this)">Less than 100</label>
+						<label class="container"><input type="radio" name="train" value="between" onclick="filterByRanges(this)">100 to 500</label>
+						<label class="container"><input type="radio" name="train" value="mayor" onclick="filterByRanges(this)">Greather than 500</label>
 
 						<h5>Test Size</h5>
-						<label class="container"><input type="checkbox" id="cbox1"
-							value="first_checkbox">Less than 300</label> <label
-							class="container"><input type="checkbox" id="cbox2"
-							value="first_checkbox">300 to 1000</label> <label
-							class="container"><input type="checkbox" id="cbox3"
-							value="first_checkbox">Greather than 1000</label>
+						<label class="container"><input type="radio" name="test" value="minus" onclick="filterByRanges(this)">Less than 300</label>
+						<label class="container"><input type="radio" name="test" value="between" onclick="filterByRanges(this)">300 to 1000</label>
+						<label class="container"><input type="radio" name="test" value="mayor" onclick="filterByRanges(this)">Greather than 1000</label>
 
 						<h5>Length</h5>
-						<label class="container"><input type="checkbox" id="cbox1"
-							value="first_checkbox">Less than 300</label> <label
-							class="container"><input type="checkbox" id="cbox2"
-							value="first_checkbox">300 to 700</label> <label
-							class="container"><input type="checkbox" id="cbox3"
-							value="first_checkbox">Greather than 700</label>
+						<label class="container"><input type="radio" name="length" value="minus" onclick="filterByRanges(this)">Less than 300</label>
+						<label class="container"><input type="radio" name="length" value="between" onclick="filterByRanges(this)">300 to 700</label>
+						<label class="container"><input type="radio" name="length" value="mayor" onclick="filterByRanges(this)">Greather than 700</label>
 
 						<h5>Classes</h5>
-						<label class="container"><input type="checkbox" id="cbox1"
-							value="first_checkbox">Less than 10</label> <label
-							class="container"><input type="checkbox" id="cbox2"
-							value="first_checkbox">10 to 30</label> <label class="container"><input
-							type="checkbox" id="cbox3" value="first_checkbox">Greather
-							than 30</label>
+						<label class="container"><input type="radio" name="classes" value="minus" onclick="filterByRanges(this)">Less than 10</label>
+						<label class="container"><input type="radio" name="classes" value="between" onclick="filterByRanges(this)">10 to 30</label>
+						<label class="container"><input type="radio" name="classes" value="mayor" onclick="filterByRanges(this)">Greather than 30</label>
 
 						<h5>Type</h5>
-						<label class="container"><input type="checkbox" id="cbox1"
-							value="first_checkbox">Device</label> <label class="container"><input
-							type="checkbox" id="cbox2" value="first_checkbox">ECG</label> <label
-							class="container"><input type="checkbox" id="cbox3"
-							value="first_checkbox">Image</label> <label class="container"><input
-							type="checkbox" id="cbox3" value="first_checkbox">Motion</label>
-						<label class="container"><input type="checkbox" id="cbox3"
-							value="first_checkbox">Sensor</label> <label class="container"><input
-							type="checkbox" id="cbox3" value="first_checkbox">Simulated</label>
-						<label class="container"><input type="checkbox" id="cbox3"
-							value="first_checkbox">Spectro</label>
+					
+						<label class="container"><input type="radio" name="type" value="Device" onclick="filterType(this)">Device</label>
+						<label class="container"><input type="radio" name="type" value="ECG" onclick="filterType(this)">ECG</label>
+						<label class="container"><input type="radio" name="type" value="Image" onclick="filterType(this)">Image</label>
+						<label class="container"><input type="radio" name="type" value="Motion" onclick="filterType(this)">Motion</label>
+						<label class="container"><input type="radio" name="type" value="Sensor" onclick="filterType(this)">Sensor</label>
+						<label class="container"><input type="radio" name="type" value="Simulated" onclick="filterType(this)">Simulated</label>
+						<label class="container"><input type="radio" name="type" value="Spectro" onclick="filterType(this)">Spectro</label>
+						
 					</div>
 
 					<div class="ds-table">
@@ -150,10 +139,10 @@
 					class="fa-solid fa-phone"></i></a>
 			</div>
 
-			<p>Trabajo Fin de Grado 2022 Universidad de Córdoba - OrdClass</p>
+			<p>Trabajo Fin de Grado 2022 Universidad de Cï¿½rdoba - OrdClass</p>
 
 			<div class="terms">
-				<a href="#">Contacto</a> <a href="#">Sobre nosotros</a> <a href="#">Términos
+				<a href="#">Contacto</a> <a href="#">Sobre nosotros</a> <a href="#">Tï¿½rminos
 					legales</a>
 			</div>
 

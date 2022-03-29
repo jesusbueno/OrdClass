@@ -1,11 +1,10 @@
 $.ajax({
-	url: "sources/mze.csv",
+	url: "sources/mae.csv",
 	dataType: 'text',
 }).done(successFunction);
 
 
 function successFunction(data) {
-	console.log("Hola Mundo");
 	var allRows = data.split(/\r?\n|\r/);
 	var table = '<table>';
 	for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
@@ -37,5 +36,5 @@ function successFunction(data) {
 	}
 	table += '</tbody>';
 	table += '</table>';
-	$(".table-1").append(table);
+	$(".table-mae").append(table);
 }

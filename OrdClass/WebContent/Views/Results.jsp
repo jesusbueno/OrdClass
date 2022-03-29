@@ -9,7 +9,8 @@
 <script src="https://kit.fontawesome.com/e289be1c63.js"
 	crossorigin="anonymous"></script>
 <script src="jquery-3.6.0.min.js" type="text/javascript"></script> 
-<script src="js/LoadCSV.js" type="text/javascript"></script> 
+<script src="js/LoadMAEcsv.js" type="text/javascript"></script>
+<script src="js/LoadMZEcsv.js" type="text/javascript"></script> 
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 <script src="js/showElements.js" type="text/javascript"></script>
 
@@ -68,7 +69,7 @@
 					</div>
 					
 					
-					<div class="table-1"></div>
+					<div class="table-mze" id="table-mze"></div>
 
 				</div>
 				
@@ -77,12 +78,11 @@
 						<p>Métrica MAE</p>
 					
 						<div class="button">
-							<a href="sources/mze.csv" download="mze.csv">Descargar (.csv)</a>
+							<a href="sources/mae.csv" download="mae.csv">Descargar (.csv)</a>
 						</div>
 					</div>
 					
-					
-					<div class="table-1"></div>
+					<div class="table-mae" id="table-mae"></div>
 
 				</div>
 			</div>
