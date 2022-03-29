@@ -1,6 +1,6 @@
 
 PENDIENTE:
-- Filtros js
+- (OK) Filtros js
 - rellenar BD
 - mejorar diseño informacion home
 - arreglar bug en numeros al ordenar tablas
