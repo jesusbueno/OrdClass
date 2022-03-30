@@ -8,8 +8,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="https://kit.fontawesome.com/e289be1c63.js"
-	crossorigin="anonymous"></script>
+<link rel="icon" href="Images/icon.png">
+<script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 
 <title>Investigadores</title>
@@ -18,6 +18,11 @@
 
 <%
 ArrayList<Researcher> researches = (ArrayList<Researcher>) session.getAttribute("researches");
+
+if(researches == null){
+	response.sendRedirect("../loadData");
+	return;
+}
 %>
 	<div class="menu" id="navbar">
 		<div class="margins">
@@ -47,7 +52,7 @@ ArrayList<Researcher> researches = (ArrayList<Researcher>) session.getAttribute(
 						<div class="r-card">
 						<a href="../SearchResearcherInfo?id=<%=researches.get(i).getId() %>">
 						<div class="profile">
-							<img src="Images/profile2.jpg">
+							<img src=<%=researches.get(i).getImage() %>>
 							<div class="name"><p><%=researches.get(i).getSurname()%>, <%=researches.get(i).getName()%></p></div>
 							<div class="institution"><p><%=researches.get(i).getInstitution() %></p></div>
 							<div class="country"><p><%=researches.get(i).getCountry() %></p></div>

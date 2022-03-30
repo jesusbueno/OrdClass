@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" href="Images/icon.png">
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 <script src="js/showElements.js" type="text/javascript"></script>
@@ -18,6 +19,11 @@
 <body>
 <%
 	Algorithm algorithm = (Algorithm) session.getAttribute("algorithm");
+
+	if(algorithm == null){
+		response.sendRedirect("../loadData");
+		return;
+	}
 %>
 
 	<div class="menu" id="navbar">

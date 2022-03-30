@@ -7,8 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="https://kit.fontawesome.com/e289be1c63.js"
-	crossorigin="anonymous"></script>
+<link rel="icon" href="Images/icon.png">
+<script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 <script src="js/SortTables.js" type="text/javascript"></script>
 <script src="js/SearchOnTables.js" type="text/javascript"></script>
@@ -21,6 +21,11 @@
 
 	<%
 		ArrayList<Dataset> datasets = (ArrayList<Dataset>) session.getAttribute("datasets");
+	
+		if(datasets == null){
+			response.sendRedirect("../loadData");
+			return;
+		}
 		
 
 	%>

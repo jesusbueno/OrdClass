@@ -7,8 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="https://kit.fontawesome.com/e289be1c63.js"
-	crossorigin="anonymous"></script>
+<link rel="icon" href="Images/icon.png">
+<script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 
 <title>Perfil</title>
@@ -17,6 +17,11 @@
 
 <%
 	Researcher researcher = (Researcher) session.getAttribute("researcher");
+
+	if(researcher == null){
+		response.sendRedirect("../loadData");
+		return;
+	}
 %>
 
 	<div class="menu" id="navbar">
@@ -41,7 +46,7 @@
 				<h3><%=researcher.getName()%> <%=researcher.getSurname()%></h3>
 				
 				<div class="container">
-					<img src="Images/profile2.jpg">
+					<img src=<%=researcher.getImage() %>>
 					
 					<div class="datos">
 						<div class="left">

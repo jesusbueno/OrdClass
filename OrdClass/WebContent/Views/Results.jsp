@@ -6,8 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="https://kit.fontawesome.com/e289be1c63.js"
-	crossorigin="anonymous"></script>
+<link rel="icon" href="Images/icon.png">
+<script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="jquery-3.6.0.min.js" type="text/javascript"></script> 
 <script src="js/LoadMAEcsv.js" type="text/javascript"></script>
 <script src="js/LoadMZEcsv.js" type="text/javascript"></script> 
@@ -15,8 +15,6 @@
 <script src="js/showElements.js" type="text/javascript"></script>
 
 <title>Results</title>
-
-
 
 </head>
 <body>

@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" href="Images/icon.png">
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 
@@ -15,6 +16,11 @@
 
 <%
 	Dataset dataset = (Dataset) session.getAttribute("dataset");
+
+	if(dataset == null){
+		response.sendRedirect("../loadData");
+		return;
+	}
 %>
 	<div class="menu" id="navbar">
 		<div class="margins">
@@ -106,9 +112,7 @@
 				</div>
 				
 				<div class="images">
-					<img src="Images/dataset.jpg">
-					<img src="Images/taxonomy.png">
-					<img src="Images/profile2.jpg">
+					<img src=<%=dataset.getImages()%> >
 				</div>
 				
 				

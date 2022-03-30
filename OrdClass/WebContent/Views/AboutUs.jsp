@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" href="Images/icon.png">
 <script src="https://kit.fontawesome.com/e289be1c63.js"
 	crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
@@ -65,7 +66,7 @@
 						<div class="contents">
 						
 							<div class="profile">
-								<img src="Images/profile2.jpg">
+								<img src="Images/aboutUs/profile2.jpg">
 								
 								<div class="name"><p>Jesús Bueno Ruiz</p></div>
 								<div class="institution"><p>Universidad de Córdoba</p></div>
@@ -73,7 +74,7 @@
 							</div>
 							
 							<div class="profile">
-								<img src="Images/profile3.jpg">
+								<img src="Images/aboutUs/profile3.jpg">
 								
 								<div class="name"><p>David Guijo Rubio</p></div>
 								<div class="institution"><p>Universidad de Córdoba</p></div>
@@ -81,7 +82,7 @@
 							</div>
 							
 							<div class="profile">
-								<img src="Images/profile4.png">
+								<img src="Images/aboutUs/profile4.png">
 								
 								<div class="name"><p>AYRNA</p></div>
 								<div class="institution"><p>Universidad de Córdoba</p></div>
