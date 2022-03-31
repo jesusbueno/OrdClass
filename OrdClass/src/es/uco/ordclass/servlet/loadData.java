@@ -33,9 +33,9 @@ public class loadData extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setMaxInactiveInterval(3600);
 		
-		String urlBD = "jdbc:mysql://localhost:3306/ordclass";
-		String userBD = "root";
-		String passBD = "";
+		String urlBD = "jdbc:mysql://ordclass.zapto.org/ordclass";
+		String userBD = "java";
+		String passBD = "1234";
 		
 		Properties prop = new Properties();
 		
