@@ -66,7 +66,7 @@
 						<div class="contents">
 						
 							<div class="profile">
-								<img src="Images/aboutUs/profile2.jpg">
+								<img src="Images/aboutUs/profile.jpg">
 								
 								<div class="name"><p>Jesús Bueno Ruiz</p></div>
 								<div class="institution"><p>Universidad de Córdoba</p></div>
@@ -74,7 +74,7 @@
 							</div>
 							
 							<div class="profile">
-								<img src="Images/aboutUs/profile3.jpg">
+								<img src="Images/aboutUs/profile.jpg">
 								
 								<div class="name"><p>David Guijo Rubio</p></div>
 								<div class="institution"><p>Universidad de Córdoba</p></div>
@@ -82,7 +82,7 @@
 							</div>
 							
 							<div class="profile">
-								<img src="Images/aboutUs/profile4.png">
+								<img src="Images/aboutUs/profile.jpg">
 								
 								<div class="name"><p>AYRNA</p></div>
 								<div class="institution"><p>Universidad de Córdoba</p></div>
@@ -117,7 +117,7 @@
 			<p>Trabajo Fin de Grado 2022 Universidad de Córdoba - OrdClass</p>
 
 			<div class="terms">
-				<a href="#">Contacto</a> <a href="#">Sobre nosotros</a> <a href="#">Términos
+				<a href="#">Contacto</a> <a href="AboutUs.jsp">Sobre nosotros</a> <a href="#">Términos
 					legales</a>
 			</div>
 

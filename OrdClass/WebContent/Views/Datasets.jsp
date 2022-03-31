@@ -147,7 +147,7 @@
 			<p>Trabajo Fin de Grado 2022 Universidad de C�rdoba - OrdClass</p>
 
 			<div class="terms">
-				<a href="#">Contacto</a> <a href="#">Sobre nosotros</a> <a href="#">T�rminos
+				<a href="#">Contacto</a> <a href="AboutUs.jsp">Sobre nosotros</a> <a href="#">T�rminos
 					legales</a>
 			</div>
 

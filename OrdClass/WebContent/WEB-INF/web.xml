@@ -50,4 +50,5 @@
         <servlet-name>SearchResearcherInfo</servlet-name>
         <url-pattern>/SearchResearcherInfo</url-pattern>
     </servlet-mapping>
+    
 </web-app>

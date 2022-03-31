@@ -24,7 +24,7 @@
 				<li><a href="../">Home</a></li>
 				<li><a href="Datasets.jsp">Datasets</a></li>
 				<li><a href="Algorithms.jsp">Algoritmos</a></li>
-				<li><a href="#">Resultados</a></li>
+				<li><a href="Results.jsp">Resultados</a></li>
 				<li><a href="Researches.jsp">Investigadores</a></li>
 				<li><a href="#" style="color: #219ebc">Bibliografía</a></li>
 				<li><a href="#">Foro</a></li>
@@ -284,7 +284,7 @@
 			<p>Trabajo Fin de Grado 2022 Universidad de Córdoba - OrdClass</p>
 
 			<div class="terms">
-				<a href="#">Contacto</a> <a href="#">Sobre nosotros</a> <a href="#">Términos
+				<a href="#">Contacto</a> <a href="AboutUs.jsp">Sobre nosotros</a> <a href="#">Términos
 					legales</a>
 			</div>
 

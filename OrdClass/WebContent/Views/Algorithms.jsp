@@ -125,7 +125,7 @@
 			<p>Trabajo Fin de Grado 2022 Universidad de Córdoba - OrdClass</p>
 
 			<div class="terms">
-				<a href="#">Contacto</a> <a href="#">Sobre nosotros</a> <a href="#">Términos
+				<a href="#">Contacto</a> <a href="AboutUs.jsp">Sobre nosotros</a> <a href="#">Términos
 					legales</a>
 			</div>
 

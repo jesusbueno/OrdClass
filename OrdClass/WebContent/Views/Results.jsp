@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="icon" href="Images/icon.png">
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
-<script src="jquery-3.6.0.min.js" type="text/javascript"></script> 
+<script src="js/jquery-3.6.0.min.js" type="text/javascript"></script> 
 <script src="js/LoadMAEcsv.js" type="text/javascript"></script>
 <script src="js/LoadMZEcsv.js" type="text/javascript"></script> 
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
@@ -102,7 +102,7 @@
 			<p>Trabajo Fin de Grado 2022 Universidad de Córdoba - OrdClass</p>
 
 			<div class="terms">
-				<a href="#">Contacto</a> <a href="#">Sobre nosotros</a> <a href="#">Términos
+				<a href="#">Contacto</a> <a href="AboutUs.jsp">Sobre nosotros</a> <a href="#">Términos
 					legales</a>
 			</div>
 
