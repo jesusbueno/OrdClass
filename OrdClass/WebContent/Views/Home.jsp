@@ -139,7 +139,7 @@
 							<%
 								for(int i=0; i<logs.size(); i++){
 									%>
-									<tr>
+									<tr onclick="window.location='../SearchLog?reference=<%=logs.get(i).getType()%>-<%=logs.get(i).getReference()%>'">
 										<td><%=logs.get(i).getDate()%></td>
 										<td><%=logs.get(i).getInfo() %></td>
 										<%
@@ -147,6 +147,11 @@
 											if(days < 7){
 												%>
 												<td><span>new</span></td>
+											<%
+											}
+											else{
+												%>
+												<td></td>
 											<%
 											}
 										%>

@@ -1,7 +1,10 @@
 package es.uco.ordclass.business;
 
-public class Researcher {
+import java.io.Serializable;
 
+public class Researcher implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String name;
 	private String surname;

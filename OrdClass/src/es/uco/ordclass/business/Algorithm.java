@@ -1,7 +1,10 @@
 package es.uco.ordclass.business;
 
-public class Algorithm {
+import java.io.Serializable;
 
+public class Algorithm implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String acronym;
 	private String name;

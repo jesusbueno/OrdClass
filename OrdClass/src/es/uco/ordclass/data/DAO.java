@@ -31,7 +31,7 @@ public abstract class DAO {
 		} catch (Exception e) {
 		}
 
-		System.out.println(con);
+		System.out.println(con + "se ha conectado.");
 		return con;
 		
 	}

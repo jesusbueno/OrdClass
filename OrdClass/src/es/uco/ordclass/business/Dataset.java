@@ -1,6 +1,10 @@
 package es.uco.ordclass.business;
 
-public class Dataset {
+import java.io.Serializable;
+
+public class Dataset implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String name;
 	private int train_size;

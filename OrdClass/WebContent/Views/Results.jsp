@@ -42,14 +42,14 @@
 					métricas distintas.</p>
 
 				<div class="options">
-					<div class="card" onclick="showMAE()">
+					<div class="card" id="buttonMAE" onclick="showMAE()" style="background: var(--secondary-color)">
 						<div class="box">
 							<p>MAE</p>
 							<i class="fa-solid fa-code-branch"></i>
 						</div>
 					</div>
 
-					<div class="card" onclick="showMZE()">
+					<div class="card" id="buttonMZE" onclick="showMZE()">
 						<div class="box">
 							<p>MZE</p>
 							<i class="fa-solid fa-code-branch"></i>

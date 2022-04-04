@@ -51,4 +51,13 @@
         <url-pattern>/SearchResearcherInfo</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>SearchLog</servlet-name>
+        <servlet-class>es.uco.ordclass.servlet.SearchLog</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchLog</servlet-name>
+        <url-pattern>/SearchLog</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

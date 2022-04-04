@@ -98,19 +98,19 @@
 					<div class="buttons">
 						<ul>
 							<li>
-								<div class="card" onclick="showMLCode()">
+								<div class="card" id="buttonML" onclick="showMLCode()" style="background: var(--secondary-color)">
 									<div class="box">
-										<p>MatLab</p>
-										<i class="fa-solid fa-code"></i>
+										<p>MATLAB</p>
+										<img src="icons/matlab.png">
 									</div>
 								</div>
 							</li>
 							
 							<li>
-								<div class="card" onclick="showPyCode()">
+								<div class="card" id="buttonPy" onclick="showPyCode()">
 									<div class="box">
 										<p>Python</p>
-										<i class="fa-brands fa-python""></i>
+										<i class="fa-brands fa-python"></i>
 									</div>
 								</div>
 							</li>

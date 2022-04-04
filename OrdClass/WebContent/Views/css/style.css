@@ -16,6 +16,7 @@
 	--news-color: #38b000;
 }
 
+
 *{
 	margin: 0;
 	padding: 0;
@@ -206,13 +207,13 @@ a{
 	font-family: 'Open Sans';
 	font-weight: bold;
 	font-size: 40px;
-	text-shadow: black 0.1em 0.1em 0.2em
+	text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .home .home-content .noticias p{
 	font-family: 'Open Sans';
 	font-size: 17px;
-	/*text-shadow: black 0.1em 0.1em 0.2em*/
+	text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .home .home-content .novedades .news{
@@ -233,10 +234,21 @@ a{
 
 .home .home-content .novedades .news table tr{
 	border-bottom: 1px solid var(--third-color);
+	cursor: pointer;
 }
 
 .home .home-content .novedades .news table tr:last-child{
 	border-bottom: none;
+}
+
+.home .home-content .novedades .news table tbody tr:hover{
+	background-color: var(--principal-color);
+	color: white;
+}
+
+.home .home-content .novedades .news table tbody tr:hover span{
+	background-color: white;
+	color: var(--principal-color);
 }
 
 .home .home-content .novedades .news table tr td{
@@ -244,7 +256,7 @@ a{
 }
 
 .home .home-content .novedades .news table tr td:nth-child(2){
-	font-weight: bold;
+	/*font-weight: bold;*/
 }
 
 .home .home-content .novedades .news span{
@@ -688,8 +700,6 @@ a{
 }
 
 
-
-
 .home .margins .nal-content .code-types{
 	width: 100%;
 	display: grid;
@@ -724,6 +734,11 @@ a{
 
 .home .margins .nal-content .code-types .buttons .card .box{
 	transition: all 0.3s ease;
+}
+
+.home .margins .nal-content .code-types .buttons .card .box img{
+	width: 30px;
+	margin-top: 10px;
 }
 
 .home .margins .nal-content .code-types .buttons .card .box i{

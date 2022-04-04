@@ -33,7 +33,9 @@ public class LogDAO extends DAO {
 				log.setDate(rs.getDate("Date"));
 				log.setId(rs.getInt("ID"));
 				log.setInfo(rs.getString("Info"));
-				
+				log.setType(rs.getString("Type"));
+				log.setReference(rs.getInt("Reference"));
+			
 				logs.add(log);
 			}
 		} catch (SQLException e) {System.out.println(e);}

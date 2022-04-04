@@ -1,7 +1,10 @@
 package es.uco.ordclass.business;
 
-public class Bibliography {
-	
+import java.io.Serializable;
+
+public class Bibliography implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String author;
 	private String title;
