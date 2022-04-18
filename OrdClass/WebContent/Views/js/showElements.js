@@ -34,3 +34,16 @@ function showMAE(){
 	document.getElementById('buttonMZE').style.background = 'var(--principal-color)';
 
 }
+
+
+function showModal(name){
+	var part = name.split(' ').join('+');
+	var link = "https://scholar.google.es/scholar?hl=es&as_sdt=0%2C5&q=" + part + "&btnG=";
+	document.getElementById('iframe').src = link;
+	document.getElementById('modal').style.display = '';
+}
+
+
+function closeModal(){
+	document.getElementById('modal').style.display = 'none';
+}

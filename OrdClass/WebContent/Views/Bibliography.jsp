@@ -11,7 +11,7 @@
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 <script src="js/SearchOnTables.js" type="text/javascript"></script>
-
+<script src="js/showElements.js" type="text/javascript"></script>
 
 
 <title>Bibliografía</title>
@@ -36,6 +36,21 @@
 
 	<div class="home">
 		<div class="margins">
+		
+			<div class="modal" id="modal" style="display: none">
+				<div class="container">
+					<div class="close">
+						<a onclick="closeModal()"><i class="fa-solid fa-rectangle-xmark"></i></a>
+					</div>
+					
+					<div class="page">
+						<iframe id="iframe" src=""></iframe>
+					</div>
+					
+				</div>
+			</div>
+			
+			
 			<div class="b-content">
 				<h3>Bibliografía</h3>
 				<p>A continuación se muestran todas las fuentes bibliográficas
@@ -68,7 +83,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							<tr onclick="showModal('A run length transformation for discriminating between auto regressive time series')">
 								<td>Bagnall, A. & Janacek, G.</td>
 								<td>A run length transformation for discriminating between
 									auto regressive time series</td>
@@ -112,7 +127,7 @@
 								<td>634--669</td>
 							</tr>
 
-							<tr>
+							<tr >
 								<td>Bagnall, A. & Janacek, G.</td>
 								<td>A run length transformation for discriminating between
 									auto regressive time series</td>
@@ -290,6 +305,8 @@
 
 			</footer>
 
+
+			
 		</div>
 
 	</div>

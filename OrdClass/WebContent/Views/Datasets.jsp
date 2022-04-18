@@ -11,7 +11,6 @@
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 <script src="js/SortTables.js" type="text/javascript"></script>
-<script src="js/SearchOnTables.js" type="text/javascript"></script>
 <script src="js/Filters.js" type="text/javascript"></script>
 
 <title>Datasets</title>
@@ -98,14 +97,14 @@
 					</div>
 
 					<div class="ds-table">
-						<table id="sortable">
+						<table class="sortable" id="sortable">
 							<thead>
-								<th>Dataset <i class="fa-solid fa-sort"></i></th>
-								<th>Train Size <i class="fa-solid fa-sort"></i></th>
-								<th>Test Size <i class="fa-solid fa-sort"></i></th>
-								<th>Length <i class="fa-solid fa-sort"></i></th>
-								<th>Classes <i class="fa-solid fa-sort"></i></th>
-								<th>Type <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 0)">Dataset <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 1)">Train Size <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 2)">Test Size <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 3)">Length <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 4)">Classes <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 5)">Type <i class="fa-solid fa-sort"></i></th>
 							</thead>
 							<tbody>
 								<%

@@ -77,12 +77,12 @@
 					</div>
 
 					<div class="al-table">
-						<table id="sortable">
+						<table class="sortable" id="sortable">
 							<thead>
-								<th>Acronym <i class="fa-solid fa-sort"></i></th>
-								<th>Algoritmo <i class="fa-solid fa-sort"></i></th>
-								<th>Tipo <i class="fa-solid fa-sort"></i></th>
-								<th>Año <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 0)" >Acronym <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 1)">Algoritmo <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 2)">Tipo <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 3)">Año <i class="fa-solid fa-sort"></i></th>
 
 							</thead>
 							<tbody>
