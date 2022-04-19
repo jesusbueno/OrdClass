@@ -1445,37 +1445,77 @@ a{
 	font-weight: bold;
 }
 
-/*
-.home .ds-content .ds-table table tr td:nth-child(2){
-	width: 16%;
-	text-align: center;
+/*----------------LIBRARIES--------------------------- */
+
+
+.home .margins .lib-content{
+	width: 100%;
+	font-family: Open Sans;
+	font-size: 17px;
 }
 
-.home .ds-content .ds-table table tr td:nth-child(3){
-	width: 16%;
-	text-align: center;
+.home .margins .lib-content .lib-table{
+	/*margin-top: 30px;*/
+	margin: 30px 50px 30px 50px;
+	height: auto;
+	background-color: white;
+	padding: 30px 40px 30px 40px;
+	border-radius: 20px;
+	font-family: Open Sans;
+	font-size: 20px;
+	box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+.home .margins .lib-content .lib-table table{
+	border-collapse: collapse;
+	width: 100%;
 }
 
-.home .ds-content .ds-table table tr td:nth-child(4){
-	width: 16%;
-	text-align: center;
+.home .margins .lib-content .lib-table table thead th{
+	font-family: Open Sans;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+	padding: 10px 20px 10px 20px;
+	cursor: pointer;
 }
 
-.home .ds-content .ds-table table tr td:nth-child(5){
-	width: 16%;
-	text-align: center;
+.home .margins .lib-content .lib-table table thead th i{
+	color: var(--third-color);
+	font-size: 15px;
 }
 
-.home .ds-content .ds-table table tr td:nth-child(6){
-	width: auto;
-	text-align: right;
+
+.home .margins .lib-content .lib-table table tr{
+	border-bottom: 1px solid var(--third-color);
 }
 
-*/
+.home .margins .lib-content .lib-table table tr:last-child{
+	border-bottom: none;
+}
 
+.home .margins .lib-content .lib-table tbody tr:hover{
+	background-color: var(--principal-color);
+	color: white;
+	cursor: pointer;
+}
 
+.home .margins .lib-content .lib-table tbody tr:hover a{
+	background-color: var(--principal-color);
+	color: white;
+	cursor: pointer;
+}
 
+.home .margins .lib-content .lib-table tbody tr td a{
+	color: var(--font-color);
+}
 
+.home .margins .lib-content .lib-table table tr td{
+	padding: 10px 20px 10px 20px;
+}
+
+.home .margins .lib-content .lib-table table tr td:nth-child(3){
+	justify-content: right;
+}
 
 
 

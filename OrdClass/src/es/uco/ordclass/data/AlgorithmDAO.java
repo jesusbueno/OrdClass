@@ -52,5 +52,33 @@ public class AlgorithmDAO extends DAO {
 
 		return algorithms;
 	}
+	
+	
+	public boolean addAlgorithm(Algorithm algorithm) throws Exception {
+		boolean result = true;
+		
+		String sql = "insert into algorithm(Acronym, Name, Type, Year, Publication, Description, Source_Code, Link, ML_Code, Py_Code) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		
+		Connection con = getConnection();
+		PreparedStatement ps = con.prepareStatement(sql);
+		
+		ps.setString(1, algorithm.getAcronym());
+		ps.setString(2, algorithm.getName());
+		ps.setString(3, algorithm.getType());
+		ps.setInt(4, algorithm.getYear());
+		ps.setString(5, algorithm.getPublication());
+		ps.setString(6, algorithm.getDescription());
+		ps.setString(7, algorithm.getSource_code());
+		ps.setString(8, algorithm.getLink());
+		ps.setString(9, algorithm.getMl_code());
+		ps.setString(10, algorithm.getPy_code());
+		
+		if (ps.executeUpdate() == 0) {
+			result = false;
+		}
+		
+		return result;
+	}
+	
 
 }

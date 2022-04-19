@@ -52,5 +52,33 @@ public class ResearcherDAO extends DAO {
 
 		return researches;
 	}
+	
+	public boolean addResearcher(Researcher researcher) throws Exception{
+		boolean result = true;
+		
+		String sql = "insert into researches(Name, Surname, Institution, Country, Profession, Phone, Link, Email, Description, Image) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		
+		Connection con = getConnection();
+		PreparedStatement ps = con.prepareStatement(sql);
+		
+		ps.setString(1, researcher.getName());
+		ps.setString(2, researcher.getSurname());
+		ps.setString(3, researcher.getInstitution());
+		ps.setString(4, researcher.getCountry());
+		ps.setString(5, researcher.getProfession());
+		ps.setInt(6, researcher.getPhone());
+		ps.setString(7, researcher.getLink());
+		ps.setString(8, researcher.getEmail());	
+		ps.setString(9, researcher.getDescription());
+		ps.setString(10, researcher.getImage());
+		
+		if (ps.executeUpdate() == 0) {
+			result = false;
+		}
+
+		return result;
+		
+		
+	}
 
 }

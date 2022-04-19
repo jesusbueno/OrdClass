@@ -1,8 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
-<%@ page import="java.util.ArrayList"%>
-<%@ page import="es.uco.ordclass.business.Researcher"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,66 +9,73 @@
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 
-<title>Investigadores</title>
+<title>Librerías</title>
+
 </head>
 <body>
-
-<%
-ArrayList<Researcher> researches = (ArrayList<Researcher>) session.getAttribute("researches");
-
-if(researches == null){
-	response.sendRedirect("../loadData");
-	return;
-}
-%>
+	
 	<div class="menu" id="navbar">
 		<div class="margins">
 			<ul>
 				<li><a href="../">Home</a></li>
-				<li><a href="Datasets.jsp">Datasets</a></li>
-				<li><a href="Algorithms.jsp" >Algoritmos</a></li>
+				<li><a href="#" >Datasets</a></li>
+				<li><a href="Algorithms.jsp">Algoritmos</a></li>
 				<li><a href="Results.jsp">Resultados</a></li>
-				<li><a href="Researches.jsp" style="color: #219ebc">Investigadores</a></li>
+				<li><a href="Researches.jsp">Investigadores</a></li>
 				<li><a href="Bibliography.jsp">Bibliografía</a></li>
-				<li><a href="Libraries.jsp">Librerías</a></li>
+				<li><a href="#" style="color: #219ebc">Librerías</a></li>
 				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
 			</ul>
 		</div>
 	</div>
-
+	
 	<div class="home">
 		<div class="margins">
-			<div class="r-content">
-				<h3>Investigadores</h3>
-				<p>Investigadores implicados en la información que se muestra en OrdClass.</p>
+			<div class="lib-content">
+				<h3>Librerías</h3>
+				<p>Librerías relacionadas con el análisis de datos de clasificación ordinal.</p>
 				
-				<div class="r-container">
+				
+				<div class="lib-table">
+					<table>
+						<thead>
+							<th>Librería</th>
+							<th>Lenguaje</th>
+							<th>Autor</th>
+							
+						</thead>
+						<tbody>
+							<tr onclick="window.location='https://github.com/ayrna/orca/tree/master/src/Algorithms'">
+								<td>ORCA</td>		
+								<td>MATLAB</td>
+								<td>AYRNA</td>
+							</tr>
+							
+							<tr onclick="window.location='https://github.com/ayrna/orca-python/tree/master/classifiers'">
+								<td>ORCA-python</td>
+								<td>Python</td>
+								<td>AYRNA</td>
+							</tr>
+							
+							<tr onclick="window.location='https://pythonhosted.org/mord/'">
+								<td>mord</td>
+								<td>Python</td>
+								<td>Fabian Pedregosa Izquierdo</td>
+							</tr>
+						</tbody>
 					
-					<%for(int i=0; i<researches.size(); i++){
-					%>
-						<div class="r-card">
-						<a href="../SearchResearcherInfo?id=<%=researches.get(i).getId() %>">
-						<div class="profile">
-							<img src=<%=researches.get(i).getImage() %>>
-							<div class="name"><p><%=researches.get(i).getSurname()%>, <%=researches.get(i).getName()%></p></div>
-							<div class="institution"><p><%=researches.get(i).getInstitution() %></p></div>
-							<div class="country"><p><%=researches.get(i).getCountry() %></p></div>
-						</div>
-						</a>
-					</div>
-						
-					<%
-					}
-						%>
-					
+					</table>
+				
 				</div>
+			
+			
 			</div>
-
-
-
-
-
-
+		
+		
+		
+		
+		
+		
 			<footer class="footer">
 			<div class="buttons">
 				<a href="https://twitter.com/?logout=1645563425361"><i
@@ -94,6 +98,7 @@ if(researches == null){
 
 			</footer>
 		</div>
+	
 	</div>
 
 </body>

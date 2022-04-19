@@ -42,5 +42,24 @@ public class LogDAO extends DAO {
 
 		return logs;
 	}
+	
+	public boolean addLog(Log log) throws Exception{
+		boolean result = true;
+		String sql="insert into logs(Date, Info, Type, Reference) values(?, ?, ?, ?)";
+		
+		Connection con = getConnection();
+		PreparedStatement ps = con.prepareStatement(sql);
+		
+		ps.setDate(1, log.getDate());
+		ps.setString(2, log.getInfo());
+		ps.setString(3, log.getType());
+		ps.setInt(4, log.getReference());
+		
+		if (ps.executeUpdate() == 0) {
+			result = false;
+		}
+		
+		return result;
+	}
 
 }

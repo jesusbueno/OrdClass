@@ -27,7 +27,7 @@
 				<li><a href="#" style="color: #219ebc">Resultados</a></li>
 				<li><a href="Researches.jsp">Investigadores</a></li>
 				<li><a href="Bibliography.jsp">Bibliografía</a></li>
-				<li><a href="#">Foro</a></li>
+				<li><a href="Libraries.jsp">Librerías</a></li>
 				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
 			</ul>
 		</div>
