@@ -30,8 +30,8 @@
 				<li><a href="Algorithms.jsp" >Algoritmos</a></li>
 				<li><a href="Results.jsp">Resultados</a></li>
 				<li><a href="Researches.jsp">Investigadores</a></li>
+				<li><a href="Libraries.jsp">Librerías</a></li>
 				<li><a href="Bibliography.jsp">Bibliografía</a></li>
-				<li><a href="Libraries.jsp">Librerías</a></li>>
 				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
 			</ul>
 		</div>
@@ -76,7 +76,7 @@
 						</tr>
 						
 						<tr>
-							<th>Best Accuaricy</th>
+							<th>Best Accuracy</th>
 							<td><%=dataset.getBest_accuracy()%>%</td>
 						</tr>
 					</table>
@@ -100,11 +100,27 @@
 							<th>Donated by</th>
 							<td><%=dataset.getDonor()%></td>
 						</tr>
+						
+						<tr>
+							<th>Downloads</th>
+							<td>
+								<div class="buttons">
+									<div class="button">
+										<a href="<%=dataset.getDownload()%>">Dataset</a>
+									</div>
+					
+									<div class="button">
+										<a href="<%=dataset.getDownload()%>">Results</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						
+						
 					</table>
 					
-					<div class="button">
-						<a href="<%=dataset.getDownload()%>">Descargar</a>
-					</div>
+					
+					
 					</div>
 				
 				
@@ -123,21 +139,22 @@
 		
 		<footer class="footer">
 				<div class="buttons">
-					<a href="https://twitter.com/?logout=1645563425361"><i class="fa-brands fa-twitter"></i></a>
-					<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-					<a href="https://www.google.com/intl/es/gmail/about/"><i class="fa-solid fa-envelope"></i></a>
-					<a href="#"><i class="fa-solid fa-phone"></i></a>
+					<img src="Images/logo.png">
 				</div>
 				
-				<p>Trabajo Fin de Grado 2022 Universidad de Córdoba - OrdClass</p>
+				
 				
 				<div class="terms">
-					<a href="#">Contacto</a>
+					<a href="https://www.uco.es/ayrna/">AYRNA</a>
+					
+					<a href="mailto:dguijo@uco.es">Contacto</a>
 
 					<a href="AboutUs.jsp">Sobre nosotros</a>
 
 					<a href="#">Términos legales</a>
 				</div>
+				
+				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>
 			
 			
 				

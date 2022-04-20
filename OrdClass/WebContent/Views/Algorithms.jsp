@@ -37,8 +37,8 @@
 				<li><a href="#" style="color: #219ebc">Algoritmos</a></li>
 				<li><a href="Results.jsp">Resultados</a></li>
 				<li><a href="Researches.jsp">Investigadores</a></li>
-				<li><a href="Bibliography.jsp">Bibliografía</a></li>
 				<li><a href="Libraries.jsp">Librerías</a></li>
+				<li><a href="Bibliography.jsp">Bibliografía</a></li>
 				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
 			</ul>
 		</div>
@@ -112,25 +112,26 @@
 
 
 			<footer class="footer">
-			<div class="buttons">
-				<a href="https://twitter.com/?logout=1645563425361"><i
-					class="fa-brands fa-twitter"></i></a> <a
-					href="https://www.instagram.com/"><i
-					class="fa-brands fa-instagram"></i></a> <a
-					href="https://www.google.com/intl/es/gmail/about/"><i
-					class="fa-solid fa-envelope"></i></a> <a href="#"><i
-					class="fa-solid fa-phone"></i></a>
-			</div>
+				<div class="buttons">
+					<img src="Images/logo.png">
+				</div>
+				
+				
+				
+				<div class="terms">
+					<a href="https://www.uco.es/ayrna/">AYRNA</a>
+					
+					<a href="mailto:dguijo@uco.es">Contacto</a>
 
-			<p>Trabajo Fin de Grado 2022 Universidad de Córdoba - OrdClass</p>
+					<a href="AboutUs.jsp">Sobre nosotros</a>
 
-			<div class="terms">
-				<a href="#">Contacto</a> <a href="AboutUs.jsp">Sobre nosotros</a> <a href="#">Términos
-					legales</a>
-			</div>
-
-
-
+					<a href="#">Términos legales</a>
+				</div>
+				
+				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>
+			
+			
+				
 			</footer>
 
 		</div>

@@ -13,10 +13,12 @@ import javax.servlet.http.HttpSession;
 
 import es.uco.ordclass.business.Algorithm;
 import es.uco.ordclass.business.Dataset;
+import es.uco.ordclass.business.Library;
 import es.uco.ordclass.business.Log;
 import es.uco.ordclass.business.Researcher;
 import es.uco.ordclass.data.AlgorithmDAO;
 import es.uco.ordclass.data.DatasetDAO;
+import es.uco.ordclass.data.LibraryDAO;
 import es.uco.ordclass.data.LogDAO;
 import es.uco.ordclass.data.ResearcherDAO;
 
@@ -44,17 +46,19 @@ public class loadData extends HttpServlet {
 		DatasetDAO dataset = new DatasetDAO(urlBD, userBD, passBD, prop);
 		AlgorithmDAO algorithm = new AlgorithmDAO(urlBD, userBD, passBD, prop);
 		ResearcherDAO researcher = new ResearcherDAO(urlBD, userBD, passBD, prop);
+		LibraryDAO library = new LibraryDAO(urlBD, userBD, passBD, prop);
 		
 		ArrayList<Log> logs = log.getLogs();
 		ArrayList<Dataset> datasets = dataset.getDatasets();
 		ArrayList<Algorithm> algorithms = algorithm.getAlgorithms();
 		ArrayList<Researcher> researches = researcher.getResearches();
-		
+		ArrayList<Library> libraries = library.getLibraries();
 		
 		session.setAttribute("logs", logs);
 		session.setAttribute("datasets", datasets);
 		session.setAttribute("algorithms", algorithms);
 		session.setAttribute("researches", researches);
+		session.setAttribute("libraries", libraries);
 		
 		response.sendRedirect("/OrdClass/Views/Home.jsp");
 	}

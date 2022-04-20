@@ -255,9 +255,7 @@ a{
 	padding: 10px 15px 10px 15px;;
 }
 
-.home .home-content .novedades .news table tr td:nth-child(2){
-	/*font-weight: bold;*/
-}
+
 
 .home .home-content .novedades .news span{
 	background-color: var(--news-color);
@@ -326,6 +324,11 @@ a{
 	color: var(--font-color);
 }
 
+.footer .buttons img{
+	margin-top: 10px;
+	width: 50px;
+}
+
 .footer .buttons a:hover{
 	color: var(--principal-color);
 	transition: all .1s;
@@ -339,13 +342,17 @@ a{
 .footer p{
 	font-size: 15px;
 	font-weight: bold;
-	margin-top: 25px;
+	margin-top: 20px;
 	margin-bottom: 10px;
+}
+
+.footer .terms{
+	margin-top: 20px;
 }
 
 .footer .terms a{
 	color: var(--font-color);
-	font-size: 15px;
+	font-size: 17px;
 	margin: 5px 10px 10px 10px;
 }
 
@@ -831,6 +838,44 @@ a{
 	overflow-y: scroll;
 	border-radius: 20px;
 }
+/********/
+
+.home .margins .nal-content .link{
+	height: auto;
+	background-color: white;
+	padding: 5px 40px 5px 40px;
+	border-radius: 20px;
+	font-family: Open Sans;
+	font-size: 17px;
+	border: solid 1px rgba(0,0,0,0.08);
+}
+
+.home .margins .nal-content .link table{
+	border-collapse: collapse;
+	width: 50%;
+}
+
+.home .margins .nal-content .link table th{
+	text-align: left;
+	vertical-align: top;
+	width: 15%;
+	padding: 10px 20px 10px 20px;
+}
+
+.home .margins .nal-content .link table tr{
+	border-bottom: 1px solid var(--third-color);
+	
+}
+
+.home .margins .nal-content .link table tr:last-child{
+	border-bottom: none;
+}
+
+.home .margins .nal-content .link table tr td{
+	padding: 10px 20px 10px 20px;
+	vertical-align: top;
+	text-align: justify;
+}
 
 /*-------------------Researches-----------------------*/
 
@@ -1180,6 +1225,16 @@ a{
 	text-align: justify;
 }
 
+.home .margins .dsd-content .info .table-2 table tr:last-child th{
+	padding-top: 20px;
+}
+
+.home .margins .dsd-content .info .buttons{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .home .margins .dsd-content .images{
 	width: 100%;
 	margin-top: 40px;
@@ -1204,7 +1259,9 @@ a{
 .home .margins .dsd-content .button{
 	display: flex;
 	justify-content: center;
-	margin-top: 20px;
+	margin-left: 40px;
+	margin-right: 40px;
+	width: 80px;
 }
 
 .home .margins .dsd-content .button a{
@@ -1450,71 +1507,100 @@ a{
 
 .home .margins .lib-content{
 	width: 100%;
+	height: 80vh;
 	font-family: Open Sans;
 	font-size: 17px;
 }
 
-.home .margins .lib-content .lib-table{
-	/*margin-top: 30px;*/
-	margin: 30px 50px 30px 50px;
+.home .margins .lib-content .libs{
 	height: auto;
-	background-color: white;
-	padding: 30px 40px 30px 40px;
+	padding: 30px 50px 30px 50px;
 	border-radius: 20px;
 	font-family: Open Sans;
-	font-size: 20px;
-	box-shadow: 0 7px 25px rgba(0,0,0,0.08);
-}
-.home .margins .lib-content .lib-table table{
-	border-collapse: collapse;
-	width: 100%;
+	font-size: 17px;
+	display: grid;
+	grid-template-columns: 2.5fr 2.5fr 2.5fr 2.5fr;
+	justify-items: left;
 }
 
-.home .margins .lib-content .lib-table table thead th{
-	font-family: Open Sans;
-	font-size: 20px;
-	font-weight: bold;
-	text-align: left;
-	padding: 10px 20px 10px 20px;
-	cursor: pointer;
-}
-
-.home .margins .lib-content .lib-table table thead th i{
-	color: var(--third-color);
-	font-size: 15px;
-}
-
-
-.home .margins .lib-content .lib-table table tr{
-	border-bottom: 1px solid var(--third-color);
-}
-
-.home .margins .lib-content .lib-table table tr:last-child{
-	border-bottom: none;
-}
-
-.home .margins .lib-content .lib-table tbody tr:hover{
-	background-color: var(--principal-color);
-	color: white;
-	cursor: pointer;
-}
-
-.home .margins .lib-content .lib-table tbody tr:hover a{
-	background-color: var(--principal-color);
-	color: white;
-	cursor: pointer;
-}
-
-.home .margins .lib-content .lib-table tbody tr td a{
+.home .margins .lib-content .libs .l-card a{
 	color: var(--font-color);
 }
 
-.home .margins .lib-content .lib-table table tr td{
-	padding: 10px 20px 10px 20px;
+.home .margins .lib-content .libs .l-card{
+	width: 290px;
+	height: auto;
+	margin-top: 30px;
+	background-color: white;
+	padding: 30px 30px 30px 30px;
+	border-radius: 20px;
+	box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+	text-align: center;
+	vertical-align: center;
+	cursor: pointer;
 }
 
-.home .margins .lib-content .lib-table table tr td:nth-child(3){
+.home .margins .lib-content .libs .l-card .book{
 	justify-content: right;
+	text-align: right;
+	margin-top: -5px;
+	margin-right: -5px;
+}
+
+.home .margins .lib-content .libs .l-card i{
+	font-size: 20px;
+	color: var(--third-color);
+	text-align: right;
+	justify-content: left;
+}
+
+.home .margins .lib-content .libs .l-card .name{
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 0px;
+	text-align: left;
+}
+
+.home .margins .lib-content .libs .l-card .author{
+	display: flex;
+	gap: 15px;
+	font-size: 15px;
+	margin-top: 30px;
+	color: var(--font-color);
+	justify-content: left;
+	vertical-align: middle;
+}
+
+.home .margins .lib-content .libs .l-card .author i{
+	font-size: 15px;
+	color: var(--font-color);
+	margin-top: 2px;
+}
+
+
+.home .margins .lib-content .libs .l-card .languaje{
+	display: flex;
+	gap: 10px;
+	font-size: 15px;
+	margin-top: 10px;
+	color: var(--font-color);
+	justify-content: left;
+	vertical-align: middle;
+}
+
+.home .margins .lib-content .libs .l-card .languaje i{
+	font-size: 15px;
+	color: var(--font-color);
+	margin-top: 3px;
+}
+
+
+.home .margins .lib-content .libs .l-card  .box:hover {
+	transform: scale(1.02);
+}
+
+.home .margins .lib-content .libs .l-card  .box{
+	transition: all 0.3s ease;
 }
 
 

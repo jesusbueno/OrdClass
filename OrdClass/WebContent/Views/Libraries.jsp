@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="es.uco.ordclass.business.Library"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,17 +16,26 @@
 
 </head>
 <body>
+
+<%
+ArrayList<Library> libraries = (ArrayList<Library>) session.getAttribute("libraries");
+
+if(libraries == null){
+	response.sendRedirect("../loadData");
+	return;
+}
+%>
 	
 	<div class="menu" id="navbar">
 		<div class="margins">
 			<ul>
 				<li><a href="../">Home</a></li>
-				<li><a href="#" >Datasets</a></li>
+				<li><a href="Datasets.jsp" >Datasets</a></li>
 				<li><a href="Algorithms.jsp">Algoritmos</a></li>
 				<li><a href="Results.jsp">Resultados</a></li>
 				<li><a href="Researches.jsp">Investigadores</a></li>
-				<li><a href="Bibliography.jsp">Bibliografía</a></li>
 				<li><a href="#" style="color: #219ebc">Librerías</a></li>
+				<li><a href="Bibliography.jsp">Bibliografía</a></li>	
 				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
 			</ul>
 		</div>
@@ -35,39 +47,41 @@
 				<h3>Librerías</h3>
 				<p>Librerías relacionadas con el análisis de datos de clasificación ordinal.</p>
 				
+				<div class="libs">
 				
-				<div class="lib-table">
-					<table>
-						<thead>
-							<th>Librería</th>
-							<th>Lenguaje</th>
-							<th>Autor</th>
-							
-						</thead>
-						<tbody>
-							<tr onclick="window.location='https://github.com/ayrna/orca/tree/master/src/Algorithms'">
-								<td>ORCA</td>		
-								<td>MATLAB</td>
-								<td>AYRNA</td>
-							</tr>
-							
-							<tr onclick="window.location='https://github.com/ayrna/orca-python/tree/master/classifiers'">
-								<td>ORCA-python</td>
-								<td>Python</td>
-								<td>AYRNA</td>
-							</tr>
-							
-							<tr onclick="window.location='https://pythonhosted.org/mord/'">
-								<td>mord</td>
-								<td>Python</td>
-								<td>Fabian Pedregosa Izquierdo</td>
-							</tr>
-						</tbody>
+					<%
+						for(int i = 0; i< libraries.size(); i++){
+							%>
+							<div class="l-card">
+							<a href=<%=libraries.get(i).getLink() %>>
+								<div class="box">
+								
+									<div class="book">
+										<i class="fa-solid fa-book"></i>
+									</div>
+								
+									<div class="name"><%=libraries.get(i).getName() %></div>
+								
+									<div class="author">
+										<p>Autor:</p>
+										<p><%=libraries.get(i).getAuthor() %></p>
+									</div>
+								
+									<div class="languaje">
+										<p>Lenguaje:</p>
+										<p><%=libraries.get(i).getLanguage() %></p>
+									</div>
+							</div>
+							</a>
+						</div>
+						<%
+						}
+					%>
 					
-					</table>
-				
+					
 				</div>
-			
+				
+				
 			
 			</div>
 		
@@ -77,25 +91,26 @@
 		
 		
 			<footer class="footer">
-			<div class="buttons">
-				<a href="https://twitter.com/?logout=1645563425361"><i
-					class="fa-brands fa-twitter"></i></a> <a
-					href="https://www.instagram.com/"><i
-					class="fa-brands fa-instagram"></i></a> <a
-					href="https://www.google.com/intl/es/gmail/about/"><i
-					class="fa-solid fa-envelope"></i></a> <a href="#"><i
-					class="fa-solid fa-phone"></i></a>
-			</div>
+				<div class="buttons">
+					<img src="Images/logo.png">
+				</div>
+				
+				
+				
+				<div class="terms">
+					<a href="https://www.uco.es/ayrna/">AYRNA</a>
+					
+					<a href="mailto:dguijo@uco.es">Contacto</a>
 
-			<p>Trabajo Fin de Grado 2022 Universidad de Córdoba - OrdClass</p>
+					<a href="AboutUs.jsp">Sobre nosotros</a>
 
-			<div class="terms">
-				<a href="#">Contacto</a> <a href="AboutUs.jsp">Sobre nosotros</a> <a href="#">Términos
-					legales</a>
-			</div>
-
-
-
+					<a href="#">Términos legales</a>
+				</div>
+				
+				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>
+			
+			
+				
 			</footer>
 		</div>
 	
