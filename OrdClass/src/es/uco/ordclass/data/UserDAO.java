@@ -11,7 +11,7 @@ import es.uco.ordclass.business.User;
 
 public class UserDAO extends DAO {
 
-	protected UserDAO(String url, String user, String password, Properties sqlProperties) {
+	public UserDAO(String url, String user, String password, Properties sqlProperties) {
 		super(url, user, password, sqlProperties);
 	}
 
@@ -19,7 +19,7 @@ public class UserDAO extends DAO {
 		User user = new User();
 
 		String sql = "SELECT * FROM user WHERE email = ?";
-
+		
 		try {
 			Connection con = getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -113,7 +113,7 @@ public class UserDAO extends DAO {
 	public User validateUser(String email, String password) {
 		User user = new User();
 		String sql = "select * from user where Email=? and Password=?";
-		
+		System.out.println("Hola que tal");
 		try {
 			Connection con = getConnection();
 

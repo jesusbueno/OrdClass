@@ -18,6 +18,11 @@
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 
 <title>OrdClass</title>
+
+<script>
+	var cont = 0;
+	localStorage.setItem("contador", cont);
+</script>
 </head>
 <body>
 

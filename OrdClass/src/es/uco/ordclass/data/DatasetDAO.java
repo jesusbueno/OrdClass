@@ -1,7 +1,5 @@
 package es.uco.ordclass.data;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -76,6 +74,53 @@ public class DatasetDAO extends DAO{
 		ps.setString(11, dataset.getDescription());
 		ps.setString(12, dataset.getDonor());
 		ps.setString(13, dataset.getData_source());
+		
+		if (ps.executeUpdate() == 0) {
+			result = false;
+		}
+		
+		return result;
+		
+	}
+
+	public boolean deleteDataset(int id) throws Exception{
+		
+		boolean result = true;
+
+		String sql = "DELETE FROM datasets WHERE ID=?";
+
+		Connection con = getConnection();
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setInt(1, id);
+
+		if(ps.executeUpdate() == 0) {
+			result = false;
+		}
+
+		return result;
+	}
+
+	public boolean modifyDataset(Dataset dataset) throws Exception {
+		boolean result = true;
+		
+		String sql = "UPDATE datasets SET Name=?, Train_Size=?, Test_Size=?, Length=?, Classes=?, Type=?, Best_Algorithm=?, Best_Accuracy=?, Images=?, Download=?, Description=?, Donor=?, Data_Source=? WHERE ID=?";
+		Connection con = getConnection();
+		PreparedStatement ps = con.prepareStatement(sql);
+		
+		ps.setString(1, dataset.getName());
+		ps.setInt(2, dataset.getTrain_size());
+		ps.setInt(3, dataset.getTest_size());
+		ps.setInt(4, dataset.getLength());
+		ps.setInt(5, dataset.getClasses());
+		ps.setString(6, dataset.getType());
+		ps.setString(7, dataset.getBest_algorithm());
+		ps.setInt(8, dataset.getBest_accuracy());
+		ps.setString(9, dataset.getImages());
+		ps.setString(10, dataset.getDownload());
+		ps.setString(11, dataset.getDescription());
+		ps.setString(12, dataset.getDonor());
+		ps.setString(13, dataset.getData_source());
+		ps.setInt(14, dataset.getId());
 		
 		if (ps.executeUpdate() == 0) {
 			result = false;

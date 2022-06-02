@@ -60,4 +60,58 @@
         <url-pattern>/SearchLog</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>LoginUser</servlet-name>
+        <servlet-class>es.uco.ordclass.servlet.LoginUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginUser</servlet-name>
+        <url-pattern>/LoginUser</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AddContent</servlet-name>
+        <servlet-class>es.uco.ordclass.servlet.AddContent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddContent</servlet-name>
+        <url-pattern>/AddContent</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>DeleteContent</servlet-name>
+        <servlet-class>es.uco.ordclass.servlet.DeleteContent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteContent</servlet-name>
+        <url-pattern>/DeleteContent</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LoadAdmin</servlet-name>
+        <servlet-class>es.uco.ordclass.servlet.LoadAdmin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoadAdmin</servlet-name>
+        <url-pattern>/LoadAdmin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SearchContentInfo</servlet-name>
+        <servlet-class>es.uco.ordclass.servlet.SearchContentInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchContentInfo</servlet-name>
+        <url-pattern>/SearchContentInfo</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ModifyContent</servlet-name>
+        <servlet-class>es.uco.ordclass.servlet.ModifyContent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModifyContent</servlet-name>
+        <url-pattern>/ModifyContent</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

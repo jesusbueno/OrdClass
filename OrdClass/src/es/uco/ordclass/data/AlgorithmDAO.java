@@ -80,5 +80,51 @@ public class AlgorithmDAO extends DAO {
 		return result;
 	}
 	
+	
+	public boolean deleteAlgorithm(int id) throws Exception {
+		
+		boolean result = true;
+		
+		String sql = "DELETE FROM algorithm WHERE ID=?";
+		
+		Connection con = getConnection();
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setInt(1, id);
+		
+		if(ps.executeUpdate() == 0) {
+			result = false;
+		}
+		
+		return result;
+	}
+	
+	
+	public boolean modifyAlgorithm(Algorithm algorithm) throws Exception{
+		boolean result = true;
+		
+		String sql = "UPDATE algorithm SET Acronym=?, Name=?, Type=?, Year=?, Publication=?, Description=?, Source_Code=?, Link=?, ML_Code=?, Py_Code=? WHERE ID=?";
+		
+		Connection con = getConnection();
+		PreparedStatement ps = con.prepareStatement(sql);
+		
+		ps.setString(1, algorithm.getAcronym());
+		ps.setString(2, algorithm.getName());
+		ps.setString(3, algorithm.getType());
+		ps.setInt(4, algorithm.getYear());
+		ps.setString(5, algorithm.getPublication());
+		ps.setString(6, algorithm.getDescription());
+		ps.setString(7, algorithm.getSource_code());
+		ps.setString(8, algorithm.getLink());
+		ps.setString(9, algorithm.getMl_code());
+		ps.setString(10, algorithm.getPy_code());
+		ps.setInt(11, algorithm.getId());
+		
+		if (ps.executeUpdate() == 0) {
+			result = false;
+		}
+			
+		return result;
+	}
+	
 
 }

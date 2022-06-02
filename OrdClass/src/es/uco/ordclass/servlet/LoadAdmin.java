@@ -1,7 +1,6 @@
 package es.uco.ordclass.servlet;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
 
@@ -26,16 +25,15 @@ import es.uco.ordclass.data.LogDAO;
 import es.uco.ordclass.data.NewDAO;
 import es.uco.ordclass.data.ResearcherDAO;
 
-
-public class loadData extends HttpServlet {
+public class LoadAdmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public loadData() {
+    public LoadAdmin() {
         super();
+
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		HttpSession session = request.getSession();
 		session.setMaxInactiveInterval(3600);
 		
@@ -69,14 +67,12 @@ public class loadData extends HttpServlet {
 		session.setAttribute("libraries", libraries);
 		session.setAttribute("bibliographies", bibliographies);
 		session.setAttribute("news", news);
-		session.setAttribute("user", null);
 		
-		response.sendRedirect("/OrdClass/Views/Home.jsp");
+		response.sendRedirect("/OrdClass/Views/AddSources.jsp");
 	}
 
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 	}
 
 }

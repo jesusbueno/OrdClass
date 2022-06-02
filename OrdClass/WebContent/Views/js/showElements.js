@@ -39,11 +39,69 @@ function showMAE(){
 function showModal(name){
 	var part = name.split(' ').join('+');
 	var link = "https://scholar.google.es/scholar?hl=es&as_sdt=0%2C5&q=" + part + "&btnG=";
-	document.getElementById('iframe').src = link;
-	document.getElementById('modal').style.display = '';
+	window.open(link);
+
 }
 
 
 function closeModal(){
 	document.getElementById('modal').style.display = 'none';
+}
+
+
+
+function showAlgorithm(){
+	document.getElementById('algoritmo').style.display = '';
+	document.getElementById('dataset').style.display = 'none';
+	document.getElementById('researcher').style.display = 'none';
+	document.getElementById('bibliografia').style.display = 'none';
+	document.getElementById('library').style.display = 'none';
+	document.getElementById('new').style.display = 'none';
+}
+
+function showDataset(){
+
+	document.getElementById('algoritmo').style.display = 'none';
+	document.getElementById('dataset').style.display = '';
+	document.getElementById('researcher').style.display = 'none';
+	document.getElementById('bibliografia').style.display = 'none';
+	document.getElementById('library').style.display = 'none';
+	document.getElementById('new').style.display = 'none';
+}
+
+function showResearcher(){
+	document.getElementById('algoritmo').style.display = 'none';
+	document.getElementById('dataset').style.display = 'none';
+	document.getElementById('researcher').style.display = '';
+	document.getElementById('bibliografia').style.display = 'none';
+	document.getElementById('library').style.display = 'none';
+	document.getElementById('new').style.display = 'none';
+}
+
+function showBibliography(){
+
+	document.getElementById('algoritmo').style.display = 'none';
+	document.getElementById('dataset').style.display = 'none';
+	document.getElementById('researcher').style.display = 'none';
+	document.getElementById('bibliografia').style.display = '';
+	document.getElementById('library').style.display = 'none';
+	document.getElementById('new').style.display = 'none';
+}
+
+function showLibraries(){
+	document.getElementById('algoritmo').style.display = 'none';
+	document.getElementById('dataset').style.display = 'none';
+	document.getElementById('researcher').style.display = 'none';
+	document.getElementById('bibliografia').style.display = 'none';	
+	document.getElementById('library').style.display = '';
+	document.getElementById('new').style.display = 'none';
+}
+
+function showNews(){
+	document.getElementById('algoritmo').style.display = 'none';
+	document.getElementById('dataset').style.display = 'none';
+	document.getElementById('researcher').style.display = 'none';
+	document.getElementById('bibliografia').style.display = 'none';	
+	document.getElementById('library').style.display = 'none';
+	document.getElementById('new').style.display = '';
 }

@@ -53,12 +53,10 @@ if(libraries == null){
 						for(int i = 0; i< libraries.size(); i++){
 							%>
 							<div class="l-card">
-							<a href=<%=libraries.get(i).getLink() %>>
+
 								<div class="box">
 								
-									<div class="book">
-										<i class="fa-solid fa-book"></i>
-									</div>
+
 								
 									<div class="name"><%=libraries.get(i).getName() %></div>
 								
@@ -71,8 +69,15 @@ if(libraries == null){
 										<p>Lenguaje:</p>
 										<p><%=libraries.get(i).getLanguage() %></p>
 									</div>
+									
+									<div class="botones">
+										<a href=<%=libraries.get(i).getGithub_link() %>><i class="fa-brands fa-github"></i></a>
+										
+										<a href=<%=libraries.get(i).getDocumentation_link() %>><i class="fa-solid fa-book"></i></a>
+	
+									</div>
 							</div>
-							</a>
+
 						</div>
 						<%
 						}
@@ -84,10 +89,6 @@ if(libraries == null){
 				
 			
 			</div>
-		
-		
-		
-		
 		
 		
 			<footer class="footer">

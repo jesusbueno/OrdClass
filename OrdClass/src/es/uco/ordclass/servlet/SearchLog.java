@@ -60,6 +60,9 @@ public class SearchLog extends HttpServlet {
 		case "Researches":
 			response.sendRedirect("/OrdClass/Views/Researches.jsp");
 			break;
+			
+		case "Link":
+			response.sendRedirect("/OrdClass/Views/LoginUser.jsp");
 						
 		default:
 		
