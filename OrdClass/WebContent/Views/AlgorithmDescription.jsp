@@ -12,7 +12,7 @@
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 <script src="js/showElements.js" type="text/javascript"></script>
 
-<title>Algoritmos</title>
+<title>Algorithms</title>
 
 
 </head>
@@ -31,12 +31,12 @@
 			<ul>
 				<li><a href="../">Home</a></li>
 				<li><a href="Datasets.jsp">Datasets</a></li>
-				<li><a href="Algorithms.jsp" style="color: #219ebc">Algoritmos</a></li>
-				<li><a href="Results.jsp">Resultados</a></li>
-				<li><a href="Researches.jsp">Investigadores</a></li>
-				<li><a href="Libraries.jsp">Librerías</a></li>
-				<li><a href="Bibliography.jsp">Bibliografía</a></li>
-				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
+				<li><a href="Algorithms.jsp" style="color: #219ebc">Algorithms</a></li>
+				<li><a href="Results.jsp">Results</a></li>
+				<li><a href="Researches.jsp">Researchers</a></li>
+				<li><a href="Libraries.jsp">Libraries</a></li>
+				<li><a href="Bibliography.jsp">Bibliography</a></li>
+				<li><a href="AboutUs.jsp">About Us</a></li>
 			</ul>
 		</div>
 	</div>
@@ -165,11 +165,11 @@
 				<div class="terms">
 					<a href="https://www.uco.es/ayrna/">AYRNA</a>
 					
-					<a href="mailto:dguijo@uco.es">Contacto</a>
+					<a href="mailto:dguijo@uco.es">Contact</a>
 
-					<a href="AboutUs.jsp">Sobre nosotros</a>
+					<a href="AboutUs.jsp">About Us</a>
 
-					<a href="#">Términos legales</a>
+					<a href="#">Legal Terms</a>
 				</div>
 				
 				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>

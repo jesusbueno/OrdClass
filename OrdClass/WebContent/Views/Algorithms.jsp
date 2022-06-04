@@ -17,7 +17,7 @@
 <script src="js/SearchOnTables.js" type="text/javascript"></script>
 <script src="js/Filters.js" type="text/javascript"></script>
 
-<title>Algoritmos</title>
+<title>Algorithms</title>
 </head>
 <body>
 
@@ -34,12 +34,12 @@
 			<ul>
 				<li><a href="../">Home</a></li>
 				<li><a href="Datasets.jsp">Datasets</a></li>
-				<li><a href="#" style="color: #219ebc">Algoritmos</a></li>
-				<li><a href="Results.jsp">Resultados</a></li>
-				<li><a href="Researches.jsp">Investigadores</a></li>
-				<li><a href="Libraries.jsp">Librerías</a></li>
-				<li><a href="Bibliography.jsp">Bibliografía</a></li>
-				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
+				<li><a href="#" style="color: #219ebc">Algorithms</a></li>
+				<li><a href="Results.jsp">Results</a></li>
+				<li><a href="Researches.jsp">Researchers</a></li>
+				<li><a href="Libraries.jsp">Libraries</a></li>
+				<li><a href="Bibliography.jsp">Bibliography</a></li>
+				<li><a href="AboutUs.jsp">About Us</a></li>
 			</ul>
 		</div>
 	</div>
@@ -48,14 +48,12 @@
 	<div class="home">
 		<div class="margins">
 			<div class="al-content">
-				<h3>Algoritmos</h3>
-				<p>Biblioteca de algoritmos de clasificación ordinal con
-					información detallada. Selecciona un algoritmo para ver más
-					información acerca de él.</p>
+				<h3>Algorithms</h3>
+				<p>This section includes some ordinal ranking algorithms. If you want to know more about one of them, click on it.</p>
 
 				<div class="searchs">
 					<div class="input-field">
-						<input id="searchTerm" type="text" placeholder="Buscar Algoritmo" name="word" onkeyup="doSearch()">
+						<input id="searchTerm" type="text" placeholder="Search algorithm" name="word" onkeyup="doSearch()">
 					</div>
 
 					<div class="button">
@@ -65,11 +63,11 @@
 
 				<div class="section-1">
 					<div class="filters">
-						<h5>Tipo</h5>
+						<h5>Type</h5>
 						<label class="container"><input type="radio" name="type" value="Dictionary" onclick="filterAlgorithm(this)">Dictionary</label><br>
 						<label class="container"><input type="radio" name="type" value="Intervals" onclick="filterAlgorithm(this)">Intervals</label><br>
 						<label class="container"><input type="radio" name="type" value="Distance based" onclick="filterAlgorithm(this)">Distance based</label><br>
-						<h5>Año</h5>
+						<h5>Year</h5>
 						<label class="container"><input type="radio" name="year" value="2020" onclick="filterAlgorithm(this)">2020</label><br>
 						<label class="container"><input type="radio" name="year" value="2017" onclick="filterAlgorithm(this)">2017</label><br>
 						<label class="container"><input type="radio" name="year" value="2015" onclick="filterAlgorithm(this)">2015</label>
@@ -80,9 +78,9 @@
 						<table class="sortable" id="sortable">
 							<thead>
 								<th onclick="sortTable('sortable', 0)" >Acronym <i class="fa-solid fa-sort"></i></th>
-								<th onclick="sortTable('sortable', 1)">Algoritmo <i class="fa-solid fa-sort"></i></th>
-								<th onclick="sortTable('sortable', 2)">Tipo <i class="fa-solid fa-sort"></i></th>
-								<th onclick="sortTable('sortable', 3)">Año <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 1)">Algorithm <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 2)">Type <i class="fa-solid fa-sort"></i></th>
+								<th onclick="sortTable('sortable', 3)">Year <i class="fa-solid fa-sort"></i></th>
 
 							</thead>
 							<tbody>
@@ -121,11 +119,11 @@
 				<div class="terms">
 					<a href="https://www.uco.es/ayrna/">AYRNA</a>
 					
-					<a href="mailto:dguijo@uco.es">Contacto</a>
+					<a href="mailto:dguijo@uco.es">Contact</a>
 
-					<a href="AboutUs.jsp">Sobre nosotros</a>
+					<a href="AboutUs.jsp">About Us</a>
 
-					<a href="#">Términos legales</a>
+					<a href="#">Legal Terms</a>
 				</div>
 				
 				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>

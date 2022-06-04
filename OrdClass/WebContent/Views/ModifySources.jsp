@@ -20,7 +20,7 @@
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 <script src="js/showElements.js" type="text/javascript"></script>
 <script src="js/CheckValues.js" type="text/javascript"></script>
-<title>Delete Sources</title>
+<title>Modify Content</title>
 </head>
 <body>
 
@@ -82,7 +82,7 @@
 
 	<div class="menu-admin">
 		<div class="margins">
-			<p><i class="fa-solid fa-lock"></i> Admin Mode</p>
+			<p><i class="fa-solid fa-lock"></i>Admin Mode</p>
 			<ul class="menu-a">
 				<li><a href="AddSources.jsp">Add content</a></li>
 				<li><a href="DeleteSources.jsp" >Delete content</a></li>
@@ -101,17 +101,17 @@
 		<div class="margins">
 			<div class="add-content">
 				<h3>Modify content</h3>
-				<p>Selecciona el tipo de contenido que desea modificar, y selecciona el contenido correspondiente</p>
+				<p>Select the type of content you want to modify, and select the corresponding content.</p>
 				
 				
 				<div class="section-1">
 			
 				<div class="filters">
-						<h5>Tipo</h5>
-						<label class="container"><input type="radio" name="type" value="algorithm" checked="true" onclick="showAlgorithm()">Algoritmo</label><br>
+						<h5>Type</h5>
+						<label class="container"><input type="radio" name="type" value="algorithm" checked="true" onclick="showAlgorithm()">Algorithm</label><br>
 						<label class="container"><input type="radio" name="type"  value="dataset" onclick="showDataset()">Dataset</label><br>
 						<label class="container"><input type="radio" name="type"  value="researcher" onclick="showResearcher()">Researcher</label><br>
-						<label class="container"><input type="radio" name="type"  value="libraries" onclick="showLibraries()">Libraries</label><br>
+						<label class="container"><input type="radio" name="type"  value="libraries" onclick="showLibraries()">Library</label><br>
 						<label class="container"><input type="radio" name="type" value="bibliography" onclick="showBibliography()">Bibliography</label><br>
 						<label class="container"><input type="radio" name="type"  value="news" onclick="showNews()">News</label><br>
 					</div>
@@ -264,7 +264,7 @@
 					</div>
 					
 					<div class="alert alert-danger" role="alert" style="width: 90%; height: 40px; padding: 7px 0px 0px 20px; margin-left: auto; margin-right: auto; margin-top: 20px; display: none" id="empty">
-  							Debe seleccionar al menos un elemento.
+  							You have to select at least one element.
 					</div>
 					
 				</div>
@@ -282,14 +282,14 @@
 				<div class="terms">
 					<a href="https://www.uco.es/ayrna/">AYRNA</a>
 					
-					<a href="mailto:dguijo@uco.es">Contacto</a>
+					<a href="mailto:dguijo@uco.es">Contact</a>
 
-					<a href="AboutUs.jsp">Sobre nosotros</a>
+					<a href="AboutUs.jsp">About Us</a>
 
-					<a href="#">Tï¿½rminos legales</a>
+					<a href="#">Legal Terms</a>
 				</div>
 				
-				<p>AYRNA Research Group - University of Cï¿½rdoba (Spain) - 2022</p>
+				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>
 
 			</footer>
 		</div>

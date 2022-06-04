@@ -34,12 +34,12 @@
 			<ul>
 				<li><a href="../">Home</a></li>
 				<li><a href="#" style="color: #219ebc">Datasets</a></li>
-				<li><a href="Algorithms.jsp">Algoritmos</a></li>
-				<li><a href="Results.jsp">Resultados</a></li>
-				<li><a href="Researches.jsp">Investigadores</a></li>
-				<li><a href="Libraries.jsp">Librerías</a></li>
-				<li><a href="Bibliography.jsp">Bibliografía</a></li>
-				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
+				<li><a href="Algorithms.jsp">Algorithms</a></li>
+				<li><a href="Results.jsp">Results</a></li>
+				<li><a href="Researches.jsp">Researchers</a></li>
+				<li><a href="Libraries.jsp">Libraries</a></li>
+				<li><a href="Bibliography.jsp">Bibliography</a></li>
+				<li><a href="AboutUs.jsp">About Us</a></li>
 			</ul>
 		</div>
 	</div>
@@ -48,13 +48,12 @@
 		<div class="margins">
 			<div class="ds-content">
 				<h3>Datasets</h3>
-				<p>Conjuntos de bases de datos utilizadas para el análisis de
-					clasificación ordinal.</p>
+				<p>This section includes all datasets related to the classification and classification of the data sets.</p>
 
 
 				<div class="searchs">
 					<div class="input-field">
-						<input id="searchTerm" type="text" placeholder="Buscar Dataset" name="word" onkeyup="doSearch()">
+						<input id="searchTerm" type="text" placeholder="Search dataset" name="word" onkeyup="doSearch()">
 					</div>
 
 					<div class="button">
@@ -142,11 +141,11 @@
 				<div class="terms">
 					<a href="https://www.uco.es/ayrna/">AYRNA</a>
 					
-					<a href="mailto:dguijo@uco.es">Contacto</a>
+					<a href="mailto:dguijo@uco.es">Contact</a>
 
-					<a href="AboutUs.jsp">Sobre nosotros</a>
+					<a href="AboutUs.jsp">About Us</a>
 
-					<a href="#">Términos legales</a>
+					<a href="#">Legal Terms</a>
 				</div>
 				
 				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>

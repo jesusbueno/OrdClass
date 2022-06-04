@@ -12,7 +12,7 @@
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 
-<title>Librerías</title>
+<title>Libraries</title>
 
 </head>
 <body>
@@ -31,12 +31,12 @@ if(libraries == null){
 			<ul>
 				<li><a href="../">Home</a></li>
 				<li><a href="Datasets.jsp" >Datasets</a></li>
-				<li><a href="Algorithms.jsp">Algoritmos</a></li>
-				<li><a href="Results.jsp">Resultados</a></li>
-				<li><a href="Researches.jsp">Investigadores</a></li>
-				<li><a href="#" style="color: #219ebc">Librerías</a></li>
-				<li><a href="Bibliography.jsp">Bibliografía</a></li>	
-				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
+				<li><a href="Algorithms.jsp">Algorithms</a></li>
+				<li><a href="Results.jsp">Results</a></li>
+				<li><a href="Researches.jsp">Researchers</a></li>
+				<li><a href="#" style="color: #219ebc">Libraries</a></li>
+				<li><a href="Bibliography.jsp">Bibliography</a></li>	
+				<li><a href="AboutUs.jsp">About Us</a></li>
 			</ul>
 		</div>
 	</div>
@@ -44,8 +44,8 @@ if(libraries == null){
 	<div class="home">
 		<div class="margins">
 			<div class="lib-content">
-				<h3>Librerías</h3>
-				<p>Librerías relacionadas con el análisis de datos de clasificación ordinal.</p>
+				<h3>Libraries</h3>
+				<p>This section includes the libraries related to ordinal classification.</p>
 				
 				<div class="libs">
 				
@@ -61,12 +61,12 @@ if(libraries == null){
 									<div class="name"><%=libraries.get(i).getName() %></div>
 								
 									<div class="author">
-										<p>Autor:</p>
+										<p>Author:</p>
 										<p><%=libraries.get(i).getAuthor() %></p>
 									</div>
 								
 									<div class="languaje">
-										<p>Lenguaje:</p>
+										<p>Language:</p>
 										<p><%=libraries.get(i).getLanguage() %></p>
 									</div>
 									
@@ -101,11 +101,11 @@ if(libraries == null){
 				<div class="terms">
 					<a href="https://www.uco.es/ayrna/">AYRNA</a>
 					
-					<a href="mailto:dguijo@uco.es">Contacto</a>
+					<a href="mailto:dguijo@uco.es">Contact</a>
 
-					<a href="AboutUs.jsp">Sobre nosotros</a>
+					<a href="AboutUs.jsp">About Us</a>
 
-					<a href="#">Términos legales</a>
+					<a href="#">Legal Terms</a>
 				</div>
 				
 				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>

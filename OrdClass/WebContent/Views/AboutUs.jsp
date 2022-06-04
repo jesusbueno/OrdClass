@@ -20,12 +20,12 @@
 			<ul>
 				<li><a href="../">Home</a></li>
 				<li><a href="Datasets.jsp">Datasets</a></li>
-				<li><a href="Algorithms.jsp">Algoritmos</a></li>
-				<li><a href="Results.jsp">Resultados</a></li>
-				<li><a href="Researches.jsp">Investigadores</a></li>
-				<li><a href="Libraries.jsp">Librerías</a></li>
-				<li><a href="Bibliography.jsp">Bibliografía</a></li>
-				<li><a href="#" style="color: #219ebc">Sobre nosotros</a></li>
+				<li><a href="Algorithms.jsp">Algorithms</a></li>
+				<li><a href="Results.jsp">Results</a></li>
+				<li><a href="Researches.jsp">Researchers</a></li>
+				<li><a href="Libraries.jsp">Libraries</a></li>
+				<li><a href="Bibliography.jsp">Bibliography</a></li>
+				<li><a href="#" style="color: #219ebc">About Us</a></li>
 			</ul>
 		</div>
 	</div>
@@ -33,25 +33,25 @@
 	<div class="home">
 		<div class="margins">
 			<div class="au-content">
-				<h3>Sobre nosotros</h3>
+				<h3>About Us</h3>
 
 				<div class="sections">
 
 					<div class="section-1">
-						<h2>¿Quiénes somos?</h2>
+						<h2>Who we are?</h2>
 						<div class="content">
 							<div class="left">
 
-								<p>OrdClass es una página web desarrollada como Trabajo de
-									Fin de Grado en Ingeniería Informática de la Universidad de
-									Córdoba. Esta idea nace gracias a Jesús Bueno Ruiz, autor de la
-									página web, y de David Guijo Rubio, tutor del proyecto.</p>
+								<p>OrdClass is a web page developed as a final thesis for the
+									Degree Thesis in Computer Engineering at the University of Cordoba.
+									Córdoba. This idea was born thanks to Jesús Bueno Ruiz, the author of the
+									and David Guijo Rubio, tutor of the project.</p>
 
-								<p>OrdClass trata de analizar datos de clasificación
-									ordinal, almacenando en esta algoritmos, conjunto de datos,
-									resultados o información que puede resultar útil. Es una web
-									con pocos antecedentes actualmente y que puede servir de gran
-									ayuda al análisis de datos de clasificación ordinal.</p>
+								<p>OrdClass is about analysing ordinal classification data
+									ordinal, storing in this algorithms, dataset,
+									results or information that may be useful. It is a website
+									with few precedents at the moment and that can be of great help to the analysis of ordinal
+									help in the analysis of ordinal classification data.</p>
 							</div>
 
 							<div class="right">
@@ -62,14 +62,14 @@
 					</div>
 					
 					<div class="section-2">
-						<h2>Integrantes</h2>
+						<h2>Members</h2>
 						<div class="contents">
 						
 							<div class="profile">
 								<img src="Images/aboutUs/profile2.jpg">
 								
 								<div class="name"><p>Jesús Bueno Ruiz</p></div>
-								<div class="institution"><p>Universidad de Córdoba</p></div>
+								<div class="institution"><p>University of Córdoba</p></div>
 								<div class="web"><a href="http://www.uco.es">http://www.uco.es</a></div>
 							</div>
 							
@@ -77,7 +77,7 @@
 								<img src="Images/aboutUs/profile3.jpg">
 								
 								<div class="name"><p>David Guijo Rubio</p></div>
-								<div class="institution"><p>Universidad de Córdoba</p></div>
+								<div class="institution"><p>University of Córdoba</p></div>
 								<div class="web"><a href="https://www.uco.es/grupos/ayrna/index.php/es/proyectos?view=member&task=show&id=22">https://www.uco.es/grupos/ayrna/</a></div>
 							</div>
 							
@@ -85,7 +85,7 @@
 								<img src="Images/aboutUs/profile4.png">
 								
 								<div class="name"><p>AYRNA</p></div>
-								<div class="institution"><p>Universidad de Córdoba</p></div>
+								<div class="institution"><p>University of Córdoba</p></div>
 								<div class="web"><a href="https://www.uco.es/ayrna/">https://www.uco.es/ayrna/</a></div>
 							</div>
 							
@@ -113,11 +113,11 @@
 				<div class="terms">
 					<a href="https://www.uco.es/ayrna/">AYRNA</a>
 					
-					<a href="mailto:dguijo@uco.es">Contacto</a>
+					<a href="mailto:dguijo@uco.es">Contact</a>
 
-					<a href="AboutUs.jsp">Sobre nosotros</a>
+					<a href="AboutUs.jsp">About Us</a>
 
-					<a href="#">Términos legales</a>
+					<a href="#">Legal Terms</a>
 				</div>
 				
 				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>

@@ -12,7 +12,7 @@
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 
-<title>Investigadores</title>
+<title>Researchers</title>
 </head>
 <body>
 
@@ -29,12 +29,12 @@ if(researches == null){
 			<ul>
 				<li><a href="../">Home</a></li>
 				<li><a href="Datasets.jsp">Datasets</a></li>
-				<li><a href="Algorithms.jsp" >Algoritmos</a></li>
-				<li><a href="Results.jsp">Resultados</a></li>
-				<li><a href="Researches.jsp" style="color: #219ebc">Investigadores</a></li>
-				<li><a href="Libraries.jsp">Librerías</a></li>
-				<li><a href="Bibliography.jsp">Bibliografía</a></li>
-				<li><a href="AboutUs.jsp">Sobre nosotros</a></li>
+				<li><a href="Algorithms.jsp" >Algorithms</a></li>
+				<li><a href="Results.jsp">Results</a></li>
+				<li><a href="Researches.jsp" style="color: #219ebc">Researchers</a></li>
+				<li><a href="Libraries.jsp">Libraries</a></li>
+				<li><a href="Bibliography.jsp">Bibliography</a></li>
+				<li><a href="AboutUs.jsp">About Us</a></li>
 			</ul>
 		</div>
 	</div>
@@ -42,8 +42,8 @@ if(researches == null){
 	<div class="home">
 		<div class="margins">
 			<div class="r-content">
-				<h3>Investigadores</h3>
-				<p>Investigadores implicados en la información que se muestra en OrdClass.</p>
+				<h3>Researchers</h3>
+				<p>This section includes the AYRNA researchers involved in the information displayed in OrdClass.</p>
 				
 				<div class="r-container">
 					
@@ -82,11 +82,11 @@ if(researches == null){
 				<div class="terms">
 					<a href="https://www.uco.es/ayrna/">AYRNA</a>
 					
-					<a href="mailto:dguijo@uco.es">Contacto</a>
+					<a href="mailto:dguijo@uco.es">Contact</a>
 
-					<a href="AboutUs.jsp">Sobre nosotros</a>
+					<a href="AboutUs.jsp">About Us</a>
 
-					<a href="#">Términos legales</a>
+					<a href="#">Legal Terms</a>
 				</div>
 				
 				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>

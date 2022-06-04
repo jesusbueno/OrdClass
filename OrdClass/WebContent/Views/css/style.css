@@ -275,7 +275,7 @@ a{
 	border-top: solid 2px var(--third-color); 
 }
 
-.home .home-content  .section-2, .section-3 p{
+.home .home-content  .section-2, .section-3, .section-4 p{
 	font-family: 'Roboto';
 	text-align: justify;
 	line-height : 30px;
@@ -305,6 +305,39 @@ a{
 	margin-top: 10px;
 	margin-left: 50px;
 	margin-bottom: 30px;
+
+}
+
+.home .home-content .section-4{
+	margin-top: 100px;
+	padding-top: 50px;
+	border-top: solid 2px var(--third-color); 
+}
+
+.home .home-content .section-4 .button{
+	display: flex;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+
+}
+
+.home .home-content .section-4 .button a{
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: 17px;
+	color: white;
+	padding: 15px 35px 15px 35px;
+	background-color: var(--principal-color);
+	border-radius: 25px;
+
+	
+}
+
+.home .home-content .section-4 a:hover{
+	background-color: var(--secondary-color);
+	transition: all .2s;
 
 }
 
@@ -2097,6 +2130,152 @@ a{
 
 .home .margins .operation .buttons .card:hover{
 	background-color: var(--secondary-color);
+}
+
+
+/*--------- ISSUES ------------- */
+
+.home .add-issue p{
+	font-family: 'Roboto';
+	text-align: justify;
+	line-height : 30px;
+	color: var(--font-color);
+	font-size: 17px;
+}
+
+.home .add-issue .section-issue{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+.home .add-issue .section-issue .content{
+	/*width: 800px;*/
+	margin-top: 30px;
+	height: auto;
+	background-color: white;
+	padding: 30px 40px 30px 40px;
+	border-radius: 20px;
+	font-family: Open Sans;
+	font-size: 17px;
+	box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+	align-items: center;
+	justify-content: center;
+	text-justify: center;
+}
+
+.home .add-issue .content .inputs{
+	justify-items: center;
+	align-items: center;
+}
+
+
+
+.home .add-issue .section-issue .content h5{
+	font-family: Open Sans;
+	font-size: 30px;
+	margin: 20px 0px 20px 50px;
+	font-weight: bold;
+}
+
+
+.home .add-issue .input-field{
+	width: 450px;
+	height: 40px;
+	background-color: #f0f0f0;
+	margin: 20px 0px;
+	border-radius: 55px;
+	padding: 0px 25px 0px 25px;
+	display: grid;
+}
+
+.home .add-issue .input-field-2{
+	width: 450px;
+	height: 160px;
+	background-color: #f0f0f0;
+	margin: 20px 0px;
+	border-radius: 25px;
+	padding: 0px 25px 0px 25px;
+	display: grid;
+}
+
+.home .add-issue input{
+	background: none;
+	outline: none;
+	border: none;
+	line-height: 1;
+	font-size: 15px;
+	color: #333;
+	
+}
+
+.home .add-issue textarea{
+	resize: none;
+	padding: 20px 20px 20px 0px;
+	background: none;
+	outline: none;
+	border: none;
+	line-height: 1;
+	font-family: Open Sans;
+	font-size: 15px;
+}
+
+
+
+.home .add-issue .button{
+	font-family: 'Open Sans';
+	font-size: 30px;
+	padding: 15px 80px 15px 80px;
+	border-radius: 25px;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	background-color: var(--principal-color);
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	transition: 0.3s;
+	display: flex;
+
+	
+}
+
+.home .add-issue input[type='submit'] { font-size: 15px; }
+
+.home .add-issue .button:hover{
+	background-color: var(--secondary-color);
+	transition: all .2s;
+}
+
+.home .add-issue .content p{
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.home .add-issue .content .radios{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.home .add-issue input[type='radio'] { 
+	margin-right: 15px; 
+	margin-top: 15px;
+}
+
+
+
+.home .add-issue .content .select{
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.home .add-issue .content .select select{ 
+	width: 50%;
 }
 
 

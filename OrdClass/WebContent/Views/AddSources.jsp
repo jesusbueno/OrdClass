@@ -12,7 +12,7 @@
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 <script src="js/showElements.js" type="text/javascript"></script>
 <script src="js/CheckValues.js" type="text/javascript"></script>
-<title>Add Sources</title>
+<title>Add Content</title>
 </head>
 <body>
 
@@ -46,18 +46,18 @@
 	<div class="home">
 		<div class="margins">
 			<div class="add-content">
-				<h3>Aï¿½adir contenido</h3>
-				<p>Selecciona el tipo de dato que deseas aï¿½adir y rellena los campos correspondientes.</p>
+				<h3>Add Content</h3>
+				<p>Select the type of data you want to add, and complete the corresponding fields.</p>
 				<form name="form" action="/OrdClass/AddContent" method="post" onsubmit="return checkAdds()">
 				
 				
 				<div class="section-1">
 					<div class="filters">
 						<h5>Tipo</h5>
-						<label class="container"><input type="radio" name="type" value="algorithm" checked="true" onclick="showAlgorithm()">Algoritmo</label><br>
+						<label class="container"><input type="radio" name="type" value="algorithm" checked="true" onclick="showAlgorithm()">Algorithm</label><br>
 						<label class="container"><input type="radio" name="type"  value="dataset" onclick="showDataset()">Dataset</label><br>
 						<label class="container"><input type="radio" name="type"  value="researcher" onclick="showResearcher()">Researcher</label><br>
-						<label class="container"><input type="radio" name="type"  value="libraries" onclick="showLibraries()">Libraries</label><br>
+						<label class="container"><input type="radio" name="type"  value="libraries" onclick="showLibraries()">Library</label><br>
 						<label class="container"><input type="radio" name="type" value="bibliography" onclick="showBibliography()">Bibliography</label><br>
 						<label class="container"><input type="radio" name="type"  value="news" onclick="showNews()">News</label><br>
 					</div>
@@ -65,7 +65,7 @@
 					<div class="right">
 					
 						<div class="algoritmo" id="algoritmo">
-							<h5>Nuevo Algoritmo</h5>
+							<h5>New Algorithm</h5>
 							
 							<div class="inputs">
 							
@@ -83,7 +83,7 @@
 								</div>
 								
 								<div class="input-field-2">
-									<textarea placeholder="Descripciï¿½n" name="al-description"></textarea>
+									<textarea placeholder="Description" name="al-description"></textarea>
 								</div>
 							
 								
@@ -127,7 +127,7 @@
 						
 						
 						<div class="dataset" id="dataset" style="display:none">
-							<h5>Nuevo Dataset</h5>
+							<h5>New Dataset</h5>
 							
 							<div class="inputs">
 							
@@ -153,7 +153,7 @@
 								</div>
 								
 								<div class="input-field-2">
-									<textarea placeholder="Descripciï¿½n" name="ds-description"></textarea>
+									<textarea placeholder="Description" name="ds-description"></textarea>
 								</div>
 							
 								
@@ -202,7 +202,7 @@
 						
 						
 						<div class="researcher" id="researcher" style="display:none">
-							<h5>Nuevo Investigador</h5>
+							<h5>New Researcher</h5>
 							
 							<div class="inputs">
 							
@@ -220,7 +220,7 @@
 								</div>
 								
 								<div class="input-field-2">
-									<textarea placeholder="Descripciï¿½n" name="r-description"></textarea>
+									<textarea placeholder="Description" name="r-description"></textarea>
 								</div>
 							
 								
@@ -263,7 +263,7 @@
 						</div>
 						
 						<div class="library" id="library" style="display:none">
-							<h5>Nueva Librerï¿½a</h5>
+							<h5>New Library</h5>
 							
 							<div class="inputs">
 							
@@ -305,25 +305,25 @@
 						
 						
 						<div class="bibliografia" id="bibliografia" style="display:none">
-							<h5>Nueva Fuente bibliogrï¿½fica</h5>
+							<h5>New Bibliographical source</h5>
 							
 							<div class="inputs">
 							
 							<div class="column">
 								<div class="input-field">
-									<input type="text" id="tipo2" name="b-author" placeholder="Autor">
+									<input type="text" id="tipo2" name="b-author" placeholder="Author">
 								</div>
 						
 								<div class="input-field">
-									<input type="text" id="tipo2" name="b-title" placeholder="Titulo">
+									<input type="text" id="tipo2" name="b-title" placeholder="Title">
 								</div>
 							
 								<div class="input-field">
-									<input type="number" id="tipo2" name="b-year" placeholder="Aï¿½o" min="1900" max="2022">
+									<input type="number" id="tipo2" name="b-year" placeholder="Year" min="1900" max="2022">
 								</div>
 								
 								<div class="input-field">
-									<input type="text" id="tipo2" name="b-book" placeholder="Libro">
+									<input type="text" id="tipo2" name="b-book" placeholder="Book">
 								</div>
 				
 								
@@ -334,17 +334,17 @@
 								
 								
 								<div class="input-field">
-									<input type="number" id="tipo2" name="b-volume" placeholder="Volumen" min="0">
+									<input type="number" id="tipo2" name="b-volume" placeholder="Volume" min="0">
 								</div>
 							
 								
 							
 								<div class="input-field">
-									<input type="number" id="tipo2" name="b-number" placeholder="Nï¿½mero" min="0">
+									<input type="number" id="tipo2" name="b-number" placeholder="Number" min="0">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="b-pages" placeholder="Pï¿½ginas">
+									<input type="text" id="tipo2" name="b-pages" placeholder="Pages">
 								</div>
 							
 							</div>
@@ -358,7 +358,7 @@
 						
 						
 						<div class="new" id="new" style="display:none">
-							<h5>Nueva Noticia</h5>
+							<h5>New News</h5>
 							
 							<div class="inputs">
 							
@@ -390,7 +390,7 @@
 						</div>
 						
 						<div class="alert alert-danger" role="alert" style="width: 90%; height: 40px; padding: 7px 0px 0px 20px; margin-left: auto; margin-right: auto; margin-top: 20px; display: none" id="empty">
-  							Debe seleccionar al menos un elemento.
+  							You have to complete all the fields.
 						</div>
 						
 						<input type="submit" name="action" value="Add" class="button">
@@ -412,14 +412,14 @@
 				<div class="terms">
 					<a href="https://www.uco.es/ayrna/">AYRNA</a>
 					
-					<a href="mailto:dguijo@uco.es">Contacto</a>
+					<a href="mailto:dguijo@uco.es">Contact</a>
 
-					<a href="AboutUs.jsp">Sobre nosotros</a>
+					<a href="AboutUs.jsp">About Us</a>
 
-					<a href="#">Tï¿½rminos legales</a>
+					<a href="#">Legal Terms</a>
 				</div>
 				
-				<p>AYRNA Research Group - University of Cï¿½rdoba (Spain) - 2022</p>
+				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>
 			
 			
 				

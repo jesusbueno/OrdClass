@@ -33,7 +33,7 @@
 	<div class="home">
 		<div class="margins">
 			<div class="operation">
-				<h3>Operación errónea</h3>
+				<h3>Failed Operation</h3>
 				
 				
 				<div class="buttons">

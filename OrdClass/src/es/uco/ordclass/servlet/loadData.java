@@ -18,6 +18,7 @@ import es.uco.ordclass.business.Library;
 import es.uco.ordclass.business.Log;
 import es.uco.ordclass.business.New;
 import es.uco.ordclass.business.Researcher;
+import es.uco.ordclass.business.User;
 import es.uco.ordclass.data.AlgorithmDAO;
 import es.uco.ordclass.data.BibliographyDAO;
 import es.uco.ordclass.data.DatasetDAO;
@@ -25,6 +26,7 @@ import es.uco.ordclass.data.LibraryDAO;
 import es.uco.ordclass.data.LogDAO;
 import es.uco.ordclass.data.NewDAO;
 import es.uco.ordclass.data.ResearcherDAO;
+import es.uco.ordclass.data.UserDAO;
 
 
 public class loadData extends HttpServlet {
@@ -46,6 +48,7 @@ public class loadData extends HttpServlet {
 		
 		Properties prop = new Properties();
 		
+		UserDAO userdao = new UserDAO(urlBD, userBD, passBD, prop);
 		LogDAO log = new LogDAO(urlBD, userBD, passBD, prop);
 		DatasetDAO dataset = new DatasetDAO(urlBD, userBD, passBD, prop);
 		AlgorithmDAO algorithm = new AlgorithmDAO(urlBD, userBD, passBD, prop);
@@ -54,6 +57,7 @@ public class loadData extends HttpServlet {
 		BibliographyDAO bibliography = new BibliographyDAO(urlBD, userBD, passBD, prop);
 		NewDAO new_ = new NewDAO(urlBD, userBD, passBD, prop);
 		
+		ArrayList<User> users = userdao.getUsers();
 		ArrayList<Log> logs = log.getLogs();
 		ArrayList<Dataset> datasets = dataset.getDatasets();
 		ArrayList<Algorithm> algorithms = algorithm.getAlgorithms();
@@ -69,6 +73,7 @@ public class loadData extends HttpServlet {
 		session.setAttribute("libraries", libraries);
 		session.setAttribute("bibliographies", bibliographies);
 		session.setAttribute("news", news);
+		session.setAttribute("users", users);
 		session.setAttribute("user", null);
 		
 		response.sendRedirect("/OrdClass/Views/Home.jsp");

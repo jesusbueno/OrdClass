@@ -17,7 +17,7 @@
 <script src="https://kit.fontawesome.com/e289be1c63.js" crossorigin="anonymous"></script>
 <script src="js/NavbarScroll.js" type="text/javascript"></script>
 <script src="js/showElements.js" type="text/javascript"></script>
-<title>Add Sources</title>
+<title>Modify Content</title>
 </head>
 <body>
 
@@ -63,7 +63,7 @@
 		<div class="margins">
 			<div class="add-content">
 				<h3>Modify content</h3>
-				<p>Rellena los campos del contenido.</p>
+				<p>Complete the content fields.</p>
 				<form name="form" action="/OrdClass/ModifyContent" method="post">
 				
 				
@@ -92,7 +92,7 @@
 								</div>
 								
 								<div class="input-field-2">
-									<textarea placeholder="Descripciï¿½n" name="al-description"></textarea>
+									<textarea placeholder="Description" name="al-description"></textarea>
 								</div>
 							
 								
@@ -162,7 +162,7 @@
 								</div>
 								
 								<div class="input-field-2">
-									<textarea placeholder="Descripciï¿½n" name="ds-description"></textarea>
+									<textarea placeholder="Description" name="ds-description"></textarea>
 								</div>
 							
 								
@@ -231,7 +231,7 @@
 								</div>
 								
 								<div class="input-field-2">
-									<textarea placeholder="Descripciï¿½n" name="r-description"></textarea>
+									<textarea placeholder="Description" name="r-description"></textarea>
 								</div>
 							
 								
@@ -331,19 +331,19 @@
 							
 							<div class="column">
 								<div class="input-field">
-									<input type="text" id="tipo2" name="b-author" placeholder="Autor" value=<%=bibliography.getAuthor() %>>
+									<input type="text" id="tipo2" name="b-author" placeholder="Author" value=<%=bibliography.getAuthor() %>>
 								</div>
 						
 								<div class="input-field">
-									<input type="text" id="tipo2" name="b-title" placeholder="Titulo" value=<%=bibliography.getTitle() %>>
+									<input type="text" id="tipo2" name="b-title" placeholder="Title" value=<%=bibliography.getTitle() %>>
 								</div>
 							
 								<div class="input-field">
-									<input type="number" id="tipo2" name="b-year" placeholder="Aï¿½o" min="1900" max="2022" value=<%=bibliography.getYear() %>>
+									<input type="number" id="tipo2" name="b-year" placeholder="Year" min="1900" max="2022" value=<%=bibliography.getYear() %>>
 								</div>
 								
 								<div class="input-field">
-									<input type="text" id="tipo2" name="b-book" placeholder="Libro" value=<%=bibliography.getBook() %>>
+									<input type="text" id="tipo2" name="b-book" placeholder="Book" value=<%=bibliography.getBook() %>>
 								</div>
 				
 								
@@ -354,17 +354,17 @@
 								
 								
 								<div class="input-field">
-									<input type="number" id="tipo2" name="b-volume" placeholder="Volumen" min="0" value=<%=bibliography.getVolume() %>>
+									<input type="number" id="tipo2" name="b-volume" placeholder="Volume" min="0" value=<%=bibliography.getVolume() %>>
 								</div>
 							
 								
 							
 								<div class="input-field">
-									<input type="number" id="tipo2" name="b-number" placeholder="Nï¿½mero" min="0" value=<%=bibliography.getNumber() %>>
+									<input type="number" id="tipo2" name="b-number" placeholder="Number" min="0" value=<%=bibliography.getNumber() %>>
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="b-pages" placeholder="Pï¿½ginas" value=<%=bibliography.getPages() %>>
+									<input type="text" id="tipo2" name="b-pages" placeholder="Pages" value=<%=bibliography.getPages() %>>
 								</div>
 							
 							</div>
@@ -439,14 +439,14 @@
 				<div class="terms">
 					<a href="https://www.uco.es/ayrna/">AYRNA</a>
 					
-					<a href="mailto:dguijo@uco.es">Contacto</a>
+					<a href="mailto:dguijo@uco.es">Contact</a>
 
-					<a href="AboutUs.jsp">Sobre nosotros</a>
+					<a href="AboutUs.jsp">About Us</a>
 
-					<a href="#">Tï¿½rminos legales</a>
+					<a href="#">Legal Terms</a>
 				</div>
 				
-				<p>AYRNA Research Group - University of Cï¿½rdoba (Spain) - 2022</p>
+				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>
 			
 			
 				

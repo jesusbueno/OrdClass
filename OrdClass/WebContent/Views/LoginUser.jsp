@@ -34,8 +34,8 @@
 	<div class="home">
 		<div class="margins">
 			<div class="login-content">
-				<h3><i class="fa-solid fa-lock"></i> Modo administrador </h3>
-				<p>Si tienes privilegios de administrador, accede y añade o elimina datos en la aplicación.</p>
+				<h3><i class="fa-solid fa-lock"></i> Admin Mode </h3>
+				<p>If you have administrator privileges, log in and add or delete data in the application.</p>
 				
 				<form name="form" action="/OrdClass/LoginUser" method="post" onsubmit="return checkLogin()">
 				<div class="login">
@@ -52,14 +52,14 @@
 						</div>
 						
 						<div class="alert alert-danger" role="alert" style="width: 90%; height: 40px; padding: 7px 0px 0px 20px; display:none" id="incorrect">
-  							Email o contraseña son incorrectos.
+  							Incorrect email or password.
 						</div>
 						
 						<div class="alert alert-danger" role="alert" style="width: 90%; height: 40px; padding: 7px 0px 0px 20px; display:none" id="empty">
-  							No puede haber campos vacíos.
+  							There cannot be empty fields.
 						</div>
 						
-						<input type="submit" name="action" value="Acceder" class="button">
+						<input type="submit" name="action" value="Login" class="button">
 						
 					</div>
 				
@@ -76,8 +76,8 @@
 				</div>
 				<div class="terms">
 					<a href="https://www.uco.es/ayrna/">AYRNA</a> <a
-						href="mailto:dguijo@uco.es">Contacto</a> <a href="AboutUs.jsp">Sobre
-						nosotros</a> <a href="#">Términos legales</a>
+						href="mailto:dguijo@uco.es">Contact</a> 
+						<a href="AboutUs.jsp">About Us</a> <a href="#">Legal Terms</a>
 				</div>
 
 				<p>AYRNA Research Group - University of Córdoba (Spain) - 2022</p>
