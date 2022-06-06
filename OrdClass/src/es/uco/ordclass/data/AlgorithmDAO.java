@@ -9,17 +9,37 @@ import java.util.Properties;
 
 import es.uco.ordclass.business.Algorithm;
 
+/**
+ * Clase DAO (Data Access Object) que se encarga de insertar, obtener o
+ * modificar información sobre un Algoritmo en la Base de datos
+ * 
+ * @author Jesús Bueno Ruiz
+ *
+ */
 public class AlgorithmDAO extends DAO {
 
+	/**
+	 * Constructor de la clase AlgorithmDAO
+	 * 
+	 * @param url:           url de la base de datos
+	 * @param user:          usuario de la base de datos
+	 * @param password:      contraseña de la base de datos
+	 * @param sqlProperties: fichero de propiedades sql
+	 */
 	public AlgorithmDAO(String url, String user, String password, Properties sqlProperties) {
 		super(url, user, password, sqlProperties);
 	}
 
+	/**
+	 * Función que obtiene todos los algoritmos de la base de datos
+	 * 
+	 * @return Array con los algoritmos
+	 */
 	public ArrayList<Algorithm> getAlgorithms() {
 
 		ArrayList<Algorithm> algorithms = new ArrayList<Algorithm>();
 
-		String sql = "SELECT * FROM algorithm ORDER BY Name";
+		String sql = sqlProperties.getProperty("getAlgorithms");
 
 		try {
 			Connection con = getConnection();
@@ -52,16 +72,21 @@ public class AlgorithmDAO extends DAO {
 
 		return algorithms;
 	}
-	
-	
+
+	/**
+	 * Función que añade un algoritmo a la base de datos
+	 * 
+	 * @param algorithm: algoritmo que se desea añadir
+	 * @return true si se añade, false si no se añade
+	 */
 	public boolean addAlgorithm(Algorithm algorithm) throws Exception {
 		boolean result = true;
-		
-		String sql = "insert into algorithm(Acronym, Name, Type, Year, Publication, Description, Source_Code, Link, ML_Code, Py_Code) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-		
+
+		String sql = sqlProperties.getProperty("addAlgorithm");
+
 		Connection con = getConnection();
 		PreparedStatement ps = con.prepareStatement(sql);
-		
+
 		ps.setString(1, algorithm.getAcronym());
 		ps.setString(2, algorithm.getName());
 		ps.setString(3, algorithm.getType());
@@ -72,41 +97,53 @@ public class AlgorithmDAO extends DAO {
 		ps.setString(8, algorithm.getLink());
 		ps.setString(9, algorithm.getMl_code());
 		ps.setString(10, algorithm.getPy_code());
-		
+
 		if (ps.executeUpdate() == 0) {
 			result = false;
 		}
-		
+
 		return result;
 	}
-	
-	
+
+	/**
+	 * Función que elimina un algoritmo de la base de datos
+	 * 
+	 * @param id: id del algoritmo que se quiere eliminar
+	 * @return true si se elimina, false si no se elimina
+	 * 
+	 */
 	public boolean deleteAlgorithm(int id) throws Exception {
-		
+
 		boolean result = true;
-		
-		String sql = "DELETE FROM algorithm WHERE ID=?";
-		
+
+		String sql = sqlProperties.getProperty("deleteAlgorithm");
+
 		Connection con = getConnection();
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setInt(1, id);
-		
-		if(ps.executeUpdate() == 0) {
+
+		if (ps.executeUpdate() == 0) {
 			result = false;
 		}
-		
+
 		return result;
 	}
-	
-	
-	public boolean modifyAlgorithm(Algorithm algorithm) throws Exception{
+
+	/**
+	 * Modifica un algoritmo de la base de datos
+	 * 
+	 * @param algorithm: algoritmo con los datos ya modificados
+	 * @return true si se modifica, false si no se modifica
+	 * @throws Exception
+	 */
+	public boolean modifyAlgorithm(Algorithm algorithm) throws Exception {
 		boolean result = true;
-		
-		String sql = "UPDATE algorithm SET Acronym=?, Name=?, Type=?, Year=?, Publication=?, Description=?, Source_Code=?, Link=?, ML_Code=?, Py_Code=? WHERE ID=?";
-		
+
+		String sql = sqlProperties.getProperty("modifyAlgorithm");
+
 		Connection con = getConnection();
 		PreparedStatement ps = con.prepareStatement(sql);
-		
+
 		ps.setString(1, algorithm.getAcronym());
 		ps.setString(2, algorithm.getName());
 		ps.setString(3, algorithm.getType());
@@ -118,13 +155,12 @@ public class AlgorithmDAO extends DAO {
 		ps.setString(9, algorithm.getMl_code());
 		ps.setString(10, algorithm.getPy_code());
 		ps.setInt(11, algorithm.getId());
-		
+
 		if (ps.executeUpdate() == 0) {
 			result = false;
 		}
-			
+
 		return result;
 	}
-	
 
 }

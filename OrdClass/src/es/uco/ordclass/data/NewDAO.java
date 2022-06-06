@@ -9,26 +9,46 @@ import java.util.Properties;
 
 import es.uco.ordclass.business.New;
 
-public class NewDAO extends DAO{
+/**
+ * Clase DAO (Data Access Object) que se encarga de insertar, obtener o
+ * modificar información sobre una noticia en la Base de datos
+ * 
+ * @author Jesús Bueno Ruiz
+ *
+ */
+public class NewDAO extends DAO {
 
+	/**
+	 * Constructor de la clase NewDAO
+	 * 
+	 * @param url:           url de la base de datos
+	 * @param user:          usuario de la base de datos
+	 * @param password:      contraseña de la base de datos
+	 * @param sqlProperties: fichero de propiedades sql
+	 */
 	public NewDAO(String url, String user, String password, Properties sqlProperties) {
 		super(url, user, password, sqlProperties);
 	}
-	
-	public ArrayList<New> getNews(){
+
+	/**
+	 * Función que obtiene todos las noticias de la base de datos
+	 * 
+	 * @return Array con las noticias
+	 */
+	public ArrayList<New> getNews() {
 		ArrayList<New> news = new ArrayList<New>();
 		news.clear();
 
-		String sql = "SELECT * from new";
+		String sql = sqlProperties.getProperty("getNews");
 
-		try{
+		try {
 			Connection con = getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 
-			while(rs.next()){
+			while (rs.next()) {
 				New new_ = new New();
-				
+
 				new_.setId(rs.getInt("ID"));
 				new_.setDescription(rs.getString("Description"));
 				new_.setImage(rs.getString("Image"));
@@ -37,16 +57,23 @@ public class NewDAO extends DAO{
 
 				news.add(new_);
 			}
-		}catch (SQLException e) {System.out.println(e);}
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
 
 		return news;
 	}
 
-
-	public boolean addNews(New new_) throws Exception{
+	/**
+	 * Función que añade una noticia a la base de datos
+	 * 
+	 * @param new_: noticia que se desea añadir
+	 * @return true si se añade, false si no se añade
+	 */
+	public boolean addNews(New new_) throws Exception {
 		boolean result = true;
 
-		String sql = "insert into new(Name, Description, Link, Image) values(?, ?, ?, ?)";
+		String sql = sqlProperties.getProperty("addNews");
 		Connection con = getConnection();
 		PreparedStatement ps = con.prepareStatement(sql);
 
@@ -62,27 +89,41 @@ public class NewDAO extends DAO{
 		return result;
 	}
 
-	public boolean deleteNew(int id) throws Exception{
-		
+	/**
+	 * Función que elimina una noticia de la base de datos
+	 * 
+	 * @param id: id de la noticia que se quiere eliminar
+	 * @return true si se elimina, false si no se elimina
+	 * 
+	 */
+	public boolean deleteNew(int id) throws Exception {
+
 		boolean result = true;
 
-		String sql = "DELETE FROM new WHERE ID=?";
+		String sql = sqlProperties.getProperty("deleteNews");
 
 		Connection con = getConnection();
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setInt(1, id);
 
-		if(ps.executeUpdate() == 0) {
+		if (ps.executeUpdate() == 0) {
 			result = false;
 		}
 
 		return result;
 	}
 
-	public boolean modifyNews(New new_) throws Exception{
+	/**
+	 * Modifica una noticia de la base de datos
+	 * 
+	 * @param new_: noticia con los datos ya modificados
+	 * @return true si se modifica, false si no se modifica
+	 * @throws Exception
+	 */
+	public boolean modifyNews(New new_) throws Exception {
 		boolean result = true;
 
-		String sql = "UPDATE new SET Name=?, Description=?, Link=?, Image=? WHERE ID=?";
+		String sql = sqlProperties.getProperty("modifyNews");
 		Connection con = getConnection();
 		PreparedStatement ps = con.prepareStatement(sql);
 

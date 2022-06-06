@@ -2,7 +2,13 @@ package es.uco.ordclass.business;
 
 import java.io.Serializable;
 
-public class Dataset implements Serializable{
+/**
+ * Clase que almacena toda la información de un dataset
+ * 
+ * @author Jesús Bueno Ruiz
+ *
+ */
+public class Dataset implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private int id;
@@ -19,11 +25,31 @@ public class Dataset implements Serializable{
 	private String description;
 	private String donor;
 	private String data_source;
-	
-	public Dataset() {}
 
-	
+	/**
+	 * Constructor vacío de la clase Dataset
+	 */
+	public Dataset() {
+	}
 
+	/**
+	 * Constructor de la clase Dataset
+	 * 
+	 * @param id: id del dataset
+	 * @param name: nombre del dataset
+	 * @param train_size: tamaño de entrenamiento
+	 * @param test_size: tamaño de test
+	 * @param length: longitud
+	 * @param classes: número de clases
+	 * @param type: tipo de dataset
+	 * @param best_algorithm: mejor algoritmo
+	 * @param best_accuracy: mejor precisión
+	 * @param images: enlace de imagen
+	 * @param download: link de descarga
+	 * @param description: descripción del dataset
+	 * @param donor: donante
+	 * @param data_source: código fuente
+	 */
 	public Dataset(int id, String name, int train_size, int test_size, int length, int classes, String type,
 			String best_algorithm, int best_accuracy, String images, String download, String description, String donor,
 			String data_source) {
@@ -44,10 +70,9 @@ public class Dataset implements Serializable{
 		this.data_source = data_source;
 	}
 
-
-
-	//Getters and setters
-	
+	/**
+	 * Getters y setters de los parámetros de la clase Dataset
+	 */
 	public int getId() {
 		return id;
 	}
@@ -144,33 +169,20 @@ public class Dataset implements Serializable{
 		this.description = description;
 	}
 
-
-
 	public String getDonor() {
 		return donor;
 	}
-
-
 
 	public void setDonor(String donor) {
 		this.donor = donor;
 	}
 
-
-
 	public String getData_source() {
 		return data_source;
 	}
 
-
-
 	public void setData_source(String data_source) {
 		this.data_source = data_source;
 	}
-	
 
-	
-	
-	
-	
 }

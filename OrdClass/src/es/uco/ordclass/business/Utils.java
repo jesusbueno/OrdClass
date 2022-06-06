@@ -8,8 +8,20 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+/**
+ * Clase que almacena funciones útiles para el correcto funcionamiento del sistema
+ * @author Jesús Bueno Ruiz
+ *
+ */
 public class Utils {
 
+	/**
+	 * Función que envía un email a un administrador cuando un usuario realiza una sugerencia
+	 * @param asunto: asunto del mensaje
+	 * @param cuerpo: cuerpo del mensaje
+	 * @param admin: administrador al que se le envía el correo
+	 * @return true si se envía correctamente, false si no se envía correctamente
+	 */
 	public static boolean sendEmail(String asunto, String cuerpo, String admin) {
 		boolean result = true;
 		
@@ -49,6 +61,15 @@ public class Utils {
 		return result;
 	}
 	
+	/**
+	 * Función que da formato al cuerpo del email que se envía a un administrador
+	 * @param name: nombre del remitente
+	 * @param surname: apellidos del remitente
+	 * @param email: email del remitente
+	 * @param concept: asunto del mensaje
+	 * @param cuerpo: cuerpo del mensaje
+	 * @return cuerpo con formato
+	 */
 	public static String createBody(String name, String surname, String email, String concept, String cuerpo) {
 		String body = "";
 		

@@ -2,19 +2,39 @@ package es.uco.ordclass.business;
 
 import java.io.Serializable;
 
-public class Library implements Serializable{
+/**
+ * Clase que almacena toda la información de una librería
+ * 
+ * @author Jesús Bueno Ruiz
+ *
+ */
+public class Library implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private int id;
 	private String name;
 	private String author;
 	private String language;
 	private String github_link;
 	private String documentation_link;
-	
-	public Library() {}
 
+	/**
+	 * Constructor vacío de la clase Library
+	 */
+	public Library() {
+	}
+
+	/**
+	 * Constructor de la clase Library
+	 * 
+	 * @param id: id de la librería
+	 * @param name: nombre de la librería
+	 * @param author: autor de la librería
+	 * @param language: lenguaje de la librería
+	 * @param github_link: link de GitHub
+	 * @param documentation_link: link de la documentación
+	 */
 	public Library(int id, String name, String author, String language, String github_link, String documentation_link) {
 		super();
 		this.id = id;
@@ -25,6 +45,9 @@ public class Library implements Serializable{
 		this.documentation_link = documentation_link;
 	}
 
+	/**
+	 * Getters y setters de los parámetros de la clase Library
+	 */
 	public int getId() {
 		return id;
 	}
@@ -72,10 +95,5 @@ public class Library implements Serializable{
 	public void setDocumentation_link(String documentation_link) {
 		this.documentation_link = documentation_link;
 	}
-
-		
-
-	
-	
 
 }

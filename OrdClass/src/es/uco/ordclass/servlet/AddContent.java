@@ -1,6 +1,7 @@
 package es.uco.ordclass.servlet;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 import javax.servlet.ServletException;
@@ -22,57 +23,69 @@ import es.uco.ordclass.data.LibraryDAO;
 import es.uco.ordclass.data.NewDAO;
 import es.uco.ordclass.data.ResearcherDAO;
 
+/**
+ * Se encarga de recibir la información acerca de un nuevo contenido, y llama a
+ * los DAO para que estos inserten dicha información
+ * 
+ * @author Jesús Bueno Ruiz
+ *
+ */
 public class AddContent extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    public AddContent() {
-        super();
-    }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	public AddContent() {
+		super();
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		//String urlBD = "jdbc:mysql://ordclass.zapto.org/ordclass";
-		String urlBD = "jdbc:mysql://localhost/ordclass";
-		String userBD = "java";
-		String passBD = "1234";		
+
+		String urlBD = getServletContext().getInitParameter("urlDB");
+		String userBD = getServletContext().getInitParameter("userDB");
+		String passBD = getServletContext().getInitParameter("passwordDB");
+
+		// Obtener fichero sql.properties
+		String sql = getServletContext().getInitParameter("sqlProperties");
 		Properties prop = new Properties();
-				
+		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+		InputStream input = classLoader.getResourceAsStream(sql);
+		prop.load(input);
+
 		String type = request.getParameter("type");
 		boolean status = false;
-		
-		switch(type){
+
+		switch (type) {
 		case "algorithm":
-			
+
 			Algorithm algorithm = new Algorithm();
 			AlgorithmDAO adao = new AlgorithmDAO(urlBD, userBD, passBD, prop);
 
 			algorithm = setAlgorithm(request);
-			
+
 			try {
-				status = adao.addAlgorithm(algorithm);	
-			} catch (Exception e) {e.printStackTrace();}
-			
-			
-			
+				status = adao.addAlgorithm(algorithm);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
 			break;
-			
+
 		case "dataset":
-			
+
 			Dataset dataset = new Dataset();
 			DatasetDAO dsdao = new DatasetDAO(urlBD, userBD, passBD, prop);
 
 			dataset = setDataset(request);
 
 			try {
-				status = dsdao.addDataset(dataset);	
-			} catch (Exception e) {e.printStackTrace();}
+				status = dsdao.addDataset(dataset);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 
 			break;
-			
+
 		case "researcher":
 
 			Researcher researcher = new Researcher();
@@ -81,11 +94,13 @@ public class AddContent extends HttpServlet {
 			researcher = setResearcher(request);
 
 			try {
-				status = rdao.addResearcher(researcher);	
-			} catch (Exception e) {e.printStackTrace();}
-			
+				status = rdao.addResearcher(researcher);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
 			break;
-			
+
 		case "libraries":
 
 			Library library = new Library();
@@ -94,11 +109,13 @@ public class AddContent extends HttpServlet {
 			library = setLibrary(request);
 
 			try {
-				status = ldao.addLibraries(library);	
-			} catch (Exception e) {e.printStackTrace();}
-			
+				status = ldao.addLibraries(library);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
 			break;
-			
+
 		case "bibliography":
 
 			Bibliography bibliography = new Bibliography();
@@ -108,10 +125,12 @@ public class AddContent extends HttpServlet {
 
 			try {
 				status = bdao.addBibliography(bibliography);
-			} catch (Exception e) {e.printStackTrace();}
-			
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
 			break;
-			
+
 		case "news":
 
 			New new_ = new New();
@@ -121,26 +140,33 @@ public class AddContent extends HttpServlet {
 
 			try {
 				status = ndao.addNews(new_);
-			} catch (Exception e) {e.printStackTrace();}
-			
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
 			break;
-			
+
 		default:
-			
+
 			break;
-		
+
 		}
-		
-		if (status == true){
+
+		if (status == true) {
 			response.sendRedirect("/OrdClass/Views/SuccessfulOperation.jsp");
-		}else {
+		} else {
 			response.sendRedirect("/OrdClass/Views/WrongOperation.jsp");
 		}
-		
-		
+
 	}
 
-	protected Algorithm setAlgorithm(HttpServletRequest request){
+	/**
+	 * Función que recoge los parámetros de las vistas, y crea un objeto Algorithm
+	 * 
+	 * @param request
+	 * @return Algorithm: Objeto Algorithm
+	 */
+	protected Algorithm setAlgorithm(HttpServletRequest request) {
 		Algorithm algorithm = new Algorithm();
 		algorithm.setAcronym(request.getParameter("al-acronym"));
 		algorithm.setDescription(request.getParameter("al-description"));
@@ -156,7 +182,13 @@ public class AddContent extends HttpServlet {
 		return algorithm;
 	}
 
-	protected Dataset setDataset(HttpServletRequest request){
+	/**
+	 * Función que recoge los parámetros de las vistas, y crea un objeto Dataset
+	 * 
+	 * @param request
+	 * @return Dataset: Objeto Dataset
+	 */
+	protected Dataset setDataset(HttpServletRequest request) {
 		Dataset dataset = new Dataset();
 
 		dataset.setBest_accuracy(Integer.parseInt(request.getParameter("ds-bestaccuracy")));
@@ -172,11 +204,17 @@ public class AddContent extends HttpServlet {
 		dataset.setTest_size(Integer.parseInt(request.getParameter("ds-testsize")));
 		dataset.setTrain_size(Integer.parseInt(request.getParameter("ds-trainsize")));
 		dataset.setType(request.getParameter("ds-type"));
-		
+
 		return dataset;
 	}
 
-	protected Researcher setResearcher(HttpServletRequest request){
+	/**
+	 * Función que recoge los parámetros de las vistas, y crea un objeto Researcher
+	 * 
+	 * @param request
+	 * @return Researcher: Objeto Researcher
+	 */
+	protected Researcher setResearcher(HttpServletRequest request) {
 		Researcher researcher = new Researcher();
 
 		researcher.setCountry(request.getParameter("r-country"));
@@ -193,7 +231,13 @@ public class AddContent extends HttpServlet {
 		return researcher;
 	}
 
-	protected Library setLibrary(HttpServletRequest request){
+	/**
+	 * Función que recoge los parámetros de las vistas, y crea un objeto Library
+	 * 
+	 * @param request
+	 * @return Library: Objeto Library
+	 */
+	protected Library setLibrary(HttpServletRequest request) {
 		Library library = new Library();
 
 		library.setAuthor(request.getParameter("l-author"));
@@ -205,7 +249,14 @@ public class AddContent extends HttpServlet {
 		return library;
 	}
 
-	protected Bibliography setBibliography(HttpServletRequest request){
+	/**
+	 * Función que recoge los parámetros de las vistas, y crea un objeto
+	 * Bibliography
+	 * 
+	 * @param request
+	 * @return Bibliography: Objeto Bibliography
+	 */
+	protected Bibliography setBibliography(HttpServletRequest request) {
 		Bibliography bibliography = new Bibliography();
 
 		bibliography.setAuthor(request.getParameter("b-author"));
@@ -219,7 +270,13 @@ public class AddContent extends HttpServlet {
 		return bibliography;
 	}
 
-	protected New setNew(HttpServletRequest request){
+	/**
+	 * Función que recoge los parámetros de las vistas, y crea un objeto New
+	 * 
+	 * @param request
+	 * @return New: Objeto New
+	 */
+	protected New setNew(HttpServletRequest request) {
 		New new_ = new New();
 
 		new_.setDescription(request.getParameter("n-description"));

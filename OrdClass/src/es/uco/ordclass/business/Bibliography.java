@@ -2,7 +2,13 @@ package es.uco.ordclass.business;
 
 import java.io.Serializable;
 
-public class Bibliography implements Serializable{
+/**
+ * Clase que almacena toda la información de una entrada bibliográfica
+ * 
+ * @author Jesús Bueno Ruiz
+ *
+ */
+public class Bibliography implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private int id;
@@ -13,10 +19,27 @@ public class Bibliography implements Serializable{
 	private int volume;
 	private int number;
 	private String pages;
-	
-	public Bibliography() {}
 
-	public Bibliography(int id, String author, String title, int year, String book, int volume, int number, String pages) {
+	/**
+	 * Constructor vacío de la clase Bibliography
+	 */
+	public Bibliography() {
+	}
+
+	/**
+	 * Constructor de la clase Bibliography
+	 * 
+	 * @param id: id de la entrada
+	 * @param author: autor
+	 * @param title: título
+	 * @param year: año
+	 * @param book: libro
+	 * @param volume: volumen
+	 * @param number: número
+	 * @param pages: páginas
+	 */
+	public Bibliography(int id, String author, String title, int year, String book, int volume, int number,
+			String pages) {
 		super();
 		this.id = id;
 		this.author = author;
@@ -27,9 +50,10 @@ public class Bibliography implements Serializable{
 		this.number = number;
 		this.pages = pages;
 	}
-	
-	//getters and setters
 
+	/**
+	 * Getters y setters de los parámetros de la clase Bibliography
+	 */
 	public int getId() {
 		return id;
 	}
@@ -93,6 +117,5 @@ public class Bibliography implements Serializable{
 	public void setPages(String pages) {
 		this.pages = pages;
 	}
-	
-	
+
 }

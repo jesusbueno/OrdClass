@@ -3,7 +3,13 @@ package es.uco.ordclass.business;
 import java.io.Serializable;
 import java.sql.Date;
 
-public class Log implements Serializable{
+/**
+ * Clase que almacena toda la información de un log
+ * 
+ * @author Jesús Bueno Ruiz
+ *
+ */
+public class Log implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private int id;
@@ -11,20 +17,34 @@ public class Log implements Serializable{
 	private String info;
 	private String type;
 	private int reference;
-	
-	public Log() {}
 
+	/**
+	 * Constructor vacío de la clase Log
+	 */
+	public Log() {
+	}
+
+	/**
+	 * Constructor de la clase Log
+	 * 
+	 * @param id: id del log
+	 * @param date: fecha
+	 * @param info: información
+	 * @param type: tipo de log
+	 * @param reference: referencia
+	 */
 	public Log(int id, Date date, String info, String type, int reference) {
 		super();
-		this.id= id;
+		this.id = id;
 		this.date = date;
 		this.info = info;
 		this.type = type;
 		this.reference = reference;
 	}
-	
-	//getters and setters
 
+	/**
+	 * Getters y setters de los parámetros de la clase Log
+	 */
 	public int getId() {
 		return id;
 	}
@@ -64,5 +84,5 @@ public class Log implements Serializable{
 	public void setReference(int reference) {
 		this.reference = reference;
 	}
-	
+
 }

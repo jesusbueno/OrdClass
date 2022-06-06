@@ -2,20 +2,38 @@ package es.uco.ordclass.business;
 
 import java.io.Serializable;
 
-public class User implements Serializable{
-	
+/**
+ * Clase que almacena toda la información de un usuario administrador
+ * @author Jesús Bueno Ruiz
+ *
+ */
+public class User implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	
+
 	private String email;
 	private String name;
 	private String surname;
 	private String username;
 	private String password;
 	private int admin;
-	
-	public User() {}
 
+	/**
+	 * Constructor vacío de la clase User
+	 */
+	public User() {
+	}
 
+	/**
+	 * Constructor de la clase User
+	 * 
+	 * @param email: email de acceso
+	 * @param name: nombre del administrador
+	 * @param surname: apellidos del administrador
+	 * @param username: nombre de usuario
+	 * @param password: contraseña de acceso
+	 * @param admin: indica si tiene privilegios de administrador
+	 */
 	public User(String email, String name, String surname, String username, String password, int admin) {
 		super();
 		this.email = email;
@@ -26,8 +44,9 @@ public class User implements Serializable{
 		this.admin = admin;
 	}
 
-
-
+	/**
+	 * Getters y setters de los parámetros de la clase User
+	 */
 	public String getPassword() {
 		return password;
 	}
@@ -75,5 +94,5 @@ public class User implements Serializable{
 	public void setAdmin(int admin) {
 		this.admin = admin;
 	}
-	
+
 }

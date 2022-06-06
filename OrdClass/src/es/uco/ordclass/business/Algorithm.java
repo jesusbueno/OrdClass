@@ -2,7 +2,11 @@ package es.uco.ordclass.business;
 
 import java.io.Serializable;
 
-public class Algorithm implements Serializable{
+/**
+ * Clase que almacena toda la información sobre un algoritmo.
+ *	@author Jesús Bueno Ruiz
+ */
+public class Algorithm implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private int id;
@@ -16,10 +20,29 @@ public class Algorithm implements Serializable{
 	private String link;
 	private String ml_code;
 	private String py_code;
-	
-	public Algorithm() {}
 
-	public Algorithm(int id, String acronym, String name, String type, int year, String publication, String description, String source_code, String link, String ml_code, String py_code) {
+	/**
+	 * Constructor vacío de la clase Algorithm
+	 */
+	public Algorithm() {
+	}
+
+	/**
+	 * Constructor de la clase Algorithm
+	 * @param id: id del algoritmo
+	 * @param acronym: acrónimo del algoritmo
+	 * @param name: nombre del algoritmo
+	 * @param type: tipo del algoritmo
+	 * @param year: año de publicación del algoritmo
+	 * @param publication: publicación del algoritmo
+	 * @param description: descripción del algoritmo
+	 * @param source_code: código fuente del algoritmo
+	 * @param link: link del algoritmo
+	 * @param ml_code: código MATLAB del algoritmo
+	 * @param py_code: código Python del algoritmo
+	 */
+	public Algorithm(int id, String acronym, String name, String type, int year, String publication, String description,
+			String source_code, String link, String ml_code, String py_code) {
 		super();
 		this.id = id;
 		this.acronym = acronym;
@@ -34,8 +57,9 @@ public class Algorithm implements Serializable{
 		this.py_code = py_code;
 	}
 
-	//getters and setters
-	
+	/**
+	 * Getters y setters de los parámetros de la clase Algorithm
+	 */
 	public String getAcronym() {
 		return acronym;
 	}
@@ -123,8 +147,5 @@ public class Algorithm implements Serializable{
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	
-	
-	
+
 }

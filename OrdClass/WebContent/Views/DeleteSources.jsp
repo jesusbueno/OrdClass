@@ -32,51 +32,19 @@
 		return;
 	}
 	
-	/*Carga de algoritmos*/
+	/*Carga de contenido*/
 	
 	ArrayList<Algorithm> algorithms = (ArrayList<Algorithm>) session.getAttribute("algorithms");
-
-	if(algorithms == null){
-		response.sendRedirect("../loadData");
-		return;
-	}
-	
 	ArrayList<Dataset> datasets = (ArrayList<Dataset>) session.getAttribute("datasets");
-
-	if(datasets == null){
-		response.sendRedirect("../loadData");
-		return;
-	}
-	
 	ArrayList<Library> libraries = (ArrayList<Library>) session.getAttribute("libraries");
-
-	if(libraries == null){
-		response.sendRedirect("../loadData");
-		return;
-	}
-	
 	ArrayList<Researcher> researches = (ArrayList<Researcher>) session.getAttribute("researches");
-
-	if(researches == null){
-		response.sendRedirect("../loadData");
-		return;
-	}
-	
 	ArrayList<Bibliography> bibliographies = (ArrayList<Bibliography>) session.getAttribute("bibliographies");
-
-	if(bibliographies == null){
-		response.sendRedirect("../loadData");
-		return;
-	}
-	
 	ArrayList<New> news = (ArrayList<New>) session.getAttribute("news");
 
-	if(news == null){
+	if(algorithms == null || datasets == null || libraries == null || researches == null || bibliographies == null || news == null){
 		response.sendRedirect("../loadData");
 		return;
 	}
-	
-
 %>
 
 

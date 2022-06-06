@@ -80,19 +80,19 @@
 							
 							<div class="column">
 								<div class="input-field">
-									<input type="text" id="tipo2" name="al-acronym" placeholder="Acronym" value=<%=algorithm.getAcronym() %>>
+									<input type="text" id="tipo2" name="al-acronym" placeholder="Acronym" value="<%=algorithm.getAcronym() %>">
 								</div>
 						
 								<div class="input-field">
-									<input type="text" id="tipo2" name="al-name" placeholder="Name" value=<%=algorithm.getName() %>>
+									<input type="text" id="tipo2" name="al-name" placeholder="Name" value="<%=algorithm.getName() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="al-type" placeholder="Type" value=<%=algorithm.getType() %>>
+									<input type="text" id="tipo2" name="al-type" placeholder="Type" value="<%=algorithm.getType() %>">
 								</div>
 								
 								<div class="input-field-2">
-									<textarea placeholder="Description" name="al-description"></textarea>
+									<textarea placeholder="Description" name="al-description" value="<%=algorithm.getDescription()%>"></textarea>
 								</div>
 							
 								
@@ -101,29 +101,29 @@
 							<div class="column">
 							
 								<div class="input-field">
-									<input type="number" id="tipo2" name="al-year" placeholder="Year" min="1990" max="2022" value=<%=algorithm.getYear() %>>
+									<input type="number" id="tipo2" name="al-year" placeholder="Year" min="1990" max="2022" value="<%=algorithm.getYear() %>">
 								</div>
 								
 								<div class="input-field">
-									<input type="text" id="tipo2" name="al-publication" placeholder="Publication" value=<%=algorithm.getPublication() %>>
+									<input type="text" id="tipo2" name="al-publication" placeholder="Publication" value="<%=algorithm.getPublication() %>">
 								</div>
 							
 								
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="al-sourcecode" placeholder="Source Code" value=<%=algorithm.getSource_code() %>>
+									<input type="text" id="tipo2" name="al-sourcecode" placeholder="Source Code" value="<%=algorithm.getSource_code() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="al-link" placeholder="Link" value=<%=algorithm.getLink() %>>
+									<input type="text" id="tipo2" name="al-link" placeholder="Link" value="<%=algorithm.getLink() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="al-matlab" placeholder="MATLAB Code" value=<%=algorithm.getMl_code() %>>
+									<input type="text" id="tipo2" name="al-matlab" placeholder="MATLAB Code" value="<%=algorithm.getMl_code() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="al-python" placeholder="Python Code" value=<%=algorithm.getPy_code() %>>
+									<input type="text" id="tipo2" name="al-python" placeholder="Python Code" value="<%=algorithm.getPy_code() %>">
 								</div>
 							</div>
 							</div>		
@@ -142,27 +142,27 @@
 							
 							<div class="column">
 								<div class="input-field">
-									<input type="text" id="tipo2" name="ds-name" placeholder="Name" value=<%=dataset.getName() %>>
+									<input type="text" id="tipo2" name="ds-name" placeholder="Name" value="<%=dataset.getName() %>">
 								</div>
 						
 								<div class="input-field">
-									<input type="number" id="tipo2" name="ds-trainsize" placeholder="Train Size" min="0" value=<%=dataset.getTrain_size() %>>
+									<input type="number" id="tipo2" name="ds-trainsize" placeholder="Train Size" min="0" value="<%=dataset.getTrain_size() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="number" id="tipo2" name="ds-testsize" placeholder="Test Size" min="0" value=<%=dataset.getTest_size() %>>
+									<input type="number" id="tipo2" name="ds-testsize" placeholder="Test Size" min="0" value="<%=dataset.getTest_size() %>">
 								</div>
 								
 								<div class="input-field">
-									<input type="number" id="tipo2" name="ds-length" placeholder="Length" min ="0" value=<%=dataset.getLength() %>>
+									<input type="number" id="tipo2" name="ds-length" placeholder="Length" min ="0" value="<%=dataset.getLength() %>">
 								</div>
 								
 								<div class="input-field">
-									<input type="number" id="tipo2" name="ds-classes" placeholder="Classes" min="0" value=<%=dataset.getClasses() %>>
+									<input type="number" id="tipo2" name="ds-classes" placeholder="Classes" min="0" value="<%=dataset.getClasses() %>">
 								</div>
 								
 								<div class="input-field-2">
-									<textarea placeholder="Description" name="ds-description"></textarea>
+									<textarea placeholder="Description" name="ds-description" value="<%=dataset.getDescription() %>"></textarea>
 								</div>
 							
 								
@@ -171,31 +171,31 @@
 							<div class="column">
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="ds-type" placeholder="Type" value=<%=dataset.getType() %>>
+									<input type="text" id="tipo2" name="ds-type" placeholder="Type" value="<%=dataset.getType() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="ds-bestalgorithm" placeholder="Best Algorithm" value=<%=dataset.getBest_algorithm() %>>
+									<input type="text" id="tipo2" name="ds-bestalgorithm" placeholder="Best Algorithm" value="<%=dataset.getBest_algorithm() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="number" id="tipo2" name="ds-bestaccuracy" placeholder="Best Accurary" min="0" max="100" value=<%=dataset.getBest_accuracy() %>>
+									<input type="number" id="tipo2" name="ds-bestaccuracy" placeholder="Best Accurary" min="0" max="100" value="<%=dataset.getBest_accuracy() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="ds-images" placeholder="Images" value=<%=dataset.getImages() %>>
+									<input type="text" id="tipo2" name="ds-images" placeholder="Images" value="<%=dataset.getImages()%>">
 								</div>
 								
 								<div class="input-field">
-									<input type="text" id="tipo2" name="ds-download" placeholder="Download link" value=<%=dataset.getDownload() %>>
+									<input type="text" id="tipo2" name="ds-download" placeholder="Download link" value="<%=dataset.getDownload() %>">
 								</div>
 								
 								<div class="input-field">
-									<input type="text" id="tipo2" name="ds-donor" placeholder="Donor" value=<%=dataset.getDonor() %>>
+									<input type="text" id="tipo2" name="ds-donor" placeholder="Donor" value="<%=dataset.getDonor() %>">
 								</div>
 								
 								<div class="input-field">
-									<input type="text" id="tipo2" name="ds-datasource" placeholder="Data Source" value=<%=dataset.getData_source() %>>
+									<input type="text" id="tipo2" name="ds-datasource" placeholder="Data Source" value="<%=dataset.getData_source() %>">
 								</div>
 							</div>
 								
@@ -219,19 +219,19 @@
 							
 							<div class="column">
 								<div class="input-field">
-									<input type="text" id="tipo2" name="r-name" placeholder="Name" value=<%=researcher.getName() %>>
+									<input type="text" id="tipo2" name="r-name" placeholder="Name" value="<%=researcher.getName() %>">
 								</div>
 						
 								<div class="input-field">
-									<input type="text" id="tipo2" name="r-surname" placeholder="Surname" value=<%=researcher.getSurname() %>>
+									<input type="text" id="tipo2" name="r-surname" placeholder="Surname" value="<%=researcher.getSurname() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="r-institution" placeholder="Institution" value=<%=researcher.getInstitution() %>>
+									<input type="text" id="tipo2" name="r-institution" placeholder="Institution" value="<%=researcher.getInstitution() %>">
 								</div>
 								
 								<div class="input-field-2">
-									<textarea placeholder="Description" name="r-description"></textarea>
+									<textarea placeholder="Description" name="r-description" value="<%=researcher.getDescription() %>"></textarea>
 								</div>
 							
 								
@@ -240,29 +240,29 @@
 							<div class="column">
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="r-country" placeholder="Country" value=<%=researcher.getCountry() %>>
+									<input type="text" id="tipo2" name="r-country" placeholder="Country" value="<%=researcher.getCountry() %>">
 								</div>
 								
 								<div class="input-field">
-									<input type="text" id="tipo2" name="r-profession" placeholder="Profession" value=<%=researcher.getProfession() %>>
+									<input type="text" id="tipo2" name="r-profession" placeholder="Profession" value="<%=researcher.getProfession() %>">
 								</div>
 							
 								
 							
 								<div class="input-field">
-									<input type="number" id="tipo2" name="r-phone" placeholder="Phone" min="0" max="999999999" value=<%=researcher.getPhone() %>>
+									<input type="number" id="tipo2" name="r-phone" placeholder="Phone" min="0" max="999999999" value="<%=researcher.getPhone() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="r-links" placeholder="Links" value=<%=researcher.getLink() %>>
+									<input type="text" id="tipo2" name="r-links" placeholder="Links" value="<%=researcher.getLink() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="r-email" placeholder="Email" value=<%=researcher.getEmail() %>>
+									<input type="text" id="tipo2" name="r-email" placeholder="Email" value="<%=researcher.getEmail() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="r-image" placeholder="Image link" value=<%=researcher.getImage() %>>
+									<input type="text" id="tipo2" name="r-image" placeholder="Image link" value="<%=researcher.getImage() %>">
 								</div>
 							</div>
 							
@@ -285,15 +285,15 @@
 							
 							<div class="column">
 								<div class="input-field">
-									<input type="text" id="tipo2" name="l-name" placeholder="Name" value=<%=library.getName() %>>
+									<input type="text" id="tipo2" name="l-name" placeholder="Name" value="<%=library.getName() %>">
 								</div>
 						
 								<div class="input-field">
-									<input type="text" id="tipo2" name="l-author" placeholder="Author" value=<%=library.getAuthor() %>>
+									<input type="text" id="tipo2" name="l-author" placeholder="Author" value="<%=library.getAuthor() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="l-language" placeholder="Language" value=<%=library.getLanguage() %>>
+									<input type="text" id="tipo2" name="l-language" placeholder="Language" value="<%=library.getLanguage() %>">
 								</div>
 								
 							
@@ -303,11 +303,11 @@
 							<div class="column">
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="l-github" placeholder="Github_Link" value=<%=library.getGithub_link() %>>
+									<input type="text" id="tipo2" name="l-github" placeholder="Github_Link" value="<%=library.getGithub_link() %>">
 								</div>
 								
 								<div class="input-field">
-									<input type="text" id="tipo2" name="l-documentation" placeholder="Documentation_link" value=<%=library.getDocumentation_link() %>>
+									<input type="text" id="tipo2" name="l-documentation" placeholder="Documentation_link" value="<%=library.getDocumentation_link() %>">
 								</div>
 							
 							</div>
@@ -331,19 +331,19 @@
 							
 							<div class="column">
 								<div class="input-field">
-									<input type="text" id="tipo2" name="b-author" placeholder="Author" value=<%=bibliography.getAuthor() %>>
+									<input type="text" id="tipo2" name="b-author" placeholder="Author" value="<%=bibliography.getAuthor() %>">
 								</div>
 						
 								<div class="input-field">
-									<input type="text" id="tipo2" name="b-title" placeholder="Title" value=<%=bibliography.getTitle() %>>
+									<input type="text" id="tipo2" name="b-title" placeholder="Title" value="<%=bibliography.getTitle() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="number" id="tipo2" name="b-year" placeholder="Year" min="1900" max="2022" value=<%=bibliography.getYear() %>>
+									<input type="number" id="tipo2" name="b-year" placeholder="Year" min="1900" max="2022" value="<%=bibliography.getYear() %>">
 								</div>
 								
 								<div class="input-field">
-									<input type="text" id="tipo2" name="b-book" placeholder="Book" value=<%=bibliography.getBook() %>>
+									<input type="text" id="tipo2" name="b-book" placeholder="Book" value="<%=bibliography.getBook() %>">
 								</div>
 				
 								
@@ -354,26 +354,21 @@
 								
 								
 								<div class="input-field">
-									<input type="number" id="tipo2" name="b-volume" placeholder="Volume" min="0" value=<%=bibliography.getVolume() %>>
+									<input type="number" id="tipo2" name="b-volume" placeholder="Volume" min="0" value="<%=bibliography.getVolume() %>">
 								</div>
 							
 								
 							
 								<div class="input-field">
-									<input type="number" id="tipo2" name="b-number" placeholder="Number" min="0" value=<%=bibliography.getNumber() %>>
+									<input type="number" id="tipo2" name="b-number" placeholder="Number" min="0" value="<%=bibliography.getNumber() %>">
 								</div>
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="b-pages" placeholder="Pages" value=<%=bibliography.getPages() %>>
+									<input type="text" id="tipo2" name="b-pages" placeholder="Pages" value="<%=bibliography.getPages() %>">
 								</div>
 							
-							</div>
-								
-							
-								
-							</div>
-							
-											
+							</div>				
+							</div>				
 						</div>
 							
 							
@@ -389,11 +384,11 @@
 							
 							<div class="column">
 								<div class="input-field">
-									<input type="text" id="tipo2" name="n-name" placeholder="Name" value=<%=new_.getName() %>>
+									<input type="text" id="tipo2" name="n-name" placeholder="Name" value="<%=new_.getName() %>">
 								</div>
 						
 								<div class="input-field">
-									<input type="text" id="tipo2" name="n-description" placeholder="Description" value=<%=new_.getDescription() %>>
+									<input type="text" id="tipo2" name="n-description" placeholder="Description" value="<%=new_.getDescription() %>">
 								</div>
 							
 				
@@ -403,11 +398,11 @@
 							<div class="column">
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="n-link" placeholder="Link" value=<%=new_.getLink() %>>
+									<input type="text" id="tipo2" name="n-link" placeholder="Link" value="<%=new_.getLink() %>">
 								</div>
 						
 								<div class="input-field">
-									<input type="text" id="tipo2" name="n-image" placeholder="Image Link" value=<%=new_.getImage() %>>
+									<input type="text" id="tipo2" name="n-image" placeholder="Image Link" value="<%=new_.getImage() %>">
 								</div>
 							</div>					
 							</div>

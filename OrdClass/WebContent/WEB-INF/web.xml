@@ -1,126 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
-  <display-name>OrdClass</display-name>
-  <welcome-file-list>
-    <welcome-file>loadData</welcome-file>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>OrdClass</display-name>
+	<welcome-file-list>
+		<welcome-file>loadData</welcome-file>
+	</welcome-file-list>
 
-  </welcome-file-list>
-  
-  <servlet>
-        <servlet-name>Controller</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.Controller</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Controller</servlet-name>
-        <url-pattern>/Controller</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>loadData</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.loadData</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>loadData</servlet-name>
-        <url-pattern>/loadData</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>SearchDatasetInfo</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.SearchDatasetInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SearchDatasetInfo</servlet-name>
-        <url-pattern>/SearchDatasetInfo</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>SearchAlgorithmInfo</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.SearchAlgorithmInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SearchAlgorithmInfo</servlet-name>
-        <url-pattern>/SearchAlgorithmInfo</url-pattern>
-    </servlet-mapping>
-    
-     <servlet>
-        <servlet-name>SearchResearcherInfo</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.SearchResearcherInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SearchResearcherInfo</servlet-name>
-        <url-pattern>/SearchResearcherInfo</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>SearchLog</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.SearchLog</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SearchLog</servlet-name>
-        <url-pattern>/SearchLog</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>LoginUser</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.LoginUser</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>LoginUser</servlet-name>
-        <url-pattern>/LoginUser</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>AddContent</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.AddContent</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>AddContent</servlet-name>
-        <url-pattern>/AddContent</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>DeleteContent</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.DeleteContent</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DeleteContent</servlet-name>
-        <url-pattern>/DeleteContent</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>LoadAdmin</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.LoadAdmin</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>LoadAdmin</servlet-name>
-        <url-pattern>/LoadAdmin</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>SearchContentInfo</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.SearchContentInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SearchContentInfo</servlet-name>
-        <url-pattern>/SearchContentInfo</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>ModifyContent</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.ModifyContent</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ModifyContent</servlet-name>
-        <url-pattern>/ModifyContent</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>SendIssue</servlet-name>
-        <servlet-class>es.uco.ordclass.servlet.SendIssue</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SendIssue</servlet-name>
-        <url-pattern>/SendIssue</url-pattern>
-    </servlet-mapping>
-    
+	<context-param>
+		<param-name>DBDriver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>urlDB</param-name>
+		<param-value>jdbc:mysql://localhost/ordclass</param-value>
+	</context-param>
+
+	<!-- <context-param> <param-name>urlDB</param-name> <param-value>jdbc:mysql://ordclass.zapto.org/ordclass</param-value> 
+		</context-param> -->
+	<context-param>
+		<param-name>userDB</param-name>
+		<param-value>java</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>passwordDB</param-name>
+		<param-value>1234</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>sqlProperties</param-name>
+		<param-value>sql.properties</param-value>
+	</context-param>
+
+
+
+	<servlet>
+		<servlet-name>Controller</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.Controller</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Controller</servlet-name>
+		<url-pattern>/Controller</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>loadData</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.loadData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loadData</servlet-name>
+		<url-pattern>/loadData</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchDatasetInfo</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.SearchDatasetInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchDatasetInfo</servlet-name>
+		<url-pattern>/SearchDatasetInfo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchAlgorithmInfo</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.SearchAlgorithmInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchAlgorithmInfo</servlet-name>
+		<url-pattern>/SearchAlgorithmInfo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchResearcherInfo</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.SearchResearcherInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchResearcherInfo</servlet-name>
+		<url-pattern>/SearchResearcherInfo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchLog</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.SearchLog</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchLog</servlet-name>
+		<url-pattern>/SearchLog</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoginUser</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.LoginUser</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginUser</servlet-name>
+		<url-pattern>/LoginUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddContent</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.AddContent</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddContent</servlet-name>
+		<url-pattern>/AddContent</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteContent</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.DeleteContent</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteContent</servlet-name>
+		<url-pattern>/DeleteContent</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoadAdmin</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.LoadAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoadAdmin</servlet-name>
+		<url-pattern>/LoadAdmin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchContentInfo</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.SearchContentInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchContentInfo</servlet-name>
+		<url-pattern>/SearchContentInfo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ModifyContent</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.ModifyContent</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModifyContent</servlet-name>
+		<url-pattern>/ModifyContent</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SendIssue</servlet-name>
+		<servlet-class>es.uco.ordclass.servlet.SendIssue</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SendIssue</servlet-name>
+		<url-pattern>/SendIssue</url-pattern>
+	</servlet-mapping>
+
 </web-app>

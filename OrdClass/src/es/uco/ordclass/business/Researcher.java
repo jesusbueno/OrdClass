@@ -2,6 +2,11 @@ package es.uco.ordclass.business;
 
 import java.io.Serializable;
 
+/**
+ * Clase que almacena toda la información de un investigador
+ * @author Jesús Bueno Ruiz
+ *
+ */
 public class Researcher implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -17,8 +22,25 @@ public class Researcher implements Serializable{
 	private String description;
 	private String image;
 	
+	/**
+	 * Constructor vacío de la clase Researcher
+	 */
 	public Researcher() {}
 
+	/**
+	 * Constructor de la clase Researcher
+	 * @param id: id del investigador
+	 * @param name: nombre del investigador
+	 * @param surname: apellidos del investigador
+	 * @param institution: institución
+	 * @param country: país del investigador
+	 * @param profession: profesión
+	 * @param phone: teléfono de contacto
+	 * @param link: link del investigador
+	 * @param email: email del investigador
+	 * @param description: descripción del investigador
+	 * @param image: link de imagen
+	 */
 	public Researcher(int id, String name, String surname, String institution, String country, String profession, int phone, String link, String email, String description, String image) {
 		super();
 		this.id = id;
@@ -34,8 +56,10 @@ public class Researcher implements Serializable{
 		this.image = image;
 	}
 
-	//getters and setters
 	
+	/**
+	 * Getters y setters de los parámetros de la clase Researcher
+	 */
 	public int getId() {
 		return id;
 	}

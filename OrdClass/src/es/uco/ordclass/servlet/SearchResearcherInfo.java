@@ -12,35 +12,39 @@ import javax.servlet.http.HttpSession;
 import es.uco.ordclass.business.Dataset;
 import es.uco.ordclass.business.Researcher;
 
-
+/**
+ * Recibe el id de un investigador en concreto y llama a los DAO para que estos
+ * se encarguen de buscar dicha información. Una vez encontrada, redirigen a la
+ * página donde se muestra la información
+ * 
+ * @author Jesús Bueno Ruiz
+ *
+ */
 public class SearchResearcherInfo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    public SearchResearcherInfo() {
-        super();
-    }
+	public SearchResearcherInfo() {
+		super();
+	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		HttpSession session = request.getSession();
 		int researcher_id = Integer.valueOf(request.getParameter("id"));
 		ArrayList<Researcher> researches = (ArrayList<Researcher>) session.getAttribute("researches");
 		Researcher researcher = new Researcher();
-		
+
 		System.out.println(researcher_id);
-		
-		for(int i=0; i<researches.size(); i++) {
+
+		for (int i = 0; i < researches.size(); i++) {
 			if (researches.get(i).getId() == researcher_id) {
 				researcher = researches.get(i);
 			}
 		}
-		
+
 		session.setAttribute("researcher", researcher);
 		response.sendRedirect("/OrdClass/Views/ResearcherProfile.jsp");
-	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	}
 
 }

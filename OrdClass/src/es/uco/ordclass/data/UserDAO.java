@@ -9,17 +9,38 @@ import java.util.Properties;
 
 import es.uco.ordclass.business.User;
 
+/**
+ * Clase DAO (Data Access Object) que se encarga de insertar, obtener o
+ * modificar información sobre un usuario administrador en la Base de datos
+ * 
+ * @author Jesús Bueno Ruiz
+ *
+ */
 public class UserDAO extends DAO {
 
+	/**
+	 * Constructor de la clase UserDAO
+	 * 
+	 * @param url:           url de la base de datos
+	 * @param user:          usuario de la base de datos
+	 * @param password:      contraseña de la base de datos
+	 * @param sqlProperties: fichero de propiedades sql
+	 */
 	public UserDAO(String url, String user, String password, Properties sqlProperties) {
 		super(url, user, password, sqlProperties);
 	}
 
+	/**
+	 * Función que obtiene los datos de un usuario concreto
+	 * 
+	 * @param email: email del usuario
+	 * @return User: objeto de tipo User
+	 */
 	public User getUser(String email) {
 		User user = new User();
 
-		String sql = "SELECT * FROM user WHERE email = ?";
-		
+		String sql = sqlProperties.getProperty("getUser");
+
 		try {
 			Connection con = getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -43,12 +64,16 @@ public class UserDAO extends DAO {
 		return user;
 	}
 
-	
+	/**
+	 * Función que obtiene todos los usuarios de la base de datos
+	 * 
+	 * @return Array con los usuarios
+	 */
 	public ArrayList<User> getUsers() {
 
 		ArrayList<User> user_list = new ArrayList<User>();
 
-		String sql = "SELECT * FROM user";
+		String sql = sqlProperties.getProperty("getUsers");
 
 		try {
 
@@ -72,17 +97,22 @@ public class UserDAO extends DAO {
 		} catch (SQLException e) {
 			System.out.println(e);
 		}
-		
+
 		return user_list;
 
 	}
-	
-	
+
+	/**
+	 * Función que añade un usuario a la base de datos
+	 * 
+	 * @param user: usuario que se desea añadir
+	 * @return true si se añade, false si no se añade
+	 */
 	public boolean addUser(User user) throws Exception {
 		boolean result = true;
-		
+
 		if (getUser(user.getEmail()).getEmail() == null) {
-			String sql = "insert into user(Name, Surname, Username, Email, Password, Admin) values (?, ?, ?, ?, ?, ?)";
+			String sql = sqlProperties.getProperty("addUser");
 
 			Connection con = getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -104,15 +134,20 @@ public class UserDAO extends DAO {
 		else {
 			result = false;
 		}
-		
-		
+
 		return result;
 	}
 
-	
+	/**
+	 * Función que valida los datos de acceso de un usuario
+	 * 
+	 * @param email:    email del usuario
+	 * @param password: contraseña del usuario
+	 * @return User: objeto de tipo User
+	 */
 	public User validateUser(String email, String password) {
 		User user = new User();
-		String sql = "select * from user where Email=? and Password=?";
+		String sql = sqlProperties.getProperty("validateUser");
 		System.out.println("Hola que tal");
 		try {
 			Connection con = getConnection();
@@ -129,13 +164,13 @@ public class UserDAO extends DAO {
 				user.setPassword(rs.getString("Password"));
 				user.setSurname(rs.getString("Surname"));
 				user.setUsername(rs.getString("Username"));
-				
+
 			}
 
 		} catch (SQLException e) {
 			System.out.println(e);
 		}
-		
+
 		return user;
 	}
 

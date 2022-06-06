@@ -1,6 +1,7 @@
 package es.uco.ordclass.servlet;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 import javax.servlet.ServletException;
@@ -22,7 +23,13 @@ import es.uco.ordclass.data.LibraryDAO;
 import es.uco.ordclass.data.NewDAO;
 import es.uco.ordclass.data.ResearcherDAO;
 
-
+/**
+ * Se encarga de recibir la información acerca de un contenido, y llama a los
+ * DAO para que estos modifiquen dicha información
+ * 
+ * @author Jesús Bueno Ruiz
+ *
+ */
 public class ModifyContent extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -32,20 +39,21 @@ public class ModifyContent extends HttpServlet {
 
     }
 
-    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-	}
-
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		//String urlBD = "jdbc:mysql://ordclass.zapto.org/ordclass";
-		String urlBD = "jdbc:mysql://localhost/ordclass";
-		String userBD = "java";
-		String passBD = "1234";		
+		
+		String urlBD = getServletContext().getInitParameter("urlDB");
+		String userBD = getServletContext().getInitParameter("userDB");
+		String passBD = getServletContext().getInitParameter("passwordDB");	
+		
+		//Obtener fichero sql.properties
+		String sql = getServletContext().getInitParameter("sqlProperties");		
 		Properties prop = new Properties();
+		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+		InputStream input = classLoader.getResourceAsStream(sql);
+		prop.load(input);
 		
 		int id = (Integer) session.getAttribute("id");	
 		String type = (String) session.getAttribute("type");
@@ -150,6 +158,12 @@ public class ModifyContent extends HttpServlet {
 	}
 	
 	
+	/**
+	 * Función que recoge los parámetros de las vistas, y crea un objeto Algorithm
+	 * @param request
+	 * @param id
+	 * @return Algorithm: Objeto Algorithm
+	 */
 	protected Algorithm setAlgorithm(HttpServletRequest request, int id){
 		Algorithm algorithm = new Algorithm();
 		algorithm.setAcronym(request.getParameter("al-acronym"));
@@ -167,6 +181,12 @@ public class ModifyContent extends HttpServlet {
 		return algorithm;
 	}
 
+	/**
+	 * Función que recoge los parámetros de las vistas, y crea un objeto Dataset
+	 * @param request
+	 * @param id
+	 * @return Dataset: Objeto Dataset
+	 */
 	protected Dataset setDataset(HttpServletRequest request, int id){
 		Dataset dataset = new Dataset();
 
@@ -188,6 +208,12 @@ public class ModifyContent extends HttpServlet {
 		return dataset;
 	}
 
+	/**
+	 * Función que recoge los parámetros de las vistas, y crea un objeto Researcher
+	 * @param request
+	 * @param id
+	 * @return Researcher: Objeto Researcher
+	 */
 	protected Researcher setResearcher(HttpServletRequest request, int id){
 		Researcher researcher = new Researcher();
 
@@ -206,6 +232,12 @@ public class ModifyContent extends HttpServlet {
 		return researcher;
 	}
 
+	/**
+	 * Función que recoge los parámetros de las vistas, y crea un objeto Library
+	 * @param request
+	 * @param id
+	 * @return Library: Objeto Library
+	 */
 	protected Library setLibrary(HttpServletRequest request, int id){
 		Library library = new Library();
 
@@ -219,6 +251,13 @@ public class ModifyContent extends HttpServlet {
 		return library;
 	}
 
+	/**
+	 * Función que recoge los parámetros de las vistas, y crea un objeto
+	 * Bibliography
+	 * @param request
+	 * @param id
+	 * @return Bibliography: Objeto Bibliography
+	 */
 	protected Bibliography setBibliography(HttpServletRequest request, int id){
 		Bibliography bibliography = new Bibliography();
 
@@ -234,6 +273,12 @@ public class ModifyContent extends HttpServlet {
 		return bibliography;
 	}
 
+	/**
+	 * Función que recoge los parámetros de las vistas, y crea un objeto New
+	 * @param request
+	 * @param id
+	 * @return New: Objeto New
+	 */
 	protected New setNew(HttpServletRequest request, int id){
 		New new_ = new New();
 
