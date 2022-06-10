@@ -203,6 +203,7 @@ public class ModifyContent extends HttpServlet {
 		dataset.setTest_size(Integer.parseInt(request.getParameter("ds-testsize")));
 		dataset.setTrain_size(Integer.parseInt(request.getParameter("ds-trainsize")));
 		dataset.setType(request.getParameter("ds-type"));
+		dataset.setResult(request.getParameter("ds-result"));
 		dataset.setId(id);
 		
 		return dataset;
@@ -224,7 +225,7 @@ public class ModifyContent extends HttpServlet {
 		researcher.setInstitution(request.getParameter("r-institution"));
 		researcher.setLink(request.getParameter("r-links"));
 		researcher.setName(request.getParameter("r-name"));
-		researcher.setPhone(Integer.parseInt(request.getParameter("r-phone")));
+		//researcher.setPhone(Integer.parseInt(request.getParameter("r-phone")));
 		researcher.setProfession(request.getParameter("r-profession"));
 		researcher.setSurname(request.getParameter("r-surname"));
 		researcher.setId(id);

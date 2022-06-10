@@ -63,6 +63,7 @@ public class DatasetDAO extends DAO {
 				dataset.setDescription(rs.getString("Description"));
 				dataset.setDonor(rs.getString("Donor"));
 				dataset.setData_source(rs.getString("Data_Source"));
+				dataset.setResult(rs.getString("Result"));
 
 				datasets.add(dataset);
 			}
@@ -100,7 +101,8 @@ public class DatasetDAO extends DAO {
 		ps.setString(11, dataset.getDescription());
 		ps.setString(12, dataset.getDonor());
 		ps.setString(13, dataset.getData_source());
-
+		ps.setString(14, dataset.getResult());
+		
 		if (ps.executeUpdate() == 0) {
 			result = false;
 		}
@@ -160,7 +162,8 @@ public class DatasetDAO extends DAO {
 		ps.setString(11, dataset.getDescription());
 		ps.setString(12, dataset.getDonor());
 		ps.setString(13, dataset.getData_source());
-		ps.setInt(14, dataset.getId());
+		ps.setString(14, dataset.getResult());
+		ps.setInt(15, dataset.getId());
 
 		if (ps.executeUpdate() == 0) {
 			result = false;

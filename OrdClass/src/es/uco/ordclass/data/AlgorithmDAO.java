@@ -26,7 +26,8 @@ public class AlgorithmDAO extends DAO {
 	 * @param password:      contraseña de la base de datos
 	 * @param sqlProperties: fichero de propiedades sql
 	 */
-	public AlgorithmDAO(String url, String user, String password, Properties sqlProperties) {
+	public AlgorithmDAO(String url, String user, String password,
+			Properties sqlProperties) {
 		super(url, user, password, sqlProperties);
 	}
 
@@ -64,12 +65,14 @@ public class AlgorithmDAO extends DAO {
 				algorithm.setYear(rs.getInt("Year"));
 
 				algorithms.add(algorithm);
+				
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
+		
 		return algorithms;
 	}
 
@@ -102,6 +105,7 @@ public class AlgorithmDAO extends DAO {
 			result = false;
 		}
 
+		System.out.println(con + "added a algorithm");
 		return result;
 	}
 
@@ -126,6 +130,7 @@ public class AlgorithmDAO extends DAO {
 			result = false;
 		}
 
+		System.out.println(con + "deleted the algorithm " + id);
 		return result;
 	}
 
@@ -160,6 +165,7 @@ public class AlgorithmDAO extends DAO {
 			result = false;
 		}
 
+		System.out.println(con + "modified the algorithm " + algorithm.getId());
 		return result;
 	}
 

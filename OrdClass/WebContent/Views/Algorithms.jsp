@@ -64,13 +64,13 @@
 				<div class="section-1">
 					<div class="filters">
 						<h5>Type</h5>
-						<label class="container"><input type="radio" name="type" value="Dictionary" onclick="filterAlgorithm(this)">Dictionary</label><br>
-						<label class="container"><input type="radio" name="type" value="Intervals" onclick="filterAlgorithm(this)">Intervals</label><br>
-						<label class="container"><input type="radio" name="type" value="Distance based" onclick="filterAlgorithm(this)">Distance based</label><br>
+						<label class="container"><input type="radio" name="type" value="Naïve approaches" onclick="filterAlgorithm(this)">Naïve approaches</label><br>
+						<label class="container"><input type="radio" name="type" value="Ordinal binary descompositions" onclick="filterAlgorithm(this)">Ordinal binary descompositions</label><br>
+						<label class="container"><input type="radio" name="type" value="Threshold models" onclick="filterAlgorithm(this)">Threshold models</label><br>
 						<h5>Year</h5>
-						<label class="container"><input type="radio" name="year" value="2020" onclick="filterAlgorithm(this)">2020</label><br>
-						<label class="container"><input type="radio" name="year" value="2017" onclick="filterAlgorithm(this)">2017</label><br>
-						<label class="container"><input type="radio" name="year" value="2015" onclick="filterAlgorithm(this)">2015</label>
+						<label class="container"><input type="radio" name="year" value="2007" onclick="filterAlgorithm(this)">2007</label><br>
+						<label class="container"><input type="radio" name="year" value="2009" onclick="filterAlgorithm(this)">2009</label><br>
+						<label class="container"><input type="radio" name="year" value="2010" onclick="filterAlgorithm(this)">2010</label>
 					
 					</div>
 

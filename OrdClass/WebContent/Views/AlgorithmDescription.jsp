@@ -66,10 +66,7 @@
 							<th>Year</th>
 							<td><%=algorithm.getYear() %></td>
 						</tr>
-						<tr>
-							<th>Publication</th>
-							<td><%=algorithm.getPublication() %></td>
-						</tr>
+						
 					</table>
 					</div>
 					
@@ -84,6 +81,11 @@
 						<tr>
 							<th>Source Code</th>
 							<td><%=algorithm.getSource_code() %></td>
+						</tr>
+						
+						<tr>
+							<th>Publication</th>
+							<td><%=algorithm.getPublication() %></td>
 						</tr>
 						
 						

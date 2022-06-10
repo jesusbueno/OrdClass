@@ -52,8 +52,6 @@
 						<div class="left">
 							<div class="title">Profession </div><p><%=researcher.getProfession() %></p>
 							<div class="title">Institution </div><p><%=researcher.getInstitution()%>, <%=researcher.getCountry() %></p>
-							<div class="title">Phone</div>
-							<p><%=researcher.getPhone() %></p>
 							<div class="title">External Link</div>
 							<p><a href="<%=researcher.getLink() %>"><%=researcher.getLink() %></a></p>
 						

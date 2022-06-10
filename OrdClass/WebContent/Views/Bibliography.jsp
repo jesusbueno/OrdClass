@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="es.uco.ordclass.business.Bibliography"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -18,6 +21,16 @@
 </head>
 
 <body>
+
+<%
+	ArrayList<Bibliography> bibliographies = (ArrayList<Bibliography>) session.getAttribute("bibliographies");
+
+	if(bibliographies == null){
+		response.sendRedirect("../loadData");
+		return;
+	}
+%>
+
 	<div class="menu" id="navbar">
 		<div class="margins">
 			<ul>
@@ -81,203 +94,22 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr onclick="showModal('A run length transformation for discriminating between auto regressive time series')">
-								<td>Bagnall, A. & Janacek, G.</td>
-								<td>A run length transformation for discriminating between
-									auto regressive time series</td>
-								<td>2014</td>
-								<td>Journal of Classification</td>
-								<td>31</td>
-								<td>-</td>
-								<td>154--178</td>
-							</tr>
-
-							<tr onclick="showModal('CID: an efficient complexity-invariant distance measure for time series')">
-								<td>BBatista, G.; Keogh, E.; Tataw, O. & deSouza, V.</td>
-								<td>CID: an efficient complexity-invariant distance measure
-									for time series</td>
-								<td>2014</td>
-								<td>Data Mining and Knowledge Discovery</td>
-								<td>28</td>
-								<td>3</td>
-								<td>634--669</td>
-							</tr>
-
-							<tr onclick="showModal('A run length transformation for discriminating between auto regressive time series')">
-								<td>Bagnall, A. & Janacek, G.</td>
-								<td>A run length transformation for discriminating between
-									auto regressive time series</td>
-								<td>2014</td>
-								<td>Journal of Classification</td>
-								<td>31</td>
-								<td>-</td>
-								<td>154--178</td>
-							</tr>
-
-							<tr onclick="showModal('CID: an efficient complexity-invariant distance measure for time series')">
-								<td>BBatista, G.; Keogh, E.; Tataw, O. & deSouza, V.</td>
-								<td>CID: an efficient complexity-invariant distance measure
-									for time series</td>
-								<td>2014</td>
-								<td>Data Mining and Knowledge Discovery</td>
-								<td>28</td>
-								<td>3</td>
-								<td>634--669</td>
-							</tr>
-
-							<tr onclick="showModal('A run length transformation for discriminating between auto regressive time series')">
-								<td>Bagnall, A. & Janacek, G.</td>
-								<td>A run length transformation for discriminating between
-									auto regressive time series</td>
-								<td>2014</td>
-								<td>Journal of Classification</td>
-								<td>31</td>
-								<td>-</td>
-								<td>154--178</td>
-							</tr>
-
-							<tr onclick="showModal('CID: an efficient complexity-invariant distance measure for time series')">
-								<td>BBatista, G.; Keogh, E.; Tataw, O. & deSouza, V.</td>
-								<td>CID: an efficient complexity-invariant distance measure
-									for time series</td>
-								<td>2014</td>
-								<td>Data Mining and Knowledge Discovery</td>
-								<td>28</td>
-								<td>3</td>
-								<td>634--669</td>
-							</tr>
-							
-							<tr onclick="showModal('A run length transformation for discriminating between auto regressive time series')">
-								<td>Bagnall, A. & Janacek, G.</td>
-								<td>A run length transformation for discriminating between
-									auto regressive time series</td>
-								<td>2014</td>
-								<td>Journal of Classification</td>
-								<td>31</td>
-								<td>-</td>
-								<td>154--178</td>
-							</tr>
-
-							<tr onclick="showModal('CID: an efficient complexity-invariant distance measure for time series')">
-								<td>BBatista, G.; Keogh, E.; Tataw, O. & deSouza, V.</td>
-								<td>CID: an efficient complexity-invariant distance measure
-									for time series</td>
-								<td>2014</td>
-								<td>Data Mining and Knowledge Discovery</td>
-								<td>28</td>
-								<td>3</td>
-								<td>634--669</td>
-							</tr>
-
-							<tr onclick="showModal('A run length transformation for discriminating between auto regressive time series')">
-								<td>Bagnall, A. & Janacek, G.</td>
-								<td>A run length transformation for discriminating between
-									auto regressive time series</td>
-								<td>2014</td>
-								<td>Journal of Classification</td>
-								<td>31</td>
-								<td>-</td>
-								<td>154--178</td>
-							</tr>
-
-							<tr onclick="showModal('CID: an efficient complexity-invariant distance measure for time series')">
-								<td>BBatista, G.; Keogh, E.; Tataw, O. & deSouza, V.</td>
-								<td>CID: an efficient complexity-invariant distance measure
-									for time series</td>
-								<td>2014</td>
-								<td>Data Mining and Knowledge Discovery</td>
-								<td>28</td>
-								<td>3</td>
-								<td>634--669</td>
-							</tr>
-
-							<tr onclick="showModal('A run length transformation for discriminating between auto regressive time series')">
-								<td>Bagnall, A. & Janacek, G.</td>
-								<td>A run length transformation for discriminating between
-									auto regressive time series</td>
-								<td>2014</td>
-								<td>Journal of Classification</td>
-								<td>31</td>
-								<td>-</td>
-								<td>154--178</td>
-							</tr>
-
-							<tr onclick="showModal('CID: an efficient complexity-invariant distance measure for time series')">
-								<td>BBatista, G.; Keogh, E.; Tataw, O. & deSouza, V.</td>
-								<td>CID: an efficient complexity-invariant distance measure
-									for time series</td>
-								<td>2014</td>
-								<td>Data Mining and Knowledge Discovery</td>
-								<td>28</td>
-								<td>3</td>
-								<td>634--669</td>
-							</tr>
-							
-							<tr onclick="showModal('A run length transformation for discriminating between auto regressive time series')">
-								<td>Bagnall, A. & Janacek, G.</td>
-								<td>A run length transformation for discriminating between
-									auto regressive time series</td>
-								<td>2014</td>
-								<td>Journal of Classification</td>
-								<td>31</td>
-								<td>-</td>
-								<td>154--178</td>
-							</tr>
-
-							<tr onclick="showModal('CID: an efficient complexity-invariant distance measure for time series')">
-								<td>BBatista, G.; Keogh, E.; Tataw, O. & deSouza, V.</td>
-								<td>CID: an efficient complexity-invariant distance measure
-									for time series</td>
-								<td>2014</td>
-								<td>Data Mining and Knowledge Discovery</td>
-								<td>28</td>
-								<td>3</td>
-								<td>634--669</td>
-							</tr>
-
-							<tr onclick="showModal('A run length transformation for discriminating between auto regressive time series')">
-								<td>Bagnall, A. & Janacek, G.</td>
-								<td>A run length transformation for discriminating between
-									auto regressive time series</td>
-								<td>2014</td>
-								<td>Journal of Classification</td>
-								<td>31</td>
-								<td>-</td>
-								<td>154--178</td>
-							</tr>
-
-							<tr onclick="showModal('CID: an efficient complexity-invariant distance measure for time series')">
-								<td>BBatista, G.; Keogh, E.; Tataw, O. & deSouza, V.</td>
-								<td>CID: an efficient complexity-invariant distance measure
-									for time series</td>
-								<td>2014</td>
-								<td>Data Mining and Knowledge Discovery</td>
-								<td>28</td>
-								<td>3</td>
-								<td>634--669</td>
-							</tr>
-
-							<tr onclick="showModal('A run length transformation for discriminating between auto regressive time series')">
-								<td>Bagnall, A. & Janacek, G.</td>
-								<td>A run length transformation for discriminating between
-									auto regressive time series</td>
-								<td>2014</td>
-								<td>Journal of Classification</td>
-								<td>31</td>
-								<td>-</td>
-								<td>154--178</td>
-							</tr>
-
-							<tr onclick="showModal('CID: an efficient complexity-invariant distance measure for time series')">
-								<td>BBatista, G.; Keogh, E.; Tataw, O. & deSouza, V.</td>
-								<td>CID: an efficient complexity-invariant distance measure
-									for time series</td>
-								<td>2014</td>
-								<td>Data Mining and Knowledge Discovery</td>
-								<td>28</td>
-								<td>3</td>
-								<td>634--669</td>
-							</tr>
+						
+							<%
+								for(int i=0; i<bibliographies.size(); i++){
+							%>
+									<tr onclick="showModal('<%=bibliographies.get(i).getTitle() %>')">
+										<td><%=bibliographies.get(i).getAuthor() %></td>
+										<td><%=bibliographies.get(i).getTitle() %></td>
+										<td><%=bibliographies.get(i).getYear() %></td>
+										<td><%=bibliographies.get(i).getBook() %></td>
+										<td><%=bibliographies.get(i).getVolume() %></td>
+										<td><%=bibliographies.get(i).getNumber() %></td>
+										<td><%=bibliographies.get(i).getPages() %></td>
+									</tr>
+							<%
+								}	
+							%>
 						</tbody>
 					</table>
 				</div>
@@ -287,8 +119,6 @@
 				<div class="buttons">
 					<img src="Images/logo.png">
 				</div>
-				
-				
 				
 				<div class="terms">
 					<a href="https://www.uco.es/ayrna/">AYRNA</a>

@@ -85,13 +85,11 @@
 
 						<h5>Type</h5>
 					
-						<label class="container"><input type="radio" name="type" value="Device" onclick="filterType(this)">Device</label>
-						<label class="container"><input type="radio" name="type" value="ECG" onclick="filterType(this)">ECG</label>
+						<label class="container"><input type="radio" name="type" value="Multivariate" onclick="filterType(this)">Multivariate</label>
+						<label class="container"><input type="radio" name="type" value="Univariate" onclick="filterType(this)">Univariate</label>
 						<label class="container"><input type="radio" name="type" value="Image" onclick="filterType(this)">Image</label>
-						<label class="container"><input type="radio" name="type" value="Motion" onclick="filterType(this)">Motion</label>
-						<label class="container"><input type="radio" name="type" value="Sensor" onclick="filterType(this)">Sensor</label>
-						<label class="container"><input type="radio" name="type" value="Simulated" onclick="filterType(this)">Simulated</label>
-						<label class="container"><input type="radio" name="type" value="Spectro" onclick="filterType(this)">Spectro</label>
+						<label class="container"><input type="radio" name="type" value="Sequential" onclick="filterType(this)">Sequential</label>
+						<label class="container"><input type="radio" name="type" value="Time Series" onclick="filterType(this)">Time Series</label>
 						
 					</div>
 

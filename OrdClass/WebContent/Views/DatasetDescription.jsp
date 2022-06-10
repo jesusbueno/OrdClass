@@ -93,7 +93,7 @@
 						
 						<tr>
 							<th>Data Source</th>
-							<td><a href="<%=dataset.getData_source() %>"><%=dataset.getData_source() %></a></td>
+							<td><%=dataset.getData_source() %></td>
 						</tr>
 						
 						<tr>
@@ -110,7 +110,7 @@
 									</div>
 					
 									<div class="button">
-										<a href="<%=dataset.getDownload()%>">Results</a>
+										<a href="<%=dataset.getResult()%>" download="<%=dataset.getName()%>.csv">Results</a>
 									</div>
 								</div>
 							</td>

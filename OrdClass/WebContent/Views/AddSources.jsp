@@ -184,6 +184,10 @@
 								</div>
 								
 								<div class="input-field">
+									<input type="text" id="tipo2" name="ds-result" placeholder="Results link">
+								</div>
+								
+								<div class="input-field">
 									<input type="text" id="tipo2" name="ds-donor" placeholder="Donor">
 								</div>
 								
@@ -364,11 +368,11 @@
 							
 							<div class="column">
 								<div class="input-field">
-									<input type="text" id="tipo2" name="n-name" placeholder="Name">
+									<input type="text" id="tipo2" name="n-name" placeholder="Name" >
 								</div>
 						
 								<div class="input-field">
-									<input type="text" id="tipo2" name="n-description" placeholder="Description">
+									<input type="text" id="tipo2" name="n-description" placeholder="Description" >
 								</div>
 							
 				
@@ -378,11 +382,11 @@
 							<div class="column">
 							
 								<div class="input-field">
-									<input type="text" id="tipo2" name="n-link" placeholder="Link">
+									<input type="text" id="tipo2" name="n-link" placeholder="Link" >
 								</div>
 						
 								<div class="input-field">
-									<input type="text" id="tipo2" name="n-image" placeholder="Image Link">
+									<input type="text" id="tipo2" name="n-image" placeholder="Image Link" >
 								</div>
 							</div>					
 							</div>

@@ -13,17 +13,24 @@
 		<param-value>com.mysql.jdbc.Driver</param-value>
 	</context-param>
 
+	<!-- 
 	<context-param>
 		<param-name>urlDB</param-name>
 		<param-value>jdbc:mysql://localhost/ordclass</param-value>
 	</context-param>
+	 -->
 
-	<!-- <context-param> <param-name>urlDB</param-name> <param-value>jdbc:mysql://ordclass.zapto.org/ordclass</param-value> 
-		</context-param> -->
+	<context-param>
+	<param-name>urlDB</param-name> 
+	<param-value>jdbc:mysql://ordclass.zapto.org/ordclass</param-value> 
+	</context-param>
+
+	
+	
 	<context-param>
 		<param-name>userDB</param-name>
 		<param-value>java</param-value>
-	</context-param>
+	</context-param> 
 
 	<context-param>
 		<param-name>passwordDB</param-name>

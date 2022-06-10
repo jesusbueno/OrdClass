@@ -204,6 +204,7 @@ public class AddContent extends HttpServlet {
 		dataset.setTest_size(Integer.parseInt(request.getParameter("ds-testsize")));
 		dataset.setTrain_size(Integer.parseInt(request.getParameter("ds-trainsize")));
 		dataset.setType(request.getParameter("ds-type"));
+		dataset.setResult(request.getParameter("ds-result"));
 
 		return dataset;
 	}

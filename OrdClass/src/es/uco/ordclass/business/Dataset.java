@@ -25,6 +25,7 @@ public class Dataset implements Serializable {
 	private String description;
 	private String donor;
 	private String data_source;
+	private String result;
 
 	/**
 	 * Constructor vacío de la clase Dataset
@@ -49,10 +50,11 @@ public class Dataset implements Serializable {
 	 * @param description: descripción del dataset
 	 * @param donor: donante
 	 * @param data_source: código fuente
+	 * @param result: resultados
 	 */
 	public Dataset(int id, String name, int train_size, int test_size, int length, int classes, String type,
 			String best_algorithm, int best_accuracy, String images, String download, String description, String donor,
-			String data_source) {
+			String data_source, String result) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -68,6 +70,7 @@ public class Dataset implements Serializable {
 		this.description = description;
 		this.donor = donor;
 		this.data_source = data_source;
+		this.result = result;
 	}
 
 	/**
@@ -184,5 +187,14 @@ public class Dataset implements Serializable {
 	public void setData_source(String data_source) {
 		this.data_source = data_source;
 	}
+
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult(String result) {
+		this.result = result;
+	}
+	
 
 }
